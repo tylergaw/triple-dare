@@ -266,6 +266,34 @@ label {
   visibility: hidden;
 }
 
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+  background-color: #fd5f34;
+  border: 0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  letter-spacing: 0.07em;
+  padding: 0.5em 0.7em;
+  width: 90%;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  padding-top: 0.3em;
+}
+
+::-moz-placeholder {
+  color: #fff;
+  padding-top: 0.3em;
+}
+
 /* - Page-supporting content footer -------------------- */
 [role="contentinfo"] {
   border-top: 6px solid rgba(0, 0, 0, 0.1);

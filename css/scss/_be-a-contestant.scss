@@ -13,3 +13,30 @@ label {
 	height: 0;
 	visibility: hidden;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+	background-color: #fd5f34;
+	border: 0;
+	@include border-radius(4px);
+	color: #fff;
+	@include komikaPaint(1em);
+	letter-spacing: 0.07em;
+	padding: 0.5em 0.7em;
+	width: 90%;
+	
+	&:focus {
+		// Do this later
+	}
+}
+
+::-webkit-input-placeholder {
+   	color: #fff;
+	padding-top: 0.3em;
+}
+
+::-moz-placeholder {
+	color: #fff;
+	padding-top: 0.3em;
+}
