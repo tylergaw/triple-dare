@@ -1,9 +1,10 @@
-/* ----- Compiled using Sass/Compass ------ */
-/* 
-	http://meyerweb.com/eric/tools/css/reset/ 
-   	v2.0 | 20110126
-   	License: none (public domain)
-*/
+/* ----------- Compiled using Sass/Compass ------------- */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* - Reset --------------------------------------------- */
+/* - http://meyerweb.com/eric/tools/css/reset ---------- */
+/* - v2.0 | 20110126 License: none (public domain) ----- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -61,6 +62,7 @@ hr {
   display: none;
 }
 
+/* - Custom fonts -------------------------------------- */
 @font-face {
   font-family: "OpenSansSemibold";
   src: url("/fonts/OpenSans-Semibold-webfont.eot");
@@ -85,6 +87,7 @@ hr {
   font-weight: normal;
 }
 
+/* - General styles ------------------------------------ */
 body {
   background-color: #80c1d6;
   caption-side: top;
@@ -94,6 +97,7 @@ body {
   width: 100%;
 }
 
+/* - Main navigation ----------------------------------- */
 body > nav {
   background-color: rgba(15, 40, 48, 0.1);
   margin: 1.7em auto 0 auto;
@@ -116,6 +120,7 @@ body > nav a:hover {
   text-shadow: rgba(0, 0, 0, 0.2) 0 1px 0;
 }
 
+/* - Page banner containing branding and tagline ------- */
 [role="banner"] {
   margin: 1.2em 0 2.2em 0;
   text-align: center;
@@ -142,6 +147,7 @@ body > nav a:hover {
   width: 95%;
 }
 
+/* - General page sections ----------------------------- */
 section {
   border: 6px solid rgba(0, 0, 0, 0.1);
   border-left: 0;
@@ -161,6 +167,7 @@ section h1 {
   text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
 }
 
+/* - Obstacles section specifics ----------------------- */
 #obstacles {
   background-color: #fe6638;
   color: #fff;
@@ -221,6 +228,7 @@ section h1 {
   color: #f46034;
 }
 
+/* - Prizes section specifics -------------------------- */
 #prizes {
   background-color: #7eb036;
   color: #fff;
@@ -233,6 +241,7 @@ section h1 {
   line-height: 1.6em;
 }
 
+/* - Be a contestant section specifics ----------------- */
 #be-a-contestant {
   border-bottom: 0;
 }
@@ -240,12 +249,14 @@ section h1 {
   font-size: 2em;
 }
 
+/* - Be a contestant form ------------------------------ */
 label {
   display: block;
   height: 0;
   visibility: hidden;
 }
 
+/* - Page-supporting content footer -------------------- */
 [role="contentinfo"] {
   border-top: 6px solid rgba(0, 0, 0, 0.1);
   color: #fff;
