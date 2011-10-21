@@ -11,7 +11,7 @@
 	}
 	
 	li {
-		display: inline-block;
+		float: left;
 		line-height: 1.6em;
 		margin: 1em 0 1.8em 0;
 	}
@@ -20,5 +20,6 @@
 		display: block;
 		margin-bottom: 0.8em;
 		max-width: 100%;
+		vertical-align: middle;
 	}
 }

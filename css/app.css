@@ -240,7 +240,7 @@ section h1 {
   overflow: hidden;
 }
 #prizes li {
-  display: inline-block;
+  float: left;
   line-height: 1.6em;
   margin: 1em 0 1.8em 0;
 }
@@ -248,6 +248,7 @@ section h1 {
   display: block;
   margin-bottom: 0.8em;
   max-width: 100%;
+  vertical-align: middle;
 }
 
 /* - Be a contestant section specifics ----------------- */
