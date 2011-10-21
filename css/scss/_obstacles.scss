@@ -2,15 +2,17 @@
 	background-color: #fe6638;
 	color: #fff;
 	@include komikaPaint(0.9em);
+	text-align: center;
 	
 	h3 {
-		font-size: 2em;
+		font-size: 2.2em;
 		line-height: 1.4em;
 	}
 	
 	p {
-		font-size: 1.1em;
+		font-size: 1.3em;
 		line-height: 1.2em;
+		margin: 0.3em 0 0.6em 0;
 	}
 	
 	h3, p {
@@ -23,6 +25,10 @@
 		&:target {
 			display: block;
 		}
+	}
+	
+	img {
+		max-width: 100%;
 	}
 	
 	nav {

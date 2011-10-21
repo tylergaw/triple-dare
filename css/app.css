@@ -156,6 +156,7 @@ section h1 {
   font: 2.4em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.05em;
   margin: 0.8em 0 1em 0;
+  text-align: left;
   text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
 }
@@ -164,14 +165,16 @@ section h1 {
   background-color: #fe6638;
   color: #fff;
   font: 0.9em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  text-align: center;
 }
 #obstacles h3 {
-  font-size: 2em;
+  font-size: 2.2em;
   line-height: 1.4em;
 }
 #obstacles p {
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: 1.2em;
+  margin: 0.3em 0 0.6em 0;
 }
 #obstacles h3, #obstacles p {
   text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
@@ -181,6 +184,9 @@ section h1 {
 }
 #obstacles li:target {
   display: block;
+}
+#obstacles img {
+  max-width: 100%;
 }
 #obstacles nav {
   margin: 1.8em 0 1.2em 0;
