@@ -1,5 +1,18 @@
 [role="banner"] {
+	
+	text-align: center;
+	
+	h2 {
+		color: #fe6537;
+		@include komikaPaint(2.4em, 1.1em);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		@include text-shadow(rgba(242, 242, 242, 1), 2px, 2px, 0);
+	}
+	
 	p {
 		color: #fff;
+		font-size: 1.2em;
+		margin-top: 0.6em;
 	}
 }

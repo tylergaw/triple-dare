@@ -1,6 +1,15 @@
 section {
+	
+	border: 6px solid rgba(0, 0, 0, 0.1);
+	border-left: 0;
+	border-right: 0;
+	
 	h1 {
 		color: #fff;
+		@include komikaPaint(1.9em);
+		letter-spacing: 0.05em;
+		margin: 0.8em 0 1em 0;
 		text-transform: uppercase;
+		@include text-shadow(rgba(0, 0, 0, 0.15), 3px, 4px, 0);
 	}
 }

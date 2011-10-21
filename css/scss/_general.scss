@@ -1,5 +1,5 @@
 body {
 	background-color: #80c1d6;
-	font-family: helvetica, arial, sans-serif;
-	font-size: 100%;
+	@include openSansSemibold(100%);
+	-webkit-font-smoothing: antialiased;
 }

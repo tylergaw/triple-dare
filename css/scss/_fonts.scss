@@ -9,23 +9,25 @@ $font-path: '/fonts' !default;
 			 url('#{$font-path}/#{$filename}.woff') format('woff'), 
 			 url('#{$font-path}/#{$filename}.ttf')	format('truetype'),
 			 url('#{$font-path}/#{$filename}.svg#webfont#{$svgFontName}') format('svg');
-		font-weight: normal;
 		font-style: normal;
+		font-weight: normal;
 	}
 }
 
-@include font-face('RabioheadRegular', 'rabiohead-webfont', 'RabioheadRegular');
-@include font-face('OstrichBlack', 'ostrich-black-webfont', 'OstrichSansBlack');
-@include font-face('OstrichMedium', 'ostrich-rounded-webfont', 'OstrichSansRoundedMedium');
+@include font-face('OpenSansSemibold', 'OpenSans-Semibold-webfont', 'OpenSansSemibold');
 
-@mixin rabiohead($font-size, $line-height: 1em) {
-	font: #{$font-size}/#{$line-height} 'RabioheadRegular', helvetica, arial , sans-serif;
+@mixin openSansSemibold($font-size, $line-height: 1em) {
+	font: #{$font-size}/#{$line-height} 'OpenSansSemibold', helvetica, arial , sans-serif;
 }
 
-@mixin ostrichBlack($font-size, $line-height: 1em) {
-	font: #{$font-size}/#{$line-height} 'OstrichBlack', helvetica, arial , sans-serif;
+@include font-face('KomikaTitle-PaintRegular', 'KomikaTitle-Paint-webfont', 'KomikaTitle-PaintRegular');
+
+@mixin komikaPaint($font-size, $line-height: 1em) {
+	font: #{$font-size}/#{$line-height} 'KomikaTitle-PaintRegular', 'Comic Sans MS', sans-serif;
 }
 
-@mixin ostrichMedium($font-size, $line-height: 1em) {
-	font: #{$font-size}/#{$line-height} 'OstrichMedium', helvetica, arial , sans-serif;
+@include font-face('KomikaTitle-WideRegular', 'KomikaTitle-Wide-webfont', 'KomikaTitleWideRegular');
+
+@mixin komikaWide($font-size, $line-height: 1em) {
+	font: #{$font-size}/#{$line-height} 'KomikaTitle-WideRegular', 'Comic Sans MS', sans-serif;
 }
