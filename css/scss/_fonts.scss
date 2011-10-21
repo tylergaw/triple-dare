@@ -1,0 +1,31 @@
+$font-path: '/fonts' !default;
+
+// http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
+@mixin font-face ($name, $filename, $svgFontName) {
+	@font-face {
+		font-family: $name;
+		src: url('#{$font-path}/#{$filename}.eot');
+		src: url('#{$font-path}/#{$filename}.eot?iefix') format('embedded-opentype'), 
+			 url('#{$font-path}/#{$filename}.woff') format('woff'), 
+			 url('#{$font-path}/#{$filename}.ttf')	format('truetype'),
+			 url('#{$font-path}/#{$filename}.svg#webfont#{$svgFontName}') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+@include font-face('RabioheadRegular', 'rabiohead-webfont', 'RabioheadRegular');
+@include font-face('OstrichBlack', 'ostrich-black-webfont', 'OstrichSansBlack');
+@include font-face('OstrichMedium', 'ostrich-rounded-webfont', 'OstrichSansRoundedMedium');
+
+@mixin rabiohead($font-size, $line-height: 1em) {
+	font: #{$font-size}/#{$line-height} 'RabioheadRegular', helvetica, arial , sans-serif;
+}
+
+@mixin ostrichBlack($font-size, $line-height: 1em) {
+	font: #{$font-size}/#{$line-height} 'OstrichBlack', helvetica, arial , sans-serif;
+}
+
+@mixin ostrichMedium($font-size, $line-height: 1em) {
+	font: #{$font-size}/#{$line-height} 'OstrichMedium', helvetica, arial , sans-serif;
+}
