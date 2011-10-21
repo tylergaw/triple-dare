@@ -1,0 +1,17 @@
+nav {
+	
+	a {
+		color: #fff;
+		display: block;
+		text-decoration: none;
+		text-transform: uppercase;
+		
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+	
+	li {
+		display: inline-block;
+	}
+}
