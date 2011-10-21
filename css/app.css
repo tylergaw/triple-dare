@@ -323,17 +323,29 @@ input[type="submit"] {
   width: 95%;
 }
 [role="contentinfo"] h2, [role="contentinfo"] h3 {
+  clear: both;
   font-size: 1.4em;
-  line-height: 1.2em;
+  line-height: 1em;
+  margin-bottom: 0.4em;
 }
 [role="contentinfo"] h3 {
-  margin-top: 1.4em;
+  padding-top: 2em;
 }
 [role="contentinfo"] p {
+  float: right;
   line-height: 1.4em;
+  text-align: left;
+  width: 48%;
+}
+[role="contentinfo"] h2 + p {
+  float: left;
+  text-align: right;
 }
 [role="contentinfo"] p:last-child {
   border-top: 6px solid rgba(0, 0, 0, 0.1);
+  float: none;
   margin-top: 1.6em;
   padding: 1.4em 0 1.8em 0;
+  text-align: center;
+  width: auto;
 }
