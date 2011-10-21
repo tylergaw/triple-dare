@@ -23,7 +23,7 @@ input[type="url"] {
 	color: #fff;
 	@include komikaPaint(1em);
 	letter-spacing: 0.07em;
-	padding: 0.5em 0.7em;
+	padding: 0.8em 0.7em;
 	width: 90%;
 	
 	&:focus {
@@ -47,7 +47,7 @@ input[type="submit"] {
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
-	@include komikaPaint(1.4em);
+	@include komikaPaint(1.5em);
 	letter-spacing: 0.07em;
 	margin-top: 1em;
 	padding: 1em 0.4em;

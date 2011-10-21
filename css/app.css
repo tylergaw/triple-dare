@@ -280,7 +280,7 @@ input[type="url"] {
   color: #fff;
   font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.07em;
-  padding: 0.5em 0.7em;
+  padding: 0.8em 0.7em;
   width: 90%;
 }
 
@@ -300,7 +300,7 @@ input[type="submit"] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font: 1.4em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  font: 1.5em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.07em;
   margin-top: 1em;
   padding: 1em 0.4em;
