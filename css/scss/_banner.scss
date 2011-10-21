@@ -1,24 +1,29 @@
 [role="banner"] {
 	
-	margin: 1.2em 0 2.8em 0;
+	margin: 1.2em 0 2.2em 0;
 	text-align: center;
 	
 	h1 {
 		color: #fff;
-		@include komikaPaint(4em, 1.2em);
+		@include komikaPaint(4.2em, 1.2em);
+		@include text-shadow(#fe6537, 4px, 4px, 0);
 	}
 	
 	h2 {
 		color: #fe6537;
 		@include komikaPaint(2.4em, 1.1em);
 		letter-spacing: 0.05em;
+		margin: 0.6em auto 0 auto;
 		text-transform: uppercase;
 		@include text-shadow(rgba(242, 242, 242, 1), 2px, 2px, 0);
+		width: 95%;
 	}
 	
 	p {
 		color: #fff;
 		font-size: 1.2em;
-		margin-top: 0.6em;
+		line-height: 1.4em;
+		margin: 0.6em auto 0 auto;
+		width: 95%;
 	}
 }

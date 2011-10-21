@@ -1,5 +1,8 @@
 body {
 	background-color: #80c1d6;
+	caption-side: top;
+	display: table;
 	@include openSansSemibold(100%);
 	-webkit-font-smoothing: antialiased;
+	width: 100%;
 }

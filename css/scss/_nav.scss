@@ -1,11 +1,15 @@
 body > nav {
 	
 	background-color: rgba(15, 40, 48, 0.1);
+	margin: 1.7em auto 0 auto;
 	text-align: center;
+	width: 95%;
 	
 	a {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		color: #fff;
 		display: block;
+		padding: 0.5em 0;
 		text-decoration: none;
 		text-transform: uppercase;
 		
@@ -15,6 +19,6 @@ body > nav {
 	}
 	
 	li {
-		display: inline-block;
+		display: block;
 	}
 }
