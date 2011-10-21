@@ -1,6 +1,12 @@
 [role="banner"] {
 	
+	margin: 1.2em 0 2.8em 0;
 	text-align: center;
+	
+	h1 {
+		color: #fff;
+		@include komikaPaint(4em, 1.2em);
+	}
 	
 	h2 {
 		color: #fe6537;

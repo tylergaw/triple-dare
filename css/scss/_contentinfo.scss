@@ -1,5 +1,29 @@
 [role="contentinfo"] {
+	
+	border-top: 6px solid rgba(0, 0, 0, 0.1);
 	color: #fff;
-	margin: 0 auto;
+	font-size: 0.9em;
+	margin: 2em auto 0 auto;
+	padding-top: 1.2em;
+	text-align: center;
 	width: 95%;
+	
+	h2, h3 {
+		font-size: 1.4em;
+		line-height: 1.2em;
+	}
+	
+	h3 {
+		margin-top: 1.4em;
+	}
+	
+	p {
+		line-height: 1.4em;
+	}
+	
+	p:last-child {
+		border-top: 6px solid rgba(0, 0, 0, 0.1);
+		margin-top: 1.6em;
+		padding: 1.4em 0 1.8em 0;
+	}
 }
