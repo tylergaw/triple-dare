@@ -1,3 +1,57 @@
 #obstacles {
 	background-color: #fe6638;
+	color: #fff;
+	@include komikaPaint(0.9em);
+	
+	h3 {
+		font-size: 2em;
+		line-height: 1.4em;
+	}
+	
+	p {
+		font-size: 1.1em;
+		line-height: 1.2em;
+	}
+	
+	h3, p {
+		@include text-shadow(rgba(0, 0, 0, 0.15), 3px, 4px, 0);
+	}
+	
+	li {
+		display: none;
+		
+		&:target {
+			display: block;
+		}
+	}
+	
+	nav {
+		overflow: hidden;
+		
+		li {
+			display: block;
+			float: left;
+			margin: 0.45em 0 0.45em 2.5%;
+			width: 45%;
+		}
+	}
+	
+	a {
+		background-color: #80b238;
+		@include border-radius(4px);
+		color: #fff;
+		display: block;
+		max-width: 100%;
+		overflow: hidden;
+		padding: 0.4em;
+		text-align: center;
+		text-decoration: none;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		
+		&:hover {
+			background-color: #eef13f;
+			color: #f46034;
+		}
+	}
 }
