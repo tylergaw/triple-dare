@@ -232,13 +232,22 @@ section h1 {
 #prizes {
   background-color: #7eb036;
   color: #fff;
-  font: 0.9em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  text-align: center;
 }
 #prizes ul {
   margin-bottom: 1.6em;
+  overflow: hidden;
 }
 #prizes li {
+  display: inline-block;
   line-height: 1.6em;
+  margin: 1em 0 1.8em 0;
+}
+#prizes img {
+  display: block;
+  margin-bottom: 0.8em;
+  max-width: 100%;
 }
 
 /* - Be a contestant section specifics ----------------- */
