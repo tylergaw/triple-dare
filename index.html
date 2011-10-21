@@ -12,7 +12,7 @@
 			<li><a href="#obstacles">Obstacles</a></li>
 			<li><a href="#prizes">Prizes</a></li>
 			<li><a href="#be-a-contestant">Be a contestant</a></li>
-			<li><a href="#top">Back to top</a></li>
+			<li><a href="#">Back to top</a></li>
 		</ul>
 	</nav>
 	
@@ -22,7 +22,7 @@
 		<p>Airing Thursdays on the Knucklelodeon Network</p>
 	</header>
 	
-	<section>
+	<section id="obstacles">
 		<h1>Obstacles</h1>
 		<ul>
 			<li>
@@ -52,7 +52,7 @@
 		</ul>
 	</section>
 	
-	<section>
+	<section id="prizes">
 		<h1>Prizes</h1>
 		<ul>
 			<li>A Trip to Space Camp!</li>
@@ -62,14 +62,22 @@
 		</ul>
 	</section>
 	
-	<section>
+	<section id="be-a-contestant">
 		<h1>Be a Contestant</h1>
 		<form method="POST" action="./">
 			<fieldset>
-				<input type="text" name="name" placeholder="Your name" />
-				<input type="email" name="email" placeholder="Email address" />
-				<input type="text" name="team-name" placeholder="Team name" />
-				<select name="team-color">
+				
+				<label for="name">Name</label>
+				<input id="name" type="text" name="name" placeholder="Your name" />
+				
+				<label for="email">Email</label>
+				<input id="email" type="email" name="email" placeholder="Email address" />
+				
+				<label for="team-name">Team name</label>
+				<input id="team-name" type="text" name="team-name" placeholder="Team name" />
+				
+				<label for="team-color">Team color</label>
+				<select id="team-color" name="team-color">
 					<option value="red">Red</option>
 					<option value="blue">Blue</option>
 					<option value="green">Green</option>
@@ -77,11 +85,16 @@
 					<option value="purple">Purple</option>
 					<option value="silver">Silver</option>
 				</select>
-				<select name="gender">
+				
+				<label for="gender">Gender</label>
+				<select id="gender" name="gender">
 					<option value="male">Male</option>
 					<option value="female">Female</option>
 				</select>
-				<input type="url" name="photo" placeholder="Profile photo url" />
+				
+				<label for="photo-url">Profile photo URL</label>
+				<input id="photo-url" type="url" name="photo" placeholder="Profile photo url" />
+				
 				<input type="submit" value="Submit entry!" />
 			</fieldset>
 		</form>
