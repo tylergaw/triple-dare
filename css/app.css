@@ -262,7 +262,7 @@ section h1 {
 /* - Be a contestant form ------------------------------ */
 label {
   display: block;
-  height: 0;
+  height: 0.6em;
   visibility: hidden;
 }
 
@@ -292,6 +292,24 @@ input[type="url"] {
 ::-moz-placeholder {
   color: #fff;
   padding-top: 0.3em;
+}
+
+input[type="submit"] {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font: 1.4em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  letter-spacing: 0.07em;
+  margin-top: 1em;
+  padding: 1em 0.4em;
+  text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 
 /* - Page-supporting content footer -------------------- */

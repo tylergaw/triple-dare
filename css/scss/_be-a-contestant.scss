@@ -10,7 +10,7 @@
 /* - Be a contestant form ------------------------------ */
 label {
 	display: block;
-	height: 0;
+	height: 0.6em;
 	visibility: hidden;
 }
 
@@ -39,4 +39,18 @@ input[type="url"] {
 ::-moz-placeholder {
 	color: #fff;
 	padding-top: 0.3em;
+}
+
+input[type="submit"] {
+	background-color: transparent;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	@include komikaPaint(1.4em);
+	letter-spacing: 0.07em;
+	margin-top: 1em;
+	padding: 1em 0.4em;
+	@include text-shadow(rgba(0, 0, 0, 0.2), 4px, 5px, 0);
+	@include rotate(-5deg);
 }
