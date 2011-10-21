@@ -4,6 +4,11 @@ section {
 	border-left: 0;
 	border-right: 0;
 	
+	& > div {
+		margin: 0 auto;
+		width: 95%;
+	}
+	
 	h1 {
 		color: #fff;
 		@include komikaPaint(1.9em);
