@@ -5,9 +5,12 @@
 	text-align: center;
 	
 	h1 {
+		background: transparent url(../images/branding.png) no-repeat center;
 		color: #fff;
+		height: 221px;
 		@include komikaPaint(4.2em, 1.2em);
 		@include text-shadow(#fe6537, 4px, 4px, 0);
+		text-indent: -300em;
 	}
 	
 	h2 {

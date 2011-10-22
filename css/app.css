@@ -126,9 +126,12 @@ body > nav a:hover {
   text-align: center;
 }
 [role="banner"] h1 {
+  background: transparent url(../images/branding.png) no-repeat center;
   color: #fff;
+  height: 221px;
   font: 4.2em/1.2em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   text-shadow: #fe6537 4px 4px 0;
+  text-indent: -300em;
 }
 [role="banner"] h2 {
   color: #fe6537;
