@@ -89,7 +89,7 @@ hr {
 
 /* - General styles ------------------------------------ */
 body {
-  background-color: #80c1d6;
+  background: #80c1d6 url(../images/body-bg-splat.png) no-repeat center top;
   caption-side: top;
   display: table;
   font: 100%/1em "OpenSansSemibold", helvetica, arial, sans-serif;
@@ -128,7 +128,7 @@ body > nav a:hover {
   text-align: center;
 }
 [role="banner"] h1 {
-  background: transparent url(../images/branding.png) no-repeat 54% top;
+  background: transparent url(../images/branding.png) no-repeat center top;
   color: #fff;
   font: 4.2em/1.2em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   height: 221px;

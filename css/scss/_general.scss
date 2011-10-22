@@ -1,6 +1,6 @@
 /* - General styles ------------------------------------ */
 body {
-	background-color: #80c1d6;
+	background: #80c1d6 url(../images/body-bg-splat.png) no-repeat center top;
 	caption-side: top;
 	display: table;
 	@include openSansSemibold(100%);
