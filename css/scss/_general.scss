@@ -1,6 +1,9 @@
 /* - General styles ------------------------------------ */
 body {
-	background: #80c1d6 url(../images/body-bg-splat.png) no-repeat center top;
+	background-color: #80c1d6;
+	background-image: url(../images/body-bg-splat.png), url(../images/texture-blue.png);
+	background-repeat: no-repeat, repeat; 
+	background-position: 60% top, 90%;
 	caption-side: top;
 	display: table;
 	@include openSansSemibold(100%);
