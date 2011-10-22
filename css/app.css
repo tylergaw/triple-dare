@@ -240,9 +240,8 @@ section h1 {
   overflow: hidden;
 }
 #prizes li {
-  float: left;
   line-height: 1.6em;
-  margin: 1em 0 1.8em 0;
+  margin: 1em 0 2.4em 0;
 }
 #prizes img {
   display: block;
