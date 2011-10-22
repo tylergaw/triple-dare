@@ -178,7 +178,7 @@ section h1 {
 
 /* - Obstacles section specifics ----------------------- */
 #obstacles {
-  background-color: #fe6638;
+  background: #fe6638 url(../images/texture-orange) repeat 90%;
   color: #fff;
   font: 0.9em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   text-align: center;
@@ -239,7 +239,7 @@ section h1 {
 
 /* - Prizes section specifics -------------------------- */
 #prizes {
-  background-color: #7eb036;
+  background: #7eb036 url(../images/texture-green) repeat 90%;
   color: #fff;
   font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   text-align: center;
