@@ -9,6 +9,13 @@
 	text-align: center;
 	width: 95%;
 	
+	section {
+		border: 0;
+		margin: 0 auto;
+		max-width: 620px;
+		overflow: hidden;
+	}
+	
 	h2, h3 {
 		clear: both;
 		font-size: 1.4em;
@@ -17,25 +24,26 @@
 	}
 	
 	h3 {
-		padding-top: 2em;
+		padding-top: 1.8em;
 	}
 	
-	p {
+	p, ul {
 		float: right;
 		line-height: 1.4em;
 		text-align: left;
 		width: 48%;
 	}
 	
-	h2 + p {
+	h2 + p,
+	h3 + ul {
 		float: left;
 		text-align: right;
 	}
 	
-	p:last-child {
+ 	section + p {
 		border-top: 6px solid rgba(0, 0, 0, 0.1);
 		float: none;
-		margin-top: 1.6em;
+		margin-top: 1.9em;
 		padding: 1.4em 0 1.8em 0;
 		text-align: center;
 		width: auto;

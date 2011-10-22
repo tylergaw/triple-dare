@@ -322,6 +322,12 @@ input[type="submit"] {
   text-align: center;
   width: 95%;
 }
+[role="contentinfo"] section {
+  border: 0;
+  margin: 0 auto;
+  max-width: 620px;
+  overflow: hidden;
+}
 [role="contentinfo"] h2, [role="contentinfo"] h3 {
   clear: both;
   font-size: 1.4em;
@@ -329,22 +335,23 @@ input[type="submit"] {
   margin-bottom: 0.4em;
 }
 [role="contentinfo"] h3 {
-  padding-top: 2em;
+  padding-top: 1.8em;
 }
-[role="contentinfo"] p {
+[role="contentinfo"] p, [role="contentinfo"] ul {
   float: right;
   line-height: 1.4em;
   text-align: left;
   width: 48%;
 }
-[role="contentinfo"] h2 + p {
+[role="contentinfo"] h2 + p,
+[role="contentinfo"] h3 + ul {
   float: left;
   text-align: right;
 }
-[role="contentinfo"] p:last-child {
+[role="contentinfo"] section + p {
   border-top: 6px solid rgba(0, 0, 0, 0.1);
   float: none;
-  margin-top: 1.6em;
+  margin-top: 1.9em;
   padding: 1.4em 0 1.8em 0;
   text-align: center;
   width: auto;
