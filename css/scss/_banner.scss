@@ -1,23 +1,26 @@
 /* - Page banner containing branding and tagline ------- */
 [role="banner"] {
 	
-	margin: 1.2em 0 2.2em 0;
+	background: transparent url(../images/branding-splat.png) no-repeat center -5.2em;
+	margin: 0 0 2.2em 0;
+	padding-top: 1.4em;
 	text-align: center;
 	
 	h1 {
-		background: transparent url(../images/branding.png) no-repeat center;
+		background: transparent url(../images/branding.png) no-repeat 54% top;
 		color: #fff;
-		height: 221px;
 		@include komikaPaint(4.2em, 1.2em);
+		height: 221px;
 		@include text-shadow(#fe6537, 4px, 4px, 0);
 		text-indent: -300em;
+		width: 100%;
 	}
 	
 	h2 {
 		color: #fe6537;
-		@include komikaPaint(2.4em, 1.1em);
+		@include komikaPaint(1.8em, 1.1em);
 		letter-spacing: 0.05em;
-		margin: 0.6em auto 0 auto;
+		margin: 3.8em auto 0 auto;
 		text-transform: uppercase;
 		@include text-shadow(rgba(242, 242, 242, 1), 2px, 2px, 0);
 		width: 95%;
