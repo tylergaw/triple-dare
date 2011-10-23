@@ -79,14 +79,6 @@ hr {
   font-weight: normal;
 }
 
-@font-face {
-  font-family: "KomikaTitle-WideRegular";
-  src: url("/fonts/KomikaTitle-Wide-webfont.eot");
-  src: url("/fonts/KomikaTitle-Wide-webfont.eot?iefix") format("embedded-opentype"), url("/fonts/KomikaTitle-Wide-webfont.woff") format("woff"), url("/fonts/KomikaTitle-Wide-webfont.ttf") format("truetype"), url("/fonts/KomikaTitle-Wide-webfont.svg#webfontKomikaTitleWideRegular") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
 /* - General styles ------------------------------------ */
 body {
   background-color: #80c1d6;

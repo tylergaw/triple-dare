@@ -26,9 +26,3 @@ $font-path: '/fonts' !default;
 @mixin komikaPaint($font-size, $line-height: 1em) {
 	font: #{$font-size}/#{$line-height} 'KomikaTitle-PaintRegular', 'Comic Sans MS', sans-serif;
 }
-
-@include font-face('KomikaTitle-WideRegular', 'KomikaTitle-Wide-webfont', 'KomikaTitleWideRegular');
-
-@mixin komikaWide($font-size, $line-height: 1em) {
-	font: #{$font-size}/#{$line-height} 'KomikaTitle-WideRegular', 'Comic Sans MS', sans-serif;
-}
