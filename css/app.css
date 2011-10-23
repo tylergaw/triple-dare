@@ -164,6 +164,7 @@ section {
 }
 section > div {
   margin: 0 auto;
+  overflow: hidden;
   width: 95%;
 }
 section h1 {
@@ -173,9 +174,12 @@ section h1 {
   background-position: 0 0, 18px 18px;
   color: #fff;
   font: 2.4em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  left: 10.5em;
   letter-spacing: 0.05em;
   margin: 0.8em 0 1em 0;
+  position: relative;
   text-align: left;
+  text-indent: -10.5em;
   text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
 }
@@ -186,6 +190,10 @@ section h1 {
   color: #fff;
   font: 0.9em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   text-align: center;
+}
+#obstacles h1 {
+  left: 6.8em;
+  text-indent: -6.8em;
 }
 #obstacles h3 {
   font-size: 2.2em;
@@ -250,6 +258,8 @@ section h1 {
 }
 #prizes h1 {
   font-size: 2.18em;
+  left: 4.5em;
+  text-indent: -4.5em;
 }
 #prizes ul {
   margin-bottom: 1.6em;

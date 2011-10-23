@@ -5,6 +5,11 @@
 	@include komikaPaint(0.9em);
 	text-align: center;
 	
+	h1 {
+		left: 6.8em;
+		text-indent: -6.8em;
+	}
+	
 	h3 {
 		font-size: 2.2em;
 		line-height: 1.4em;

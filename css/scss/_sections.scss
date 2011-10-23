@@ -7,6 +7,7 @@ section {
 	
 	& > div {
 		margin: 0 auto;
+		overflow: hidden;
 		width: 95%;
 	}
 	
@@ -18,9 +19,12 @@ section {
 		background-position: 0 0, 18px 18px;
 		color: #fff;
 		@include komikaPaint(2.4em);
+		left: 10.5em;
 		letter-spacing: 0.05em;
 		margin: 0.8em 0 1em 0;
+		position: relative;
 		text-align: left;
+		text-indent: -10.5em;
 		text-transform: uppercase;
 		@include text-shadow(rgba(0, 0, 0, 0.15) 3px 4px 0);
 	}
