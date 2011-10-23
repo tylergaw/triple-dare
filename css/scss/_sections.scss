@@ -11,6 +11,11 @@ section {
 	}
 	
 	h1 {
+		background-color: transparent;
+		background-image: -webkit-linear-gradient(45deg, #eef13f 25%, transparent 25%, transparent 75%, #eef13f 75%),
+						  -webkit-linear-gradient(45deg, #eef13f 25%, transparent 25%, transparent 75%, #eef13f 75%);
+		background-size: 34px 34px;
+		background-position: 0 0, 18px 18px;
 		color: #fff;
 		@include komikaPaint(2.4em);
 		letter-spacing: 0.05em;
