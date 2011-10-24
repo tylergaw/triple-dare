@@ -95,7 +95,7 @@ body {
 /* - Main navigation ----------------------------------- */
 body > nav {
   background-color: rgba(15, 40, 48, 0.1);
-  margin: 1.7em auto 0 auto;
+  margin: 1.7em auto 3.6em auto;
   text-align: center;
   width: 95%;
 }
