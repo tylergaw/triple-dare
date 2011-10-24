@@ -336,10 +336,10 @@ input[type="submit"] {
   position: relative;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
-  -moz-transition-property: background-size;
-  -webkit-transition-property: background-size;
-  -o-transition-property: background-size;
-  transition-property: background-size;
+  -moz-transition-property: background-size -webkit-transform -moz-transform;
+  -webkit-transition-property: background-size -webkit-transform -moz-transform;
+  -o-transition-property: background-size -webkit-transform -moz-transform;
+  transition-property: background-size -webkit-transform -moz-transform;
   -moz-transition-duration: 0.07s;
   -webkit-transition-duration: 0.07s;
   -o-transition-duration: 0.07s;
@@ -360,6 +360,11 @@ input[type="submit"]:hover {
   -webkit-background-size: 72%;
   -o-background-size: 72%;
   background-size: 72%;
+  -moz-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  transform: rotate(-1deg);
 }
 
 /* - Page-supporting content footer -------------------- */
