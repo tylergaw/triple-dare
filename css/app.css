@@ -114,6 +114,23 @@ body > nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   text-shadow: rgba(0, 0, 0, 0.2) 0 1px 0;
 }
+@media screen and (min-width: 32em) {
+  body > nav {
+    background-color: rgba(15, 40, 48, 0.2);
+    display: table-caption;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  body > nav li {
+    display: inline-block;
+  }
+  body > nav a {
+    border-bottom: 0;
+    padding: 0.5em 0.8em;
+  }
+}
 
 /* - Page banner containing branding and tagline ------- */
 [role="banner"] {
