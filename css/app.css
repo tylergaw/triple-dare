@@ -312,7 +312,11 @@ input[type="url"] {
 }
 
 input[type="submit"] {
-  background-color: transparent;
+  background: transparent url(../images/green-on-blue-splat.png) no-repeat center;
+  -moz-background-size: 65%;
+  -webkit-background-size: 65%;
+  -o-background-size: 65%;
+  background-size: 65%;
   border: 0;
   color: #fff;
   cursor: pointer;
@@ -320,13 +324,19 @@ input[type="submit"] {
   font: 1.5em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.07em;
   margin-top: 1em;
-  padding: 1em 0.4em;
+  padding: 2.4em 0.4em;
   text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
   -moz-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
+}
+input[type="submit"]:hover {
+  -moz-background-size: 72%;
+  -webkit-background-size: 72%;
+  -o-background-size: 72%;
+  background-size: 72%;
 }
 
 /* - Page-supporting content footer -------------------- */

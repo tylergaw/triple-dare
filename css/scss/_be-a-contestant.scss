@@ -42,7 +42,8 @@ input[type="url"] {
 }
 
 input[type="submit"] {
-	background-color: transparent;
+	background: transparent url(../images/green-on-blue-splat.png) no-repeat center;
+	@include background-size(65%);
 	border: 0;
 	color: #fff;
 	cursor: pointer;
@@ -50,7 +51,11 @@ input[type="submit"] {
 	@include komikaPaint(1.5em);
 	letter-spacing: 0.07em;
 	margin-top: 1em;
-	padding: 1em 0.4em;
+	padding: 2.4em 0.4em;
 	@include text-shadow(rgba(0, 0, 0, 0.2), 4px, 5px, 0);
 	@include rotate(-5deg);
+	
+	&:hover {
+		@include background-size(72%);
+	}
 }
