@@ -65,16 +65,16 @@ hr {
 /* - Custom fonts -------------------------------------- */
 @font-face {
   font-family: "OpenSansSemibold";
-  src: url("/fonts/OpenSans-Semibold-webfont.eot");
-  src: url("/fonts/OpenSans-Semibold-webfont.eot?iefix") format("embedded-opentype"), url("/fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("/fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("/fonts/OpenSans-Semibold-webfont.svg#webfontOpenSansSemibold") format("svg");
+  src: url("../fonts/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/OpenSans-Semibold-webfont.eot?iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Semibold-webfont.svg#webfontOpenSansSemibold") format("svg");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "KomikaTitle-PaintRegular";
-  src: url("/fonts/KomikaTitle-Paint-webfont.eot");
-  src: url("/fonts/KomikaTitle-Paint-webfont.eot?iefix") format("embedded-opentype"), url("/fonts/KomikaTitle-Paint-webfont.woff") format("woff"), url("/fonts/KomikaTitle-Paint-webfont.ttf") format("truetype"), url("/fonts/KomikaTitle-Paint-webfont.svg#webfontKomikaTitle-PaintRegular") format("svg");
+  src: url("../fonts/KomikaTitle-Paint-webfont.eot");
+  src: url("../fonts/KomikaTitle-Paint-webfont.eot?iefix") format("embedded-opentype"), url("../fonts/KomikaTitle-Paint-webfont.woff") format("woff"), url("../fonts/KomikaTitle-Paint-webfont.ttf") format("truetype"), url("../fonts/KomikaTitle-Paint-webfont.svg#webfontKomikaTitle-PaintRegular") format("svg");
   font-style: normal;
   font-weight: normal;
 }
