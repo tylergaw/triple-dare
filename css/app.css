@@ -313,24 +313,39 @@ input[type="url"] {
 
 input[type="submit"] {
   background: transparent url(../images/green-on-blue-splat.png) no-repeat center;
-  -moz-background-size: 65%;
-  -webkit-background-size: 65%;
-  -o-background-size: 65%;
-  background-size: 65%;
+  -moz-background-size: 60%;
+  -webkit-background-size: 60%;
+  -o-background-size: 60%;
+  background-size: 60%;
   border: 0;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   font: 1.5em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.07em;
-  margin-top: 1em;
-  padding: 2.4em 0.4em;
+  margin: 1em auto 0 auto;
+  padding: 2.6em 0;
+  position: relative;
+  text-align: center;
   text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
+  -moz-transition-property: background-size;
+  -webkit-transition-property: background-size;
+  -o-transition-property: background-size;
+  transition-property: background-size;
+  -moz-transition-duration: 0.07s;
+  -webkit-transition-duration: 0.07s;
+  -o-transition-duration: 0.07s;
+  transition-duration: 0.07s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
   -moz-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
+  width: 9.2em;
 }
 input[type="submit"]:hover {
   -moz-background-size: 72%;

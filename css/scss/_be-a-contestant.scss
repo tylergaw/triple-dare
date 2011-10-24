@@ -43,17 +43,23 @@ input[type="url"] {
 
 input[type="submit"] {
 	background: transparent url(../images/green-on-blue-splat.png) no-repeat center;
-	@include background-size(65%);
+	@include background-size(60%);
 	border: 0;
 	color: #fff;
 	cursor: pointer;
-	display: inline-block;
+	display: block;
 	@include komikaPaint(1.5em);
 	letter-spacing: 0.07em;
-	margin-top: 1em;
-	padding: 2.4em 0.4em;
+	margin: 1em auto 0 auto;
+	padding: 2.6em 0;
+	position: relative;
+	text-align: center;
 	@include text-shadow(rgba(0, 0, 0, 0.2), 4px, 5px, 0);
+	@include transition-property(background-size);
+	@include transition-duration(0.07s);
+	@include transition-timing-function(ease);
 	@include rotate(-5deg);
+	width: 9.2em;
 	
 	&:hover {
 		@include background-size(72%);
