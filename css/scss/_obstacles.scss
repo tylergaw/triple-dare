@@ -42,29 +42,67 @@
 		overflow: hidden;
 		
 		li {
+			background: #7eb036 url(../images/texture-green.png) repeat 90%;
+			@include border-radius(6px);
 			display: block;
-			float: left;
-			margin: 0.45em 0 0.45em 2.5%;
-			width: 45%;
+			//float: left;
+			margin: 0.45em 0;
+			width: 100%;
+			
+			&:hover {
+				background: #7eb036 url(../images/texture-yellow.png) repeat 90%;
+			}
 		}
 	}
 	
 	a {
-		background-color: #80b238;
-		@include border-radius(4px);
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center 1em;
+		@include background-size(40%);
+		@include border-radius(6px);
 		color: #fff;
 		display: block;
 		max-width: 100%;
 		overflow: hidden;
-		padding: 0.4em;
+		padding: 50% 0 0.9em 0;
 		text-align: center;
 		text-decoration: none;
 		text-overflow: ellipsis;
+		@include transition-property(background-size background-position);
+		@include transition-duration(0.08s);
+		@include transition-timing-function(ease);
 		white-space: nowrap;
 		
 		&:hover {
-			background-color: #eef13f;
 			color: #f46034;
+			background-position: center 0.5em;
+			@include background-size(43%);
 		}
 	}
+	
+	a[href*="tank"] {
+		background-image: url(../images/obstacle-the-tank.png);
+	}
+	
+	a[href*="sundae"] {
+		background-image: url(../images/obstacle-sundae-slide.png);
+	}
+	
+	a[href*="hamster"] {
+		background-image: url(../images/obstacle-human-hamster-wheel.png);
+	}
+	
+	a[href*="hatch"] {
+		background-image: url(../images/obstacle-down-the-hatch.png);
+	}
+	
+	a[href*="pick"] {
+		background-image: url(../images/obstacle-pick-it.png);
+	}
+	
+	a[href*="wringer"] {
+		background-image: url(../images/obstacle-the-wringer.png);
+	}
 }
+
