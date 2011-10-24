@@ -5,7 +5,7 @@
 	color: #fff;
 	font-size: 0.9em;
 	margin: 2em auto 0 auto;
-	padding-top: 1.2em;
+	padding: 1.2em 0;
 	text-align: center;
 	width: 95%;
 	
@@ -60,10 +60,11 @@
 	}
 	
  	section + p {
+		background: transparent url(../images/creative-commons-logo.png) no-repeat center bottom;
 		border-top: 6px solid rgba(0, 0, 0, 0.1);
 		float: none;
 		margin-top: 1.9em;
-		padding: 1.4em 0 1.8em 0;
+		padding: 1.4em 0 3.4em 0;
 		text-align: center;
 		width: auto;
 	}
