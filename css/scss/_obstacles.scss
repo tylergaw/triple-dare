@@ -10,31 +10,75 @@
 		text-indent: -6.7em;
 	}
 	
+	li {
+		background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
+		margin-bottom: 2em;
+		padding-top: 4.2em;
+	}
+	
 	h3 {
 		font-size: 2.2em;
 		line-height: 1.4em;
+		@include rotate(-5deg);
 	}
 	
 	p {
 		font-size: 1.3em;
 		line-height: 1.2em;
-		margin: 0.3em 0 0.6em 0;
+		margin: 0.3em 0 1.5em 0;
+		@include rotate(-5deg);
 	}
 	
 	h3, p {
 		@include text-shadow(rgba(0, 0, 0, 0.15), 3px, 4px, 0);
 	}
 	
-	li {
+	img {
+		display: block;
+		width: 100%;
+	}
+	
+	nav {
 		display: none;
+	}
+	
+	@media screen and (min-width: 32em) {
 		
-		&:target {
+		p {
+			margin-bottom: 2.4em;
+		}
+		
+		ul, nav {
+			width: 47.9166667%;
+		}
+		
+		ul {
+			float: right;
+		}
+		
+		nav ul {
+			float: none;
+			width: 90%;
+		}
+		
+		li {
+			display: none;
+			padding-top: 3.4em;
+
+			&:target {
+				display: block;
+			}
+		}
+		
+		nav {
 			display: block;
 		}
 	}
 	
-	img {
-		max-width: 100%;
+	@media screen and (min-width: 38em) {
+		h3 {
+			font-size: 3em;
+		}
 	}
 	
 	nav {
@@ -45,9 +89,8 @@
 			background: #7eb036 url(../images/texture-green.png) repeat 90%;
 			@include border-radius(6px);
 			display: block;
-			//float: left;
 			margin: 0.45em 0;
-			width: 100%;
+			padding-top: 0;
 			
 			&:hover {
 				background: #7eb036 url(../images/texture-yellow.png) repeat 90%;

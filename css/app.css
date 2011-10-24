@@ -195,26 +195,69 @@ section h1 {
   left: 6.8em;
   text-indent: -6.7em;
 }
+#obstacles li {
+  background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
+  margin-bottom: 2em;
+  padding-top: 4.2em;
+}
 #obstacles h3 {
   font-size: 2.2em;
   line-height: 1.4em;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 #obstacles p {
   font-size: 1.3em;
   line-height: 1.2em;
-  margin: 0.3em 0 0.6em 0;
+  margin: 0.3em 0 1.5em 0;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 #obstacles h3, #obstacles p {
   text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
 }
-#obstacles li {
+#obstacles img {
+  display: block;
+  width: 100%;
+}
+#obstacles nav {
   display: none;
 }
-#obstacles li:target {
-  display: block;
+@media screen and (min-width: 32em) {
+  #obstacles p {
+    margin-bottom: 2.4em;
+  }
+  #obstacles ul, #obstacles nav {
+    width: 47.9166667%;
+  }
+  #obstacles ul {
+    float: right;
+  }
+  #obstacles nav ul {
+    float: none;
+    width: 90%;
+  }
+  #obstacles li {
+    display: none;
+    padding-top: 3.4em;
+  }
+  #obstacles li:target {
+    display: block;
+  }
+  #obstacles nav {
+    display: block;
+  }
 }
-#obstacles img {
-  max-width: 100%;
+@media screen and (min-width: 38em) {
+  #obstacles h3 {
+    font-size: 3em;
+  }
 }
 #obstacles nav {
   margin: 1.8em 0 1.2em 0;
@@ -230,7 +273,7 @@ section h1 {
   border-radius: 6px;
   display: block;
   margin: 0.45em 0;
-  width: 100%;
+  padding-top: 0;
 }
 #obstacles nav li:hover {
   background: #7eb036 url(../images/texture-yellow.png) repeat 90%;
