@@ -49,7 +49,7 @@
 		}
 		
 		ul, nav {
-			width: 47.9166667%;
+			width: 48.9361702%;
 		}
 		
 		ul {
@@ -81,6 +81,17 @@
 		}
 	}
 	
+	@media screen and (min-width: 43em) {
+		nav li {
+			float: left;
+			width: 47.826087%;
+		}
+		
+		nav li:nth-child(2n) {
+			float: right;
+		}
+	}
+	
 	nav {
 		margin: 1.8em 0 1.2em 0;
 		overflow: hidden;
@@ -89,7 +100,7 @@
 			background: #7eb036 url(../images/texture-green.png) repeat 90%;
 			@include border-radius(6px);
 			display: block;
-			margin: 0.45em 0;
+			margin: 0.6em 0;
 			padding-top: 0;
 			
 			&:hover {
@@ -101,26 +112,25 @@
 	a {
 		background-color: transparent;
 		background-repeat: no-repeat;
-		background-position: center 1em;
-		@include background-size(40%);
+		background-position: center 0.8em;
+		@include background-size(75%);
 		@include border-radius(6px);
 		color: #fff;
 		display: block;
-		max-width: 100%;
 		overflow: hidden;
-		padding: 50% 0 0.9em 0;
+		padding: 90% 0.6em 0.9em 0.6em;
 		text-align: center;
 		text-decoration: none;
 		text-overflow: ellipsis;
 		@include transition-property(background-size background-position);
-		@include transition-duration(0.08s);
+		@include transition-duration(0.06s);
 		@include transition-timing-function(ease);
 		white-space: nowrap;
 		
 		&:hover {
 			color: #f46034;
-			background-position: center 0.5em;
-			@include background-size(43%);
+			background-position: center 0.4em;
+			@include background-size(83%);
 		}
 	}
 	
