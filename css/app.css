@@ -343,7 +343,22 @@ input[type="submit"] {
   border: 0;
   margin: 0 auto;
   max-width: 620px;
-  overflow: hidden;
+}
+[role="contentinfo"] section:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+[role="contentinfo"] h2 {
+  margin-top: -3em;
+}
+[role="contentinfo"] h2:before {
+  background: transparent url(../images/knucklelodeon-logo.png) no-repeat center;
+  content: " ";
+  display: block;
+  height: 85px;
+  margin: 0 auto 1em auto;
+  width: 134px;
 }
 [role="contentinfo"] h2, [role="contentinfo"] h3 {
   clear: both;

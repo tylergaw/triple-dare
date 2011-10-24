@@ -13,7 +13,26 @@
 		border: 0;
 		margin: 0 auto;
 		max-width: 620px;
-		overflow: hidden;
+		
+		&:after {
+			clear: both;
+			content: " ";
+			display: block;
+		}
+	}
+	
+	h2 {
+		
+		margin-top: -3em;
+		
+		&:before {
+			background: transparent url(../images/knucklelodeon-logo.png) no-repeat center;
+			content: " ";
+			display: block;
+			height: 85px;
+			margin: 0 auto 1em auto;
+			width: 134px;
+		}
 	}
 	
 	h2, h3 {
