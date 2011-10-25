@@ -109,6 +109,18 @@ body > nav a {
   padding: 0.5em 0;
   text-decoration: none;
   text-transform: uppercase;
+  -moz-transition-property: padding;
+  -webkit-transition-property: padding;
+  -o-transition-property: padding;
+  transition-property: padding;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 body > nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
@@ -129,6 +141,11 @@ body > nav a:hover {
   body > nav a {
     border-bottom: 0;
     padding: 0.5em 0.8em;
+  }
+}
+@media screen and (min-width: 43em) {
+  body > nav a {
+    padding: 0.5em 1.6em;
   }
 }
 
