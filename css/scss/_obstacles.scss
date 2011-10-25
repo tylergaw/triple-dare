@@ -2,7 +2,6 @@
 #obstacles {
 	background: #fe6638 url(../images/texture-orange.png) repeat 90%;
 	color: #fff;
-	@include komikaPaint(0.9em);
 	text-align: center;
 	
 	h1 {
@@ -13,7 +12,7 @@
 	li {
 		background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
 		margin-bottom: 2em;
-		padding-top: 4.2em;
+		padding-top: 3.6em;
 	}
 	
 	h3 {

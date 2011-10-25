@@ -4,6 +4,7 @@ section {
 	border: 6px solid rgba(0, 0, 0, 0.1);
 	border-left: 0;
 	border-right: 0;
+	@include komikaPaint(1em);
 	
 	& > div {
 		margin: 0 auto;
@@ -19,7 +20,6 @@ section {
 		background-size: 34px 34px;
 		background-position: 0 0, 18px 18px;
 		color: #fff;
-		@include komikaPaint(2.4em);
 		left: 10.5em;
 		letter-spacing: 0.05em;
 		margin: 1.2em 0 1em 0;

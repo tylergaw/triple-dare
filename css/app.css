@@ -250,6 +250,7 @@ section {
   border: 6px solid rgba(0, 0, 0, 0.1);
   border-left: 0;
   border-right: 0;
+  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
 }
 section > div {
   margin: 0 auto;
@@ -270,7 +271,6 @@ section h1 {
   background-size: 34px 34px;
   background-position: 0 0, 18px 18px;
   color: #fff;
-  font: 2.4em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   left: 10.5em;
   letter-spacing: 0.05em;
   margin: 1.2em 0 1em 0;
@@ -285,7 +285,6 @@ section h1 {
 #obstacles {
   background: #fe6638 url(../images/texture-orange.png) repeat 90%;
   color: #fff;
-  font: 0.9em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   text-align: center;
 }
 #obstacles h1 {
@@ -295,7 +294,7 @@ section h1 {
 #obstacles li {
   background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
   margin-bottom: 2em;
-  padding-top: 4.2em;
+  padding-top: 3.6em;
 }
 #obstacles h3 {
   font-size: 2.2em;
@@ -450,11 +449,9 @@ section h1 {
 #prizes {
   background: #7eb036 url(../images/texture-green.png) repeat 90%;
   color: #fff;
-  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   text-align: center;
 }
 #prizes h1 {
-  font-size: 2.18em;
   left: 4.5em;
   text-indent: -4.4em;
 }
@@ -476,9 +473,6 @@ section h1 {
 /* - Be a contestant section specifics ----------------- */
 #be-a-contestant {
   border-bottom: 0;
-}
-#be-a-contestant h1 {
-  font-size: 2.18em;
 }
 
 /* - Be a contestant form ------------------------------ */
@@ -576,6 +570,7 @@ input[type="submit"]:hover {
 }
 [role="contentinfo"] section {
   border: 0;
+  font: 1em/1em "OpenSansSemibold", helvetica, arial, sans-serif;
   margin: 0 auto;
   max-width: 620px;
 }
