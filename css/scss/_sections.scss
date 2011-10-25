@@ -13,20 +13,37 @@ section {
 	}
 	
 	h1 {
-		background-color: transparent;
-		@include background(linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), 
-						linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%));
-		@include background-size(34px 34px);
-		background-size: 34px 34px;
-		background-position: 0 0, 18px 18px;
 		color: #fff;
-		left: 10.5em;
+		font-size: 1.6em;
 		letter-spacing: 0.05em;
 		margin: 1.2em 0 1em 0;
-		position: relative;
-		text-align: left;
-		text-indent: -10.4em;
+		text-align: center;
 		text-transform: uppercase;
 		@include text-shadow(rgba(0, 0, 0, 0.15) 3px 4px 0);
+	}
+	
+	@media screen and (min-width: 28em) {
+		h1 {
+			background-color: transparent;
+			@include background(linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), 
+							linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%));
+			@include background-size(28px 28px);
+			background-position: 0 0, 14px 14px;
+			left: 10.8em;
+			line-height: 1.1em;
+			position: relative;
+			text-align: left;
+			text-indent: -10.7em;
+		}
+	}
+	
+	@media screen and (min-width: 43em) {
+		h1 {
+			@include background-size(40px 40px);
+			background-position: 0 0, 20px 20px;
+			font-size: 2.5em;
+			line-height: 1em;
+			margin-top: 1.4em;
+		}
 	}
 }

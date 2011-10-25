@@ -258,27 +258,45 @@ section > div {
   width: 95%;
 }
 section h1 {
-  background-color: transparent;
-  background: -webkit-gradient(linear, 45deg, 45deg, color-stop(25%, #eef13f), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #eef13f)), -webkit-gradient(linear, 45deg, 45deg, color-stop(25%, #eef13f), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #eef13f));
-  background: -webkit-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), -webkit-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
-  background: -moz-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), -moz-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
-  background: -o-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), -o-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
-  background: linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
-  -moz-background-size: 34px 34px;
-  -webkit-background-size: 34px 34px;
-  -o-background-size: 34px 34px;
-  background-size: 34px 34px;
-  background-size: 34px 34px;
-  background-position: 0 0, 18px 18px;
   color: #fff;
-  left: 10.5em;
+  font-size: 1.6em;
   letter-spacing: 0.05em;
   margin: 1.2em 0 1em 0;
-  position: relative;
-  text-align: left;
-  text-indent: -10.4em;
+  text-align: center;
   text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
+}
+@media screen and (min-width: 28em) {
+  section h1 {
+    background-color: transparent;
+    background: -webkit-gradient(linear, 45deg, 45deg, color-stop(25%, #eef13f), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #eef13f)), -webkit-gradient(linear, 45deg, 45deg, color-stop(25%, #eef13f), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #eef13f));
+    background: -webkit-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), -webkit-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
+    background: -moz-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), -moz-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
+    background: -o-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), -o-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
+    background: linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%), linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%);
+    -moz-background-size: 28px 28px;
+    -webkit-background-size: 28px 28px;
+    -o-background-size: 28px 28px;
+    background-size: 28px 28px;
+    background-position: 0 0, 14px 14px;
+    left: 10.8em;
+    line-height: 1.1em;
+    position: relative;
+    text-align: left;
+    text-indent: -10.7em;
+  }
+}
+@media screen and (min-width: 43em) {
+  section h1 {
+    -moz-background-size: 40px 40px;
+    -webkit-background-size: 40px 40px;
+    -o-background-size: 40px 40px;
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    font-size: 2.5em;
+    line-height: 1em;
+    margin-top: 1.4em;
+  }
 }
 
 /* - Obstacles section specifics ----------------------- */
