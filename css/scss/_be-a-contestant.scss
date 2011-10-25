@@ -55,9 +55,10 @@ input[type="submit"] {
 	position: relative;
 	text-align: center;
 	@include text-shadow(rgba(0, 0, 0, 0.2), 4px, 5px, 0);
-	@include transition-property(background-size -webkit-transform -moz-transform);
+	@include transition-property(background-size -webkit-transform -moz-transform -o-transform transform);
 	@include transition-duration(0.07s);
 	@include transition-timing-function(ease);
+	
 	@include rotate(-5deg);
 	width: 9.2em;
 	

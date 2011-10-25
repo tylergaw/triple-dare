@@ -189,18 +189,10 @@ body > nav a:hover {
   margin: 10% auto 0 auto;
   text-transform: uppercase;
   text-shadow: #f2f2f2 2px 2px 0;
-  -moz-transition-property: font-size;
-  -webkit-transition-property: font-size;
-  -o-transition-property: font-size;
-  transition-property: font-size;
-  -moz-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -moz-transition-timing-function: ease;
-  -webkit-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
+  -moz-transition: font-size 0.2s ease;
+  -webkit-transition: font-size 0.2s ease;
+  -o-transition: font-size 0.2s ease;
+  transition: font-size 0.2s ease;
 }
 [role="banner"] p {
   color: #fff;
@@ -549,10 +541,10 @@ input[type="submit"] {
   position: relative;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
-  -moz-transition-property: background-size -webkit-transform -moz-transform;
-  -webkit-transition-property: background-size -webkit-transform -moz-transform;
-  -o-transition-property: background-size -webkit-transform -moz-transform;
-  transition-property: background-size -webkit-transform -moz-transform;
+  -moz-transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
+  -webkit-transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
+  -o-transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
+  transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
   -moz-transition-duration: 0.07s;
   -webkit-transition-duration: 0.07s;
   -o-transition-duration: 0.07s;

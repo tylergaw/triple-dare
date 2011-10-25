@@ -27,9 +27,10 @@
 		margin: 10% auto 0 auto;
 		text-transform: uppercase;
 		@include text-shadow(rgba(242, 242, 242, 1), 2px, 2px, 0);
-		@include transition-property(font-size);
-		@include transition-duration(0.2s);
-		@include transition-timing-function(ease);
+		-moz-transition: font-size 0.2s ease;
+		-webkit-transition: font-size 0.2s ease;
+		-o-transition: font-size 0.2s ease;
+		transition: font-size 0.2s ease;
 	}
 	
 	p {
