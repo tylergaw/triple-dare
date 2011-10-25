@@ -305,10 +305,6 @@ section h1 {
   color: #fff;
   text-align: center;
 }
-#obstacles h1 {
-  left: 6.8em;
-  text-indent: -6.7em;
-}
 #obstacles li {
   background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
   margin-bottom: 2em;
@@ -342,6 +338,12 @@ section h1 {
 }
 #obstacles nav {
   display: none;
+}
+@media screen and (min-width: 28em) {
+  #obstacles h1 {
+    left: 6.8em;
+    text-indent: -6.7em;
+  }
 }
 @media screen and (min-width: 32em) {
   #obstacles p {
@@ -469,10 +471,6 @@ section h1 {
   color: #fff;
   text-align: center;
 }
-#prizes h1 {
-  left: 4.5em;
-  text-indent: -4.4em;
-}
 #prizes ul {
   margin-bottom: 1.6em;
   overflow: hidden;
@@ -486,6 +484,12 @@ section h1 {
   margin-bottom: 0.8em;
   max-width: 100%;
   vertical-align: middle;
+}
+@media screen and (min-width: 28em) {
+  #prizes h1 {
+    left: 4.5em;
+    text-indent: -4.4em;
+  }
 }
 
 /* - Be a contestant section specifics ----------------- */

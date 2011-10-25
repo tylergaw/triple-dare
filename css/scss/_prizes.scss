@@ -4,12 +4,6 @@
 	color: #fff;
 	text-align: center;
 	
-	h1 {
-		//font-size: 2.18em;
-		left: 4.5em;
-		text-indent: -4.4em;
-	}
-	
 	ul {
 		margin-bottom: 1.6em;
 		overflow: hidden;
@@ -25,5 +19,12 @@
 		margin-bottom: 0.8em;
 		max-width: 100%;
 		vertical-align: middle;
+	}
+	
+	@media screen and (min-width: 28em) {
+		h1 {
+			left: 4.5em;
+			text-indent: -4.4em;
+		}
 	}
 }

@@ -4,11 +4,6 @@
 	color: #fff;
 	text-align: center;
 	
-	h1 {
-		left: 6.8em;
-		text-indent: -6.7em;
-	}
-	
 	li {
 		background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
 		margin-bottom: 2em;
@@ -39,6 +34,13 @@
 	
 	nav {
 		display: none;
+	}
+	
+	@media screen and (min-width: 28em) {
+		h1 {
+			left: 6.8em;
+			text-indent: -6.7em;
+		}
 	}
 	
 	@media screen and (min-width: 32em) {
