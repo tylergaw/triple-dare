@@ -22,7 +22,7 @@
 	
 	h2 {
 		color: #fe6537;
-		@include komikaPaint(1.8em, 1.1em);
+		@include komikaPaint(1.6em, 1.3em);
 		letter-spacing: 0.05em;
 		margin: 10% auto 0 auto;
 		text-transform: uppercase;
@@ -34,7 +34,7 @@
 	
 	p {
 		color: #fff;
-		font-size: 1.2em;
+		font-size: 1em;
 		line-height: 1.4em;
 		margin: 0.6em auto 0 auto;
 		width: 95%;

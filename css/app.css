@@ -184,7 +184,7 @@ body > nav a:hover {
 }
 [role="banner"] h2 {
   color: #fe6537;
-  font: 1.8em/1.1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  font: 1.6em/1.3em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.05em;
   margin: 10% auto 0 auto;
   text-transform: uppercase;
@@ -204,7 +204,7 @@ body > nav a:hover {
 }
 [role="banner"] p {
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.4em;
   margin: 0.6em auto 0 auto;
   width: 95%;
