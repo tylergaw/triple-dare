@@ -157,16 +157,26 @@ body > nav a:hover {
 
 /* - Page banner containing branding and tagline ------- */
 [role="banner"] {
-  background: transparent url(../images/green-on-blue-splat.png) no-repeat center -5.2em;
-  margin: 0 0 2.2em 0;
-  padding-top: 1.4em;
+  background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
+  -moz-background-size: 90%;
+  -webkit-background-size: 90%;
+  -o-background-size: 90%;
+  background-size: 90%;
+  margin: 5% auto 2.2em auto;
+  padding-top: 18%;
   text-align: center;
 }
 [role="banner"] h1 {
-  background: transparent url(../images/branding.png) no-repeat center top;
+  background: transparent url(../images/branding.png) no-repeat 56% top;
+  -moz-background-size: 55%;
+  -webkit-background-size: 55%;
+  -o-background-size: 55%;
+  background-size: 55%;
   color: #fff;
   font: 4.2em/1.2em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
-  height: 221px;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: 35%;
   text-shadow: #fe6537 4px 4px 0;
   text-indent: -300em;
   width: 100%;
@@ -175,10 +185,21 @@ body > nav a:hover {
   color: #fe6537;
   font: 1.8em/1.1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.05em;
-  margin: 3.8em auto 0 auto;
+  margin: 10% auto 0 auto;
   text-transform: uppercase;
   text-shadow: #f2f2f2 2px 2px 0;
-  width: 95%;
+  -moz-transition-property: font-size;
+  -webkit-transition-property: font-size;
+  -o-transition-property: font-size;
+  transition-property: font-size;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 [role="banner"] p {
   color: #fff;
@@ -186,6 +207,28 @@ body > nav a:hover {
   line-height: 1.4em;
   margin: 0.6em auto 0 auto;
   width: 95%;
+}
+@media screen and (min-width: 33em) {
+  [role="banner"] {
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    padding-top: 6.3em;
+  }
+  [role="banner"] h1 {
+    background-position: 53% top;
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    height: 221px;
+    padding-top: 0;
+  }
+  [role="banner"] h2 {
+    font-size: 2.6em;
+    margin-top: 3.2em;
+  }
 }
 
 /* - General page sections ----------------------------- */
