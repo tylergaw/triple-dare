@@ -10,3 +10,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	width: 100%;
 }
+
+::selection {
+	background-color: #fe6638;
+	color: #fff;
+	text-shadow: none;
+}

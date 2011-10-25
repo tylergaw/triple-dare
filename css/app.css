@@ -92,6 +92,12 @@ body {
   width: 100%;
 }
 
+::selection {
+  background-color: #fe6638;
+  color: #fff;
+  text-shadow: none;
+}
+
 /* - Main navigation ----------------------------------- */
 body > nav {
   background-color: rgba(15, 40, 48, 0.1);
