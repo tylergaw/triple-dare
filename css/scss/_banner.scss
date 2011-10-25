@@ -42,6 +42,7 @@
 	
 	@media screen and (min-width: 33em) {
 		@include background-size('auto');
+		margin-bottom: 3.6em;
 		padding-top: 6.3em;
 		
 		h1 {
@@ -53,7 +54,20 @@
 		
 		h2 {
 			font-size: 2.6em;
-			margin-top: 3.2em;
+			margin-top: 3.1em;
+		}
+	}
+	
+	@media screen and (min-width: 60em) {
+		margin-bottom: 4.7em;
+		margin-top: 3.8em;
+		
+		h2 {
+			font-size: 3.2em;
+		}
+		
+		p {
+			font-size: 1.4em;
 		}
 	}
 }

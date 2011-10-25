@@ -214,6 +214,7 @@ body > nav a:hover {
     -webkit-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
+    margin-bottom: 3.6em;
     padding-top: 6.3em;
   }
   [role="banner"] h1 {
@@ -227,7 +228,19 @@ body > nav a:hover {
   }
   [role="banner"] h2 {
     font-size: 2.6em;
-    margin-top: 3.2em;
+    margin-top: 3.1em;
+  }
+}
+@media screen and (min-width: 60em) {
+  [role="banner"] {
+    margin-bottom: 4.7em;
+    margin-top: 3.8em;
+  }
+  [role="banner"] h2 {
+    font-size: 3.2em;
+  }
+  [role="banner"] p {
+    font-size: 1.4em;
   }
 }
 
