@@ -17,7 +17,7 @@ body > nav {
 		padding: 0.5em 0;
 		text-decoration: none;
 		text-transform: uppercase;
-		@include transition-property(padding);
+		@include transition-property(padding font-size);
 		@include transition-duration(0.2s);
 		@include transition-timing-function(ease);
 		
@@ -47,7 +47,8 @@ body > nav {
 	
 	@media screen and (min-width: 43em) {
 		a {
-			padding: 0.5em 1.6em;
+			font-size: 1.1em;
+			padding: 0.5em 1.5em;
 		}
 	}
 }

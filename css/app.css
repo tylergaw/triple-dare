@@ -115,10 +115,10 @@ body > nav a {
   padding: 0.5em 0;
   text-decoration: none;
   text-transform: uppercase;
-  -moz-transition-property: padding;
-  -webkit-transition-property: padding;
-  -o-transition-property: padding;
-  transition-property: padding;
+  -moz-transition-property: padding font-size;
+  -webkit-transition-property: padding font-size;
+  -o-transition-property: padding font-size;
+  transition-property: padding font-size;
   -moz-transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
   -o-transition-duration: 0.2s;
@@ -151,7 +151,8 @@ body > nav a:hover {
 }
 @media screen and (min-width: 43em) {
   body > nav a {
-    padding: 0.5em 1.6em;
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
   }
 }
 
