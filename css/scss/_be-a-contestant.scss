@@ -80,7 +80,7 @@ input[type="submit"] {
 	@include rotate(-5deg);
 	width: 9.2em;
 	
-	&:hover {
+	&:hover, &:focus {
 		@include background-size(72%);
 		@include rotate(-1deg);
 	}
