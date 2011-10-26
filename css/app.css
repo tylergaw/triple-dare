@@ -101,7 +101,7 @@ body {
 /* - Main navigation ----------------------------------- */
 body > nav {
   background-color: rgba(15, 40, 48, 0.1);
-  margin: 1.7em auto 3.6em auto;
+  margin: 0 auto 3.6em auto;
   text-align: center;
   width: 95%;
 }
@@ -554,7 +554,7 @@ input[type="submit"] {
   display: block;
   font: 1.5em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.07em;
-  margin: 1em auto 0 auto;
+  margin: 0.2em auto 1.2em auto;
   padding: 2.6em 0;
   position: relative;
   text-align: center;
