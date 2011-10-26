@@ -590,6 +590,31 @@ input[type="submit"]:hover {
   transform: rotate(-1deg);
 }
 
+@media screen and (min-width: 28em) {
+  fieldset {
+    width: 100%;
+  }
+
+  label[for="team-color"],
+  label[for="gender"] {
+    display: none;
+  }
+
+  select {
+    display: inline-block;
+  }
+
+  #team-color {
+    margin-top: 0.5em;
+    width: 57.8947368%;
+  }
+
+  #gender {
+    float: right;
+    margin-top: 0.5em;
+    width: 36.8421053%;
+  }
+}
 /* - Page-supporting content footer -------------------- */
 [role="contentinfo"] {
   border-top: 6px solid rgba(0, 0, 0, 0.1);
