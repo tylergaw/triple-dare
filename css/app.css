@@ -498,20 +498,34 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="url"] {
-  background-color: #fd5f34;
+input[type="url"],
+select {
+  background: #fe6638 url(../images/texture-orange.png) repeat 90%;
   border: 0;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
   color: #fff;
   font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   letter-spacing: 0.07em;
   padding: 0.8em 0.7em;
   width: 90%;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-image: url(../images/select-arrow.png), url(../images/texture-orange.png);
+  background-repeat: no-repeat, repeat;
+  background-position: right top, 90%;
+  cursor: pointer;
+  line-height: 1.15em;
+  padding: 1em 0.7em;
+  text-indent: 0.1em;
+  width: 96%;
 }
 
 ::-webkit-input-placeholder {

@@ -16,10 +16,11 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="url"] {
-	background-color: #fd5f34;
+input[type="url"],
+select {
+	background: #fe6638 url(../images/texture-orange.png) repeat 90%;
 	border: 0;
-	@include border-radius(4px);
+	@include border-radius(6px);
 	color: #fff;
 	@include komikaPaint(1em);
 	letter-spacing: 0.07em;
@@ -29,6 +30,19 @@ input[type="url"] {
 	&:focus {
 		// Do this later
 	}
+}
+
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-image: url(../images/select-arrow.png), url(../images/texture-orange.png);
+	background-repeat: no-repeat, repeat;
+	background-position: right top, 90%;
+	cursor: pointer;
+	line-height: 1.15em;
+	padding: 1em 0.7em;
+	text-indent: 0.1em;
+	width: 96%;
 }
 
 ::-webkit-input-placeholder {
@@ -58,7 +72,6 @@ input[type="submit"] {
 	@include transition-property(background-size -webkit-transform -moz-transform -o-transform transform);
 	@include transition-duration(0.07s);
 	@include transition-timing-function(ease);
-	
 	@include rotate(-5deg);
 	width: 9.2em;
 	
