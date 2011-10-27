@@ -596,6 +596,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 1.8em;
   }
 }
+/* - That crazy ole' timer ----------------------------- */
 #be-a-contestant h2 {
   background: transparent url(../images/timer.png) no-repeat center top;
   -moz-background-size: 83.913%;
