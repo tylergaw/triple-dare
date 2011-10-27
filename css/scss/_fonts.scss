@@ -26,3 +26,9 @@ $font-path: '../fonts' !default;
 @mixin komikaPaint($font-size, $line-height: 1em) {
 	font: #{$font-size}/#{$line-height} 'KomikaTitle-PaintRegular', 'Comic Sans MS', sans-serif;
 }
+
+@include font-face('DigitalDream-FatRegular', 'DigitalDream-Fat-webfont', 'DigitaldreamFatRegular');
+
+@mixin digitalDream($font-size, $line-height: 1em) {
+	font: #{$font-size}/#{$line-height} 'DigitalDream-FatRegular', 'arial', sans-serif;
+}

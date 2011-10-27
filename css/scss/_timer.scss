@@ -9,9 +9,21 @@
 	margin-right: 2.2553191%;
 	max-width: 460px;
 	padding-top: 37%;
+	position: relative;
 	text-align: center;
 	@include text-shadow(rgba(0, 0, 0, 0.2), 4px, 5px, 0);
 	width: 48.9361702%;
+	
+	&:before {
+		color: #f5eb00;
+		content: "60";
+		display: block;
+		@include digitalDream(2.7em);
+		left: 27%;
+		position: absolute;
+		@include text-shadow(#000, 5px, 8px, 0);
+		top: 19%;
+	}
 	
 	@media screen and (min-width: 42em) {
 		display: block;

@@ -79,6 +79,14 @@ hr {
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "DigitalDream-FatRegular";
+  src: url("../fonts/DigitalDream-Fat-webfont.eot");
+  src: url("../fonts/DigitalDream-Fat-webfont.eot?iefix") format("embedded-opentype"), url("../fonts/DigitalDream-Fat-webfont.woff") format("woff"), url("../fonts/DigitalDream-Fat-webfont.ttf") format("truetype"), url("../fonts/DigitalDream-Fat-webfont.svg#webfontDigitaldreamFatRegular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
 /* - General styles ------------------------------------ */
 body {
   background-color: #80c1d6;
@@ -636,9 +644,20 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   margin-right: 2.2553191%;
   max-width: 460px;
   padding-top: 37%;
+  position: relative;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
   width: 48.9361702%;
+}
+#be-a-contestant h2:before {
+  color: #f5eb00;
+  content: "60";
+  display: block;
+  font: 2.7em/1em "DigitalDream-FatRegular", "arial", sans-serif;
+  left: 27%;
+  position: absolute;
+  text-shadow: black 5px 8px 0;
+  top: 19%;
 }
 @media screen and (min-width: 42em) {
   #be-a-contestant h2 {
