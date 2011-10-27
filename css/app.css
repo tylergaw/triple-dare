@@ -594,7 +594,14 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   fieldset {
     width: 100%;
   }
-
+}
+@media screen and (min-width: 38em) {
+  fieldset {
+    float: left;
+    width: 40.4255319%;
+  }
+}
+@media screen and (min-width: 61em) {
   label[for="team-color"],
   label[for="gender"] {
     display: none;
