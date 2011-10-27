@@ -629,6 +629,10 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     margin-top: 0.5em;
     width: 36.8421053%;
   }
+
+  input[type="submit"] {
+    font-size: 1.8em;
+  }
 }
 #be-a-contestant h2 {
   background: transparent url(../images/timer.png) no-repeat center top;
@@ -641,12 +645,25 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   float: right;
   font-size: 2.2em;
   line-height: 1.3em;
-  margin-right: 2.2553191%;
+  margin-right: 1.2553191%;
+  margin-top: 1%;
   max-width: 460px;
   padding-top: 37%;
   position: relative;
   text-align: center;
   text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
+  -moz-transition-property: font-size;
+  -webkit-transition-property: font-size;
+  -o-transition-property: font-size;
+  transition-property: font-size;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
   width: 48.9361702%;
 }
 #be-a-contestant h2:before {
@@ -654,14 +671,35 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   content: "60";
   display: block;
   font: 2.7em/1em "DigitalDream-FatRegular", "arial", sans-serif;
-  left: 27%;
+  left: 26%;
   position: absolute;
   text-shadow: black 5px 8px 0;
   top: 19%;
+  width: 49%;
 }
 @media screen and (min-width: 42em) {
   #be-a-contestant h2 {
     display: block;
+  }
+}
+@media screen and (min-width: 48em) {
+  #be-a-contestant h2:before {
+    font-size: 3em;
+    top: 21%;
+  }
+}
+@media screen and (min-width: 53em) {
+  #be-a-contestant h2:before {
+    font-size: 3.5em;
+  }
+}
+@media screen and (min-width: 61em) {
+  #be-a-contestant h2 {
+    font-size: 2.6em;
+    padding-top: 8em;
+  }
+  #be-a-contestant h2:before {
+    font-size: 3.2em;
   }
 }
 
