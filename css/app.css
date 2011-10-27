@@ -434,18 +434,18 @@ section h1 {
   text-align: center;
 }
 #prizes ul {
-  margin-bottom: 1.6em;
+  margin: 0 auto;
   overflow: hidden;
+  width: 90%;
 }
 #prizes li {
   line-height: 1.6em;
-  margin: 1em 0 2.4em 0;
+  margin: 1.5em 0 3.8em 0;
 }
 #prizes img {
   display: block;
-  margin-bottom: 0.8em;
-  max-width: 100%;
-  vertical-align: middle;
+  margin: 0 auto 0.4em auto;
+  width: 85%;
 }
 @media screen and (min-width: 28em) {
   #prizes h1 {
