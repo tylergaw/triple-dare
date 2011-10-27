@@ -4,11 +4,10 @@
 
 html, body, div, span,
 h1, h2, h3, h4, p,
-a, address, em, img,
+a, em, img,
 small, strong,
 b, i, ul, li,
-fieldset, form, label, legend,
-article, aside, 
+fieldset, form, label,
 figure, figcaption, footer, header, nav, section {
 	margin: 0;
 	padding: 0;
@@ -17,8 +16,6 @@ figure, figcaption, footer, header, nav, section {
 	font: inherit;
 	vertical-align: baseline;
 }
-
-figcaption, figure, 
 footer, header, nav, section {
 	display: block;
 }
@@ -30,8 +27,4 @@ ul {
 }
 b, strong {
 	font-weight: bold;
-}
-
-hr {
-	display: none;
 }
