@@ -1,14 +1,9 @@
-/* - Reset --------------------------------------------- */
-/* - http://meyerweb.com/eric/tools/css/reset ---------- */
-/* - v2.0 | 20110126 License: none (public domain) ----- */
-
-html, body, div, span,
-h1, h2, h3, h4, p,
-a, em, img,
-small, strong,
-b, i, ul, li,
+/* - Meyer Reset, pruned to fit this lil' page ------------------- */
+html, body, div,
+h1, h2, h3, p,
+a, img, ul, li,
 fieldset, form, label,
-figure, figcaption, footer, header, nav, section {
+footer, header, nav, section {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -19,12 +14,6 @@ figure, figcaption, footer, header, nav, section {
 footer, header, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 ul {
 	list-style: none;
-}
-b, strong {
-	font-weight: bold;
 }
