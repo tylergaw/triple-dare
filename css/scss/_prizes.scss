@@ -27,4 +27,26 @@
 			text-indent: -4.4em;
 		}
 	}
+	
+	@media screen and (min-width: 32em) {
+		ul {
+			@include column-count(2);
+			margin-top: 2em;
+			width: 100%;
+		}
+		
+		li {
+			margin: 0 auto 2.5em auto;
+			width: 87%;
+		}
+		
+		li:first-child {
+			margin-bottom: 5.2em;
+		}
+		
+		img {
+			margin-bottom: 0.8em;
+			width: 95%;
+		}
+	}
 }
