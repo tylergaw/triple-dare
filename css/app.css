@@ -622,6 +622,30 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     width: 36.8421053%;
   }
 }
+#be-a-contestant h2 {
+  background: transparent url(../images/timer.png) no-repeat center top;
+  -moz-background-size: 83.913%;
+  -webkit-background-size: 83.913%;
+  -o-background-size: 83.913%;
+  background-size: 83.913%;
+  color: #fff;
+  display: none;
+  float: right;
+  font-size: 2.2em;
+  line-height: 1.3em;
+  margin-right: 2.2553191%;
+  max-width: 460px;
+  padding-top: 37%;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
+  width: 48.9361702%;
+}
+@media screen and (min-width: 42em) {
+  #be-a-contestant h2 {
+    display: block;
+  }
+}
+
 /* - Page-supporting content footer -------------------- */
 [role="contentinfo"] {
   border-top: 6px solid rgba(0, 0, 0, 0.1);
