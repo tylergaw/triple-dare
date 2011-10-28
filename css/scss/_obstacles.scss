@@ -115,7 +115,7 @@
 	@media screen and (min-width: 32em) {
 		
 		li {
-			background-position: 2% 3.2em;
+			background-position: 2% 5em;
 			@include background-size(40%);
 			display: none;
 			margin: -2.5em 0 0 0;
@@ -131,7 +131,7 @@
 		h3 {
 			float: left;
 			font-size: 1.8em;
-			margin: 8% 0 0 2%;
+			margin: 12% 0 0 2%;
 			width: 45%;
 		}
 		
