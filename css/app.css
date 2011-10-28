@@ -392,7 +392,7 @@ section h1 {
 }
 @media screen and (min-width: 32em) {
   #obstacles li {
-    background-position: 2% 5em;
+    background-position: 3% 5em;
     -moz-background-size: 40%;
     -webkit-background-size: 40%;
     -o-background-size: 40%;
@@ -441,17 +441,47 @@ section h1 {
   }
 }
 @media screen and (min-width: 43em) {
-  #obstacles {
-    /*
-    nav li {
-    	float: left;
-    	width: 47.826087%;
-    }
-    
-    nav li:nth-child(2n) {
-    	float: right;
-    }
-    */
+  #obstacles li {
+    background-position: center top;
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    margin: 0 0 0 0;
+    padding-top: 3.4em;
+  }
+  #obstacles h3 {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+  #obstacles p {
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  #obstacles img, #obstacles #human-hamster-wheel img {
+    float: none;
+    margin-top: 5em;
+    width: 90%;
+  }
+  #obstacles ul, #obstacles nav {
+    width: 48.9361702%;
+  }
+  #obstacles ul {
+    float: right;
+  }
+  #obstacles nav li {
+    margin: 0.4em 0;
+    width: 47.826087%;
+  }
+  #obstacles nav li:nth-child(2n) {
+    float: right;
+  }
+}
+@media screen and (min-width: 54em) {
+  #obstacles h3 {
+    font-size: 2.6em;
   }
 }
 
