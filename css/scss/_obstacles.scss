@@ -6,18 +6,19 @@
 	
 	li {
 		background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
-		margin-bottom: 2em;
-		padding-top: 3.6em;
+		margin: 4em auto 4em auto;
+		padding-top: 3.2em;
+		width: 100%;
 	}
 	
 	h3 {
-		font-size: 2.2em;
+		font-size: 2.4em;
 		line-height: 1.4em;
 		@include rotate(-5deg);
 	}
 	
 	p {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		line-height: 1.2em;
 		margin: 0.3em 0 1.5em 0;
 		@include rotate(-5deg);
@@ -29,7 +30,12 @@
 	
 	img {
 		display: block;
-		width: 100%;
+		margin: 0 auto;
+		width: 75%;
+	}
+	
+	#human-hamster-wheel img {
+		margin-top: -1em;
 	}
 	
 	nav {
