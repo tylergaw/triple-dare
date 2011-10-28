@@ -305,53 +305,6 @@ section h1 {
 }
 #obstacles nav {
   display: none;
-}
-@media screen and (min-width: 28em) {
-  #obstacles h1 {
-    left: 6.8em;
-    text-indent: -6.7em;
-  }
-}
-@media screen and (min-width: 32em) {
-  #obstacles p {
-    margin-bottom: 2.4em;
-  }
-  #obstacles ul, #obstacles nav {
-    width: 48.9361702%;
-  }
-  #obstacles ul {
-    float: right;
-  }
-  #obstacles nav ul {
-    float: none;
-    width: 90%;
-  }
-  #obstacles li {
-    display: none;
-    padding-top: 3.4em;
-  }
-  #obstacles li:target {
-    display: block;
-  }
-  #obstacles nav {
-    display: block;
-  }
-}
-@media screen and (min-width: 38em) {
-  #obstacles h3 {
-    font-size: 3em;
-  }
-}
-@media screen and (min-width: 43em) {
-  #obstacles nav li {
-    float: left;
-    width: 47.826087%;
-  }
-  #obstacles nav li:nth-child(2n) {
-    float: right;
-  }
-}
-#obstacles nav {
   margin: 1.8em 0 1.2em 0;
   overflow: hidden;
 }
@@ -430,6 +383,76 @@ section h1 {
 }
 #obstacles a[href*="wringer"] {
   background-image: url(../images/obstacle-the-wringer.png);
+}
+@media screen and (min-width: 28em) {
+  #obstacles h1 {
+    left: 6.8em;
+    text-indent: -6.7em;
+  }
+}
+@media screen and (min-width: 32em) {
+  #obstacles li {
+    background-position: 2% 3.2em;
+    -moz-background-size: 40%;
+    -webkit-background-size: 40%;
+    -o-background-size: 40%;
+    background-size: 40%;
+    display: none;
+    margin: -2.5em 0 0 0;
+    overflow: hidden;
+    padding-top: 3.4em;
+    width: 100%;
+  }
+  #obstacles li:target {
+    display: block;
+  }
+  #obstacles h3 {
+    float: left;
+    font-size: 1.8em;
+    margin: 8% 0 0 2%;
+    width: 45%;
+  }
+  #obstacles p {
+    clear: left;
+    float: left;
+    margin-left: 2%;
+    width: 45%;
+  }
+  #obstacles img {
+    width: 52%;
+  }
+  #obstacles #human-hamster-wheel img {
+    margin-top: 0;
+  }
+  #obstacles nav {
+    display: block;
+  }
+  #obstacles nav ul {
+    float: none;
+    width: 100%;
+  }
+  #obstacles nav li {
+    float: left;
+    margin: 0 2.1276596% 0.6em 0;
+    width: 31.9148936%;
+  }
+  #obstacles nav li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 43em) {
+  #obstacles {
+    /*
+    nav li {
+    	float: left;
+    	width: 47.826087%;
+    }
+    
+    nav li:nth-child(2n) {
+    	float: right;
+    }
+    */
+  }
 }
 
 /* - Prizes section specifics -------------------------- */

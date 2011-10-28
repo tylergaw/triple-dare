@@ -40,66 +40,6 @@
 	
 	nav {
 		display: none;
-	}
-	
-	@media screen and (min-width: 28em) {
-		h1 {
-			left: 6.8em;
-			text-indent: -6.7em;
-		}
-	}
-	
-	@media screen and (min-width: 32em) {
-		
-		p {
-			margin-bottom: 2.4em;
-		}
-		
-		ul, nav {
-			width: 48.9361702%;
-		}
-		
-		ul {
-			float: right;
-		}
-		
-		nav ul {
-			float: none;
-			width: 90%;
-		}
-		
-		li {
-			display: none;
-			padding-top: 3.4em;
-
-			&:target {
-				display: block;
-			}
-		}
-		
-		nav {
-			display: block;
-		}
-	}
-	
-	@media screen and (min-width: 38em) {
-		h3 {
-			font-size: 3em;
-		}
-	}
-	
-	@media screen and (min-width: 43em) {
-		nav li {
-			float: left;
-			width: 47.826087%;
-		}
-		
-		nav li:nth-child(2n) {
-			float: right;
-		}
-	}
-	
-	nav {
 		margin: 1.8em 0 1.2em 0;
 		overflow: hidden;
 		
@@ -164,5 +104,102 @@
 	a[href*="wringer"] {
 		background-image: url(../images/obstacle-the-wringer.png);
 	}
+	
+	@media screen and (min-width: 28em) {
+		h1 {
+			left: 6.8em;
+			text-indent: -6.7em;
+		}
+	}
+	
+	@media screen and (min-width: 32em) {
+		
+		li {
+			background-position: 2% 3.2em;
+			@include background-size(40%);
+			display: none;
+			margin: -2.5em 0 0 0;
+			overflow: hidden;
+			padding-top: 3.4em;
+			width: 100%;
+
+			&:target {
+				display: block;
+			}
+		}
+		
+		h3 {
+			float: left;
+			font-size: 1.8em;
+			margin: 8% 0 0 2%;
+			width: 45%;
+		}
+		
+		p {
+			clear: left;
+			float: left;
+			margin-left: 2%;
+			width: 45%;
+		}
+		
+		img {
+			width: 52%;
+		}
+		
+		#human-hamster-wheel img {
+			margin-top: 0;
+		}
+		
+		nav {
+			display: block;
+			
+			ul {
+				float: none;
+				width: 100%;
+			}
+			
+			li {
+				float: left;
+				margin: 0 2.1276596% 0.6em 0;
+				width: 31.9148936%;
+				
+				&:nth-child(3n) {
+					margin-right: 0;
+				}
+			}
+		}
+		
+		p {
+			//margin-bottom: 2.4em;
+		}
+		
+		ul, nav {
+			//width: 48.9361702%;
+		}
+		
+		ul {
+			//float: right;
+		}
+	}
+	
+	@media screen and (min-width: 38em) {
+		h3 {
+			//font-size: 3em;
+		}
+	}
+	
+	@media screen and (min-width: 43em) {
+		/*
+		nav li {
+			float: left;
+			width: 47.826087%;
+		}
+		
+		nav li:nth-child(2n) {
+			float: right;
+		}
+		*/
+	}
+	
 }
 
