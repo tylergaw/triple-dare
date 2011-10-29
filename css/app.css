@@ -216,6 +216,7 @@ section {
 }
 section > div {
   margin: 0 auto;
+  max-width: 67em;
   overflow: hidden;
   width: 95%;
 }
