@@ -68,6 +68,12 @@ body {
   text-shadow: none;
 }
 
+::-moz-selection {
+  background-color: #fe6638;
+  color: #fff;
+  text-shadow: none;
+}
+
 /* - Main navigation ----------------------------------- */
 body > nav {
   background-color: rgba(15, 40, 48, 0.1);
@@ -102,7 +108,7 @@ body > nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   text-shadow: rgba(0, 0, 0, 0.2) 0 1px 0;
 }
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 33em) {
   body > nav {
     background-color: rgba(15, 40, 48, 0.2);
     display: table-caption;
