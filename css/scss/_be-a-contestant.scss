@@ -45,7 +45,17 @@ select {
 	background-image: url(../images/select-arrow.png), url(../images/texture-orange.png);
 	background-repeat: no-repeat, repeat;
 	background-position: right top, 90%;
-	cursor: pointer;
+	cursor: pointer;	
+	font-family: 'Comic Sans MS', sans-serif;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 0.9em;
+	padding: 0.85em 0;
+}
+
+.font-face-select-support select {
+	@include komikaPaint(1em);
 	line-height: 1.15em;
 	padding: 1em 0;
 }
