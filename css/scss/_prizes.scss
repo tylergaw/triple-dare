@@ -30,18 +30,27 @@
 	
 	@media screen and (min-width: 32em) {
 		ul {
-			@include column-count(2);
-			margin-top: 2em;
+			margin-top: -4em;
+			padding-bottom: 4em;
 			width: 100%;
 		}
 		
-		li {
-			margin: 0 auto 2.5em auto;
-			width: 87%;
+		li {			
+			clear: left;
+			display: inline-block;
+			float: left;
+			margin: 5em 0 0 0;
+			position: relative;
+			width: 45%;
 		}
 		
-		li:first-child {
-			margin-bottom: 5.2em;
+		li:last-child {
+			margin-top: -3em;
+		}
+		
+		li:nth-child(2n) {
+			clear: right;
+			float: right;
 		}
 		
 		img {
@@ -51,6 +60,12 @@
 		
 		img[src*="vcr"], img[src*="camp"] {
 			width: 85%;
+		}
+	}
+	
+	@media screen and (min-width: 46em) {
+		li:last-child {
+			margin-top: -6em;
 		}
 	}
 }
