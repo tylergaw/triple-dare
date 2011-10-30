@@ -744,6 +744,16 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   top: 19%;
   width: 49%;
 }
+#be-a-contestant h2.ten-second-warning:before {
+  color: #ff8a00;
+}
+#be-a-contestant h2.out-of-time {
+  -webkit-animation: timer-shake 0.1s infinite;
+  background-image: url(../images/timer-out-of-time.png);
+}
+#be-a-contestant h2.out-of-time:before {
+  color: #ff1800;
+}
 @media screen and (min-width: 42em) {
   #be-a-contestant h2 {
     display: block;
@@ -770,6 +780,24 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   }
   #be-a-contestant h2:before {
     font-size: 8.5rem;
+  }
+}
+
+@-webkit-keyframes timer-shake {
+  0%, 25% {
+    margin-right: -1%;
+  }
+
+  25.0001%, 50% {
+    margin-right: 1%;
+  }
+
+  50.0001%, 75% {
+    margin-right: -0.5%;
+  }
+
+  75.0001%, 100% {
+    margin-right: 0.5%;
   }
 }
 
