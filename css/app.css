@@ -469,8 +469,8 @@ section h1 {
   }
   #obstacles img {
     float: none;
-    margin-top: 5em;
-    width: 90%;
+    margin-top: 4em;
+    width: 95%;
   }
   #obstacles ul, #obstacles nav {
     width: 48.9361702%;
@@ -539,7 +539,7 @@ section h1 {
     width: 95%;
   }
   #prizes img[src*="vcr"], #prizes img[src*="camp"] {
-    width: 90%;
+    width: 85%;
   }
 }
 
