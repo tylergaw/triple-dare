@@ -26,6 +26,8 @@ input[type="url"],
 select {
 	background: #fe6638 url(../images/texture-orange.png) repeat 90%;
 	border: 0;
+	-moz-box-shadow: none;
+	box-shadow: none;
 	@include border-radius(6px);
 	color: #fff;
 	@include komikaPaint(1em);
@@ -40,21 +42,25 @@ select {
 }
 
 select {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	background-image: url(../images/select-arrow.png), url(../images/texture-orange.png);
-	background-repeat: no-repeat, repeat;
-	background-position: right top, 90%;
 	cursor: pointer;	
 	font-family: 'Comic Sans MS', sans-serif;
 	font-size: 1.2em;
 	font-style: italic;
 	font-weight: bold;
 	line-height: 0.9em;
+	padding: 0;
+	text-indent: 0;
+}
+
+.custom-selects select {
+	-webkit-appearance: none;
+	background-image: url(../images/select-arrow.png), url(../images/texture-orange.png);
+	background-repeat: no-repeat, repeat;
+	background-position: right top, 90%;
 	padding: 0.85em 0;
 }
 
-.font-face-select-support select {
+.font-face-selects select {
 	@include komikaPaint(1em);
 	line-height: 1.15em;
 	padding: 1em 0;
@@ -65,9 +71,8 @@ select {
 	padding-top: 0.3em;
 }
 
-::-moz-placeholder {
+:-moz-placeholder {
 	color: #fff;
-	padding-top: 0.3em;
 }
 
 input[type="submit"] {
