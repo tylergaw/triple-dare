@@ -467,7 +467,7 @@ section h1 {
     margin-left: 0;
     width: 100%;
   }
-  #obstacles img, #obstacles #human-hamster-wheel img {
+  #obstacles img {
     float: none;
     margin-top: 5em;
     width: 90%;
