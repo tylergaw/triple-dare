@@ -237,17 +237,11 @@ section h1 {
 }
 @media screen and (min-width: 28em) {
   section h1 {
-    background-color: transparent;
-    background: -webkit-gradient(linear, 45deg, 45deg, color-stop(25%, #eef13f), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #eef13f), color-stop(100%, #eef13f)), -webkit-gradient(linear, 45deg, 45deg, color-stop(25%, #eef13f), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, #eef13f), color-stop(100%, #eef13f));
-    background: -webkit-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f), -webkit-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f);
-    background: -moz-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f), -moz-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f);
-    background: -o-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f), -o-linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f);
-    background: linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f), linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f);
+    background: transparent url(../images/headers-checks-bg.png) repeat-x left top;
     -moz-background-size: 28px 28px;
     -webkit-background-size: 28px 28px;
     -o-background-size: 28px 28px;
     background-size: 28px 28px;
-    background-position: 0 0, 14px 14px;
     left: 10.8em;
     line-height: 1.1em;
     position: relative;
@@ -261,7 +255,7 @@ section h1 {
     -webkit-background-size: 40px 40px;
     -o-background-size: 40px 40px;
     background-size: 40px 40px;
-    background-position: 0 0, 20px 20px;
+    background-position: 0 0;
     font-size: 2.5em;
     line-height: 1em;
     margin-top: 1.4em;

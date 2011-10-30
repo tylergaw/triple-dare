@@ -25,11 +25,8 @@ section {
 	
 	@media screen and (min-width: 28em) {
 		h1 {
-			background-color: transparent;
-			@include background(linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f), 
-							linear-gradient(45deg, #eef13f 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #eef13f 75%, #eef13f));
+			background: transparent url(../images/headers-checks-bg.png) repeat-x left top;
 			@include background-size(28px 28px);
-			background-position: 0 0, 14px 14px;
 			left: 10.8em;
 			line-height: 1.1em;
 			position: relative;
@@ -41,7 +38,7 @@ section {
 	@media screen and (min-width: 43em) {
 		h1 {
 			@include background-size(40px 40px);
-			background-position: 0 0, 20px 20px;
+			background-position: 0 0;
 			font-size: 2.5em;
 			line-height: 1em;
 			margin-top: 1.4em;
