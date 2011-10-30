@@ -538,6 +538,9 @@ section h1 {
     margin-bottom: 0.8em;
     width: 95%;
   }
+  #prizes img[src*="vcr"], #prizes img[src*="camp"] {
+    width: 90%;
+  }
 }
 
 /* - Be a contestant section specifics ----------------- */

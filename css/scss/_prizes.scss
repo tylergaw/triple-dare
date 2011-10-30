@@ -48,5 +48,9 @@
 			margin-bottom: 0.8em;
 			width: 95%;
 		}
+		
+		img[src*="vcr"], img[src*="camp"] {
+			width: 90%;
+		}
 	}
 }
