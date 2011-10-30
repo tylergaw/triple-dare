@@ -737,7 +737,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   color: #f5eb00;
   content: "60";
   display: block;
-  font: 2.7em/1em "DigitalDream-FatRegular", "arial", sans-serif;
+  font: 1em/1em "DigitalDream-FatRegular", "arial", sans-serif;
   left: 26%;
   position: absolute;
   text-shadow: black 5px 8px 0;
@@ -748,16 +748,19 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   #be-a-contestant h2 {
     display: block;
   }
+  #be-a-contestant h2:before {
+    font-size: 6rem;
+  }
 }
 @media screen and (min-width: 48em) {
   #be-a-contestant h2:before {
-    font-size: 3em;
+    font-size: 7rem;
     top: 21%;
   }
 }
 @media screen and (min-width: 53em) {
   #be-a-contestant h2:before {
-    font-size: 3.5em;
+    font-size: 8rem;
   }
 }
 @media screen and (min-width: 61em) {
@@ -766,7 +769,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     padding-top: 8em;
   }
   #be-a-contestant h2:before {
-    font-size: 3.2em;
+    font-size: 8.5rem;
   }
 }
 

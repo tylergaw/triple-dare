@@ -24,7 +24,7 @@
 		color: #f5eb00;
 		content: "60";
 		display: block;
-		@include digitalDream(2.7em);
+		@include digitalDream(1em);
 		left: 26%;
 		position: absolute;
 		@include text-shadow(#000, 5px, 8px, 0);
@@ -34,18 +34,22 @@
 	
 	@media screen and (min-width: 42em) {
 		display: block;
+		
+		&:before {
+			font-size: 6rem;
+		}
 	}
 	
 	@media screen and (min-width: 48em) {
 		&:before {
-			font-size: 3em;
+			font-size: 7rem;
 			top: 21%;
 		}
 	}
 	
 	@media screen and (min-width: 53em) {
 		&:before {
-			font-size: 3.5em;
+			font-size: 8rem;
 		}
 	}
 	
@@ -54,7 +58,7 @@
 		padding-top: 8em;
 		
 		&:before {
-			font-size: 3.2em;
+			font-size: 8.5rem;
 		}
 	}
 }
