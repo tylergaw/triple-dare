@@ -589,7 +589,7 @@ select {
   font-style: italic;
   font-weight: bold;
   line-height: 0.9em;
-  padding: 0.4em 0.3em;
+  padding: 0.8em 0.3em;
   text-indent: 0;
 }
 
@@ -604,7 +604,6 @@ select {
 .font-face-selects select {
   font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
   line-height: 1.15em;
-  padding: 1em 0;
 }
 
 ::-webkit-input-placeholder {
