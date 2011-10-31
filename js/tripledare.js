@@ -105,6 +105,28 @@
 					}
         		
 					return b;
+				},
+				
+				// Those select styles are tough. Using JS and "skinning" an
+				// element to act as the <select> I'm sure every browser
+				// could have the same full style, but just doesn't seem
+				// worth the extra http requests and filesize for those elements.
+				// Chrome and Safari do play nice though. The -webkit-appearance
+				// property is really great for removing all of the standard
+				// styling, leaving it open for user CSS to take the helm.
+				// Here we'll do some more sniffing and give a class to Chrome/Safari
+				customSelects = function () {
+					var b = false,
+						browsers = {
+							'Chrome': true,
+							'Safari': true
+						};
+
+					if (browsers[browserDetect.browser]) {
+						b = true;
+					}
+					
+					return b;
 				};
 			
 			// Start up that browserDetect object
@@ -114,6 +136,12 @@
 			// with select elements.
 			if (fontFaceSelects()) {
 				htmlElem.className += ' font-face-selects';
+			}
+			
+			// Determine whether or not the browser can have custom
+			// styles on select elements.
+			if (customSelects()) {
+				htmlElem.className += ' custom-selects';
 			}
 		},
 		
@@ -180,7 +208,7 @@
 		
 		// For browsers that do not yet support the placeholder attribute
 		// for input elements.
-		placeholderPolyfill = function () {			
+		placeholderPolyfill = function () {
 			if ('placeholder' in document.createElement('input')) {
 				htmlElem.className += ' input-placeholders';
 			} else {

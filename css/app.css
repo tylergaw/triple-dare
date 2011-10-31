@@ -601,7 +601,7 @@ select {
 select {
   cursor: pointer;
   font-family: 'Comic Sans MS', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-style: italic;
   font-weight: bold;
   line-height: 0.9em;
@@ -614,7 +614,8 @@ select {
   background-image: url(../images/select-arrow.png), url(../images/texture-orange.png);
   background-repeat: no-repeat, repeat;
   background-position: right top, 90%;
-  padding: 0.85em 0;
+  padding: 1em 0;
+  text-indent: 0.7em;
 }
 
 .font-face-selects select {
