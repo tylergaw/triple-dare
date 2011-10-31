@@ -41,7 +41,6 @@
 	&.out-of-time {
 		-webkit-animation: timer-shake 0.1s infinite;
 		-moz-animation: timer-shake 0.1s infinite;
-		-o-animation: timer-shake 0.1s infinite;
 		animation: timer-shake 0.1s infinite;
 		background-image: url(../images/timer-out-of-time.png);
 		
@@ -54,12 +53,14 @@
 		display: block;
 		
 		&:before {
+			font-size: 90px;
 			font-size: 6rem;
 		}
 	}
 	
 	@media screen and (min-width: 48em) {
 		&:before {
+			font-size: 110px;
 			font-size: 7rem;
 			top: 21%;
 		}
@@ -67,6 +68,7 @@
 	
 	@media screen and (min-width: 53em) {
 		&:before {
+			font-size: 130px;
 			font-size: 8rem;
 		}
 	}
@@ -76,6 +78,7 @@
 		padding-top: 8em;
 		
 		&:before {
+			font-size: 140px;
 			font-size: 8.5rem;
 		}
 	}
