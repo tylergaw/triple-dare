@@ -48,16 +48,9 @@
 	}
 	
 	p, ul {
-		float: right;
 		line-height: 1.4em;
-		text-align: left;
-		width: 48%;
-	}
-	
-	h2 + p,
-	h3 + ul {
-		float: left;
-		text-align: right;
+		margin-bottom: 1em;
+		text-align: center;
 	}
 	
  	section + p {
@@ -68,5 +61,20 @@
 		padding: 1.4em 0 3.4em 0;
 		text-align: center;
 		width: auto;
+	}
+	
+	@media screen and (min-width: 25em) {
+		p, ul {
+			float: right;
+			margin-bottom: 0;
+			text-align: left;
+			width: 48%;
+		}
+
+		h2 + p,
+		h3 + ul {
+			float: left;
+			text-align: right;
+		}
 	}
 }

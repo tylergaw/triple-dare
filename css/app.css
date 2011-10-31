@@ -901,15 +901,9 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   padding-top: 1.8em;
 }
 [role="contentinfo"] p, [role="contentinfo"] ul {
-  float: right;
   line-height: 1.4em;
-  text-align: left;
-  width: 48%;
-}
-[role="contentinfo"] h2 + p,
-[role="contentinfo"] h3 + ul {
-  float: left;
-  text-align: right;
+  margin-bottom: 1em;
+  text-align: center;
 }
 [role="contentinfo"] section + p {
   background: transparent url(../images/creative-commons-logo.png) no-repeat center bottom;
@@ -919,4 +913,17 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   padding: 1.4em 0 3.4em 0;
   text-align: center;
   width: auto;
+}
+@media screen and (min-width: 25em) {
+  [role="contentinfo"] p, [role="contentinfo"] ul {
+    float: right;
+    margin-bottom: 0;
+    text-align: left;
+    width: 48%;
+  }
+  [role="contentinfo"] h2 + p,
+  [role="contentinfo"] h3 + ul {
+    float: left;
+    text-align: right;
+  }
 }
