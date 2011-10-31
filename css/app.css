@@ -749,6 +749,9 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 }
 #be-a-contestant h2.out-of-time {
   -webkit-animation: timer-shake 0.1s infinite;
+  -moz-animation: timer-shake 0.1s infinite;
+  -o-animation: timer-shake 0.1s infinite;
+  animation: timer-shake 0.1s infinite;
   background-image: url(../images/timer-out-of-time.png);
 }
 #be-a-contestant h2.out-of-time:before {
@@ -784,6 +787,42 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 }
 
 @-webkit-keyframes timer-shake {
+  0%, 25% {
+    margin-right: -1%;
+  }
+
+  25.0001%, 50% {
+    margin-right: 1%;
+  }
+
+  50.0001%, 75% {
+    margin-right: -0.5%;
+  }
+
+  75.0001%, 100% {
+    margin-right: 0.5%;
+  }
+}
+
+@-moz-keyframes timer-shake {
+  0%, 25% {
+    margin-right: -1%;
+  }
+
+  25.0001%, 50% {
+    margin-right: 1%;
+  }
+
+  50.0001%, 75% {
+    margin-right: -0.5%;
+  }
+
+  75.0001%, 100% {
+    margin-right: 0.5%;
+  }
+}
+
+@keyframes timer-shake {
   0%, 25% {
     margin-right: -1%;
   }
