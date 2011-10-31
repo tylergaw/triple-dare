@@ -11,8 +11,24 @@ fieldset {
 }
 
 label {
+	color: #fff;
 	display: block;
+	margin-top: 0.6em;
+	padding: 0.2em 0 0.4em 0.4em;
+}
+
+.input-placeholders label {
 	height: 0.6em;
+	margin: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
+label[for="team-color"],
+label[for="gender"] {
+	height: 0.6em;
+	margin: 0;
+	padding: 0;
 	visibility: hidden;
 }
 

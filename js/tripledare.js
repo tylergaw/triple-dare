@@ -1,6 +1,6 @@
 (function () {
 
-	var 
+	var htmlElem = document.getElementsByTagName('html')[0],
 		// Ran into a number of edge-cases with styling that I
 		// can't seem to get around with feature detection, so
 		// falling back to some good ole browser sniffing to 
@@ -113,7 +113,7 @@
 			// Determine whether or not the browser can use font-face
 			// with select elements.
 			if (fontFaceSelects()) {
-				document.getElementsByTagName('html')[0].className += ' font-face-selects';
+				htmlElem.className += ' font-face-selects';
 			}
 		},
 		
@@ -180,13 +180,16 @@
 		
 		// For browsers that do not yet support the placeholder attribute
 		// for input elements.
-		placeholderPolyfill = function () {
-			
+		placeholderPolyfill = function () {			
+			if ('placeholder' in document.createElement('input')) {
+				htmlElem.className += ' input-placeholders';
+			} else {
+				console.log('need to add placeholders');
+			}
 		};
 	
 	// Start these boss hogs up!
 	featureAdditionsBySniffing();
 	timer();
 	placeholderPolyfill();
-	
 }());
