@@ -295,7 +295,7 @@
 						forcedItem  = document.querySelector(firstTarget);
 						previousHash = forcedItem;
 						
-						forcedItem.className = 'manualDisplay';			
+						forcedItem.className = 'manualDisplay';	
 						selectItem(firstTarget);
 					}
 				};
