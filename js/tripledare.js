@@ -1,5 +1,5 @@
 (function () {
-
+		
 	var htmlElem = document.getElementsByTagName('html')[0],
 		// Ran into a number of edge-cases with styling that I
 		// can't seem to get around with feature detection, so
@@ -151,7 +151,7 @@
 			if ('placeholder' in document.createElement('input')) {
 				htmlElem.className += ' input-placeholders';
 			} else {
-				console.log('need to add placeholders');
+				//console.log('need to add placeholders');
 			}
 		},
 		
@@ -293,7 +293,7 @@
 						firstTarget	= firstItem.getAttribute('href');
 						forcedItem  = document.querySelector(firstTarget);
 						
-						forcedItem.className = 'manualDisplay';	
+						forcedItem.className = 'manualDisplay';
 						selectItem(firstTarget);
 					}
 				};
@@ -301,7 +301,7 @@
 			if ('onhashchange' in window) {
 				window.onhashchange = hashChanged;
 			} else {
-				console.log('no hashchange');
+				//console.log('no hashchange');
 			}
 			
 			onPageLoad();
