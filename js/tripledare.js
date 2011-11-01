@@ -145,12 +145,22 @@
 			}
 		},
 		
+		// For browsers that do not yet support the placeholder attribute
+		// for input elements.
+		placeholderPolyfill = function () {
+			if ('placeholder' in document.createElement('input')) {
+				htmlElem.className += ' input-placeholders';
+			} else {
+				console.log('need to add placeholders');
+			}
+		},
+		
 		// That ole timer sure is a doozy. I was really against
 		// adding an extra, non-semantic element for the time so
 		// I opted for the :before pseudo element for the digit.
 		// However, I couldn't find a way to make that change using
 		// CSS animations and JS is unable to directly access
-		// pseudo elements. So, this little nifty trick found on
+		// pseudo elements. So this little nifty trick found on
 		// Stackoverflow: 
 		// http://stackoverflow.com/questions/311052/setting-css-pseudo-class-rules-from-javascript/311437#311437
 		// describes a method for directly accessing the loaded
@@ -206,18 +216,32 @@
 			interval = setInterval(tick, tickSpeed);
 		},
 		
-		// For browsers that do not yet support the placeholder attribute
-		// for input elements.
-		placeholderPolyfill = function () {
-			if ('placeholder' in document.createElement('input')) {
-				htmlElem.className += ' input-placeholders';
+		// We're taking care of displaying each obstacle using
+		// the :target pseudo selector, but we need to add a
+		// couple more things to the obstacle navigation. 
+		obstacleSelection = function () {
+			var hashChanged = function () {
+					var hash         = location.hash,
+						activeItem   = document.querySelector('li.active') || null,
+						selectedItem = document.querySelector('a[href="' + hash + '"]');
+					
+					if (activeItem !== null) {
+						activeItem.className = '';
+					}
+					
+					selectedItem.parentNode.className = 'active';
+				};
+				
+			if ('onhashchange' in window) {
+				window.onhashchange = hashChanged;
 			} else {
-				console.log('need to add placeholders');
+				console.log('no hashchange');
 			}
 		};
 	
 	// Start these boss hogs up!
 	featureAdditionsBySniffing();
-	timer();
 	placeholderPolyfill();
+	timer();
+	obstacleSelection();
 }());
