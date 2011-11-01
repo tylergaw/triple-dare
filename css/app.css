@@ -47,15 +47,19 @@ ul {
 
 /* - General styles ------------------------------------ */
 body {
-  background-color: #80c1d6;
-  background-image: url(../images/body-bg-splat.png), url(../images/texture-blue.png);
-  background-repeat: no-repeat, repeat;
-  background-position: 60% top, 90%;
+  background: #80c1d6 url(../images/texture-blue.png) repeat 90%;
   caption-side: top;
   display: table;
   font: 100%/1em "OpenSansSemibold", helvetica, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   width: 100%;
+}
+@media screen and (min-width: 33em) {
+  body {
+    background-image: url(../images/body-bg-splat.png), url(../images/texture-blue.png);
+    background-repeat: no-repeat, repeat;
+    background-position: 60% top, 90%;
+  }
 }
 
 ::selection {
