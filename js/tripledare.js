@@ -241,7 +241,6 @@
 					var prevItems    = document.querySelectorAll('li.active') || null,
 						len          = 0,
 						selectedItem = document.querySelector('a[href="' + itemHash + '"]'),
-						targetItem   = document.querySelector(itemHash),
 						i            = 0;
 					
 					if (prevItems !== null) {
@@ -293,7 +292,6 @@
 						firstItem   = document.querySelector('#obstacles nav li:first-child a');
 						firstTarget	= firstItem.getAttribute('href');
 						forcedItem  = document.querySelector(firstTarget);
-						previousHash = forcedItem;
 						
 						forcedItem.className = 'manualDisplay';	
 						selectItem(firstTarget);

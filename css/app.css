@@ -264,6 +264,9 @@ section h1 {
   color: #fff;
   text-align: center;
 }
+#obstacles ul {
+  position: relative;
+}
 #obstacles li {
   background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
   margin: 4em auto 4em auto;
@@ -407,6 +410,7 @@ section h1 {
     margin: -2.5em 0 0 0;
     overflow: hidden;
     padding-top: 3.4em;
+    position: absolute;
     width: 100%;
   }
   #obstacles li:target, #obstacles li.manualDisplay {
@@ -432,6 +436,7 @@ section h1 {
   }
   #obstacles nav {
     display: block;
+    margin-top: 65%;
   }
   #obstacles nav ul {
     float: none;
@@ -440,6 +445,7 @@ section h1 {
   #obstacles nav li {
     float: left;
     margin: 0 2.1276596% 0.6em 0;
+    position: relative;
     width: 31.9148936%;
   }
   #obstacles nav li:nth-child(3n) {
@@ -470,6 +476,9 @@ section h1 {
     float: none;
     margin-top: 4em;
     width: 95%;
+  }
+  #obstacles nav {
+    margin-top: 1.8em;
   }
   #obstacles ul, #obstacles nav {
     width: 48.9361702%;
