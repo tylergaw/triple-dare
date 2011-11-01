@@ -220,16 +220,35 @@
 		// the :target pseudo selector, but we need to add a
 		// couple more things to the obstacle navigation. 
 		obstacleSelection = function () {
-			var hashChanged = function () {
-					var hash         = location.hash,
-						activeItem   = document.querySelector('li.active') || null,
-						selectedItem = document.querySelector('a[href="' + hash + '"]');
+			var // @param STRING itemHash - The hashtag in the href for the
+				//                          selected item.
+				selectItem = function (itemHash) {
+					var activeItem   = document.querySelector('li.active') || null,
+						selectedItem = document.querySelector('a[href="' + itemHash + '"]');
 					
 					if (activeItem !== null) {
 						activeItem.className = '';
 					}
-					
+				
 					selectedItem.parentNode.className = 'active';
+				},
+				
+				hashChanged = function () {
+					selectItem(window.location.hash);
+				},
+				
+				// When the page first loads there may or may not
+				// be a hash and that hash might not be for the
+				// obstacle nav. We need to make sure the correct
+				// item is selected
+				onPageLoad = function () {
+					var hash = window.location.hash || null;
+					
+					if (hash !== null) {
+						selectItem(hash);
+					} else {
+						console.log('no hash');
+					}
 				};
 				
 			if ('onhashchange' in window) {
@@ -237,6 +256,8 @@
 			} else {
 				console.log('no hashchange');
 			}
+			
+			onPageLoad();
 		};
 	
 	// Start these boss hogs up!
