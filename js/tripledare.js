@@ -220,8 +220,20 @@
 		// the :target pseudo selector, but we need to add a
 		// couple more things to the obstacle navigation. 
 		obstacleSelection = function () {
-			var // @param STRING itemHash - The hashtag in the href for the
-				//                          selected item.
+			
+			var // Since we know what hashes we're looking for and we don't
+				// want to trigger the changes if a main nav item is selected
+				// just store the valid hashes and check for them when needed.
+				validHashes = {
+					'#the-tank': true,
+					'#sundae-slide': true,
+					'#human-hamster-wheel': true,
+					'#down-the-hatch': true,
+					'#pick-it': true,
+					'#the-wringer': true
+				},
+				
+				// @param STRING itemHash - The hashtag in the href for the selected item.
 				selectItem = function (itemHash) {
 					var activeItem   = document.querySelector('li.active') || null,
 						selectedItem = document.querySelector('a[href="' + itemHash + '"]');
@@ -234,7 +246,11 @@
 				},
 				
 				hashChanged = function () {
-					selectItem(window.location.hash);
+					var hash = window.location.hash;
+					
+					if (validHashes[hash]) {
+						selectItem(window.location.hash);
+					}
 				},
 				
 				// When the page first loads there may or may not
@@ -242,12 +258,14 @@
 				// obstacle nav. We need to make sure the correct
 				// item is selected
 				onPageLoad = function () {
-					var hash = window.location.hash || null;
+					var hash      = window.location.hash || null,
+						firstItem = null;
 					
-					if (hash !== null) {
+					if (hash !== null && validHashes[hash]) {
 						selectItem(hash);
 					} else {
-						console.log('no hash');
+						firstItem = document.querySelector('#obstacles nav li:first-child a');
+						selectItem(firstItem.getAttribute('href'));
 					}
 				};
 				
