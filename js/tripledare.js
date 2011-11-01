@@ -3,96 +3,97 @@
 	'use strict';
 
 	var htmlElem = document.getElementsByTagName('html')[0],
+		
+		// A modified version of Quirksmode's BrowserDetect
+		// http://www.quirksmode.org/js/detect.html
+		browserDetect = {
+			init: function () {
+				this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+				this.OS = this.searchString(this.dataOS) || "an unknown OS";
+			},
+			searchString: function (data) {
+				var i          = 0,
+					len        = data.length,
+					dataString = null,
+					dataProp   = null,
+					identity   = null;
+			
+				for (i; i < len; i += 1) {
+					dataString = data[i].string;
+					dataProp   = data[i].prop;
+			
+					if (dataString) {
+						if (dataString.indexOf(data[i].subString) !== -1) {
+							identity = data[i].identity;
+							break;
+						}
+					} else if (dataProp) {
+						identity = data[i].identity;
+						break;
+					}
+				}
+			
+				return identity;
+			},
+			dataBrowser: [
+				{
+					string: navigator.userAgent,
+					subString: "Chrome",
+					identity: "Chrome"
+				},
+				{
+					string: navigator.vendor,
+					subString: "Apple",
+					identity: "Safari",
+					versionSearch: "Version"
+				},
+				{
+					prop: window.opera,
+					identity: "Opera",
+					versionSearch: "Version"
+				},
+				{
+					string: navigator.userAgent,
+					subString: "Firefox",
+					identity: "Firefox"
+				},
+				{
+					string: navigator.userAgent,
+					subString: "MSIE",
+					identity: "Explorer",
+					versionSearch: "MSIE"
+				}
+			],
+			dataOS : [
+				{
+					string: navigator.platform,
+					subString: "Win",
+					identity: "Windows"
+				},
+				{
+					string: navigator.platform,
+					subString: "Mac",
+					identity: "Mac"
+				},
+				{
+					string: navigator.userAgent,
+					subString: "iPhone",
+					identity: "iPhone/iPod"
+			    },
+				{
+					string: navigator.userAgent,
+					subString: "iPad",
+					identity: "iPad"
+			    }
+			]
+		},
+
 		// Ran into a number of edge-cases with styling that I
 		// can't seem to get around with feature detection, so
 		// falling back to some good ole browser sniffing to 
 		// handle the few outliers.
 		featureAdditionsBySniffing = function () {
-
-			// A modified version of Quirksmode's BrowserDetect
-			// http://www.quirksmode.org/js/detect.html
-			var browserDetect = {
-					init: function () {
-						this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
-						this.OS = this.searchString(this.dataOS) || "an unknown OS";
-					},
-					searchString: function (data) {
-						var i          = 0,
-							len        = data.length,
-							dataString = null,
-							dataProp   = null,
-							identity   = null;
-
-						for (i; i < len; i += 1) {
-							dataString = data[i].string;
-							dataProp   = data[i].prop;
-
-							if (dataString) {
-								if (dataString.indexOf(data[i].subString) !== -1) {
-									identity = data[i].identity;
-									break;
-								}
-							} else if (dataProp) {
-								identity = data[i].identity;
-								break;
-							}
-						}
-
-						return identity;
-					},
-					dataBrowser: [
-						{
-							string: navigator.userAgent,
-							subString: "Chrome",
-							identity: "Chrome"
-						},
-						{
-							string: navigator.vendor,
-							subString: "Apple",
-							identity: "Safari",
-							versionSearch: "Version"
-						},
-						{
-							prop: window.opera,
-							identity: "Opera",
-							versionSearch: "Version"
-						},
-						{
-							string: navigator.userAgent,
-							subString: "Firefox",
-							identity: "Firefox"
-						},
-						{
-							string: navigator.userAgent,
-							subString: "MSIE",
-							identity: "Explorer",
-							versionSearch: "MSIE"
-						}
-					],
-					dataOS : [
-						{
-							string: navigator.platform,
-							subString: "Win",
-							identity: "Windows"
-						},
-						{
-							string: navigator.platform,
-							subString: "Mac",
-							identity: "Mac"
-						},
-						{
-							string: navigator.userAgent,
-							subString: "iPhone",
-							identity: "iPhone/iPod"
-					    },
-						{
-							string: navigator.userAgent,
-							subString: "iPad",
-							identity: "iPad"
-					    }
-					]
-				},
-
+			var
 				// Safari (as of 5.1) has a bug where @font-face fonts
 				// cannot be used with select elements. Using them together
 				// causing the selects to not work, and makes the browser
@@ -150,18 +151,19 @@
 		// For browsers that do not yet support the placeholder attribute
 		// for input elements.
 		placeholderPolyfill = function () {
-			var inputs = null,
-				input  = null,
-				len    = null,
-				i      = 0,
-				focus  = function () {
+			var support = 'placeholder' in document.createElement('input'),
+				inputs  = null,
+				input   = null,
+				len     = null,
+				i       = 0,
+				focus   = function () {
 					var val = this.value || null;
 
 					if (val === null || val === this.getAttribute('placeholder')) {
 						this.value = '';
 					}
 				},
-				blur   = function () {
+				blur    = function () {
 					var val = this.value || null;
 
 					if (val === null) {
@@ -169,7 +171,7 @@
 					}
 				};
 
-			if ('placeholder' in document.createElement('input')) {
+			if (support && browserDetect.browser !== 'Opera') {
 				htmlElem.className += ' input-placeholders';
 			} else {
 				htmlElem.className += ' polyfilled-input-placeholders';
