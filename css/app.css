@@ -409,7 +409,7 @@ section h1 {
     padding-top: 3.4em;
     width: 100%;
   }
-  #obstacles li:target {
+  #obstacles li:target, #obstacles li.manualDisplay {
     display: block;
   }
   #obstacles h3 {
