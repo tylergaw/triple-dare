@@ -330,7 +330,7 @@ section h1 {
   padding-top: 0;
 }
 #obstacles nav li:hover, #obstacles nav li.active {
-  background: #7eb036 url(../images/texture-yellow.png) repeat 90%;
+  background: #edf23f url(../images/texture-yellow.png) repeat 90%;
 }
 #obstacles nav li.active a {
   background-position: center 0.4em;
@@ -982,4 +982,77 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     float: left;
     text-align: right;
   }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0.5;
+    margin-left: 85px;
+  }
+
+  25% {
+    margin-left: -35px;
+  }
+
+  50% {
+    margin-left: 50px;
+  }
+
+  75% {
+    margin-left: -22px;
+  }
+
+  100% {
+    margin-left: -10px;
+    opacity: 0.9;
+  }
+}
+
+::-webkit-validation-bubble {
+  -webkit-animation-timing-function: ease;
+  -webkit-animation: bounce 0.35s 1;
+  margin-left: -4px;
+  opacity: 1;
+}
+
+::-webkit-validation-bubble-message {
+  background: #edf23f url(../images/texture-yellow.png) repeat 90%;
+  border: 1px solid #e4d700;
+  -webkit-border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 7px;
+  color: #1f1f1f;
+  font: 1em/1.2em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1em;
+  min-width: 50px;
+  max-width: 310px;
+  padding: 0.4em 0.4em;
+  text-indent: 0;
+  text-transform: uppercase;
+  top: -9px;
+}
+
+::-webkit-validation-bubble-arrow {
+  background-color: #edf23f;
+  border: 1px solid #e4d700;
+  border-right: none;
+  border-bottom: none;
+  -webkit-box-shadow: none;
+  display: inline-block;
+  height: 12px;
+  left: 20px;
+  position: relative;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: rotate(45deg);
+  width: 12px;
+}
+
+::-webkit-validation-bubble-arrow-clipper {
+  display: block;
+  height: 16px;
+  overflow: hidden;
+}
+
+::-webkit-validation-bubble-icon {
+  display: none;
 }
