@@ -345,7 +345,8 @@
 		handleFormSubmit = function () {
 			var form = document.getElementsByTagName('form')[0],
 				submit = function () {
-					var fieldset   = this.getElementsByTagName('fieldset')[0],
+					var that       = this,
+						fieldset   = this.getElementsByTagName('fieldset')[0],
 						firstChild = fieldset.getElementsByTagName('label')[0],
 						container  = document.createElement('div'),
 						title      = document.createElement('h3'),
@@ -365,7 +366,7 @@
 						fieldset.className = 'submitted';
 					}, 1500);
 					
-					setTimeout(function () {
+					setTimeout(function () {						
 						fieldset.removeChild(container);
 						fieldset.className = '';
 					}, 8000);
