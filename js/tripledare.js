@@ -351,14 +351,24 @@
 						title      = document.createElement('h3'),
 						message    = document.createElement('p');
 					
+					fieldset.className = 'submitting';
+					
 					title.appendChild(document.createTextNode('Thanks!'));
 					message.appendChild(document.createTextNode('We\'ll let you know soon if you\'ve been picked to get messy!'));
 					container.appendChild(title);
 					container.appendChild(message);
 					container.className = 'success';
 					
-					fieldset.insertBefore(container, firstChild);
-					fieldset.className = 'submitted';
+					// Give a little pause to fake an ajax request
+					setTimeout(function () {
+						fieldset.insertBefore(container, firstChild);
+						fieldset.className = 'submitted';
+					}, 1500);
+					
+					setTimeout(function () {
+						fieldset.removeChild(container);
+						fieldset.className = '';
+					}, 8000);
 					
 					return false;
 				};

@@ -595,6 +595,14 @@ section h1 {
 /* - Be a contestant form ------------------------------ */
 fieldset {
   margin: 0 auto;
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   width: 95%;
 }
 
@@ -772,6 +780,10 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 1.8em;
   }
 }
+.submitting {
+  opacity: 0.5;
+}
+
 .submitted label, .submitted input, .submitted select {
   display: none;
 }
