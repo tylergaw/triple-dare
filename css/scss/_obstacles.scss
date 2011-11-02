@@ -10,21 +10,22 @@
 	
 	li {
 		background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
-		margin: 4em auto 4em auto;
-		padding-top: 3.2em;
+		@include background-size(70%);
+		margin: 2em auto;
+		padding-top: 2.2em;
 		width: 100%;
 	}
 	
 	h3 {
-		font-size: 2.4em;
+		font-size: 1.5em;
 		line-height: 1.4em;
 		@include rotate(-5deg);
 	}
 	
 	p {
-		font-size: 1.2em;
+		font-size: 0.9em;
 		line-height: 1.2em;
-		margin: 0.3em 0 1.5em 0;
+		margin: 0.3em 0 1em 0;
 		@include rotate(-5deg);
 	}
 	
@@ -114,6 +115,23 @@
 	
 	a[href*="wringer"] {
 		background-image: url(../images/obstacle-the-wringer.png);
+	}
+	
+	@media screen and (min-width: 20em) {
+		li {
+			@include background-size(auto);
+			margin: 4em auto;
+			padding-top: 3.2em;
+		}
+
+		h3 {
+			font-size: 1.8em;
+		}
+
+		p {
+			font-size: 1.2em;
+			margin: 0.3em 0 1.5em 0;
+		}
 	}
 	
 	@media screen and (min-width: 28em) {
