@@ -154,3 +154,9 @@ input[type="submit"] {
 		font-size: 1.8em;
 	}
 }
+
+.submitted {
+	label, input, select {
+		display: none;
+	}
+}
