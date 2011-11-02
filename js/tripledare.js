@@ -345,6 +345,20 @@
 		handleFormSubmit = function () {
 			var form = document.getElementsByTagName('form')[0],
 				submit = function () {
+					var fieldset   = this.getElementsByTagName('fieldset')[0],
+						firstChild = fieldset.getElementsByTagName('label')[0],
+						container  = document.createElement('div'),
+						title      = document.createElement('h3'),
+						message    = document.createElement('p');
+					
+					title.appendChild(document.createTextNode('Thanks!'));
+					message.appendChild(document.createTextNode('We\'ll let you know soon if you\'ve been picked to get messy!'));
+					container.appendChild(title);
+					container.appendChild(message);
+					container.className = 'success';
+					
+					fieldset.insertBefore(container, firstChild);
+					fieldset.className = 'submitted';
 					
 					return false;
 				};
