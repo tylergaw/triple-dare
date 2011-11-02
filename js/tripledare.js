@@ -339,6 +339,17 @@
 			}
 
 			onPageLoad();
+		},
+		
+		// Fake an async form submission
+		handleFormSubmit = function () {
+			var form = document.getElementsByTagName('form')[0],
+				submit = function () {
+					
+					return false;
+				};
+			
+			form.onsubmit = submit;
 		};
 
 	// Start these boss hogs up!
@@ -346,4 +357,5 @@
 	placeholderPolyfill();
 	timer();
 	obstacleSelection();
+	handleFormSubmit();
 }());
