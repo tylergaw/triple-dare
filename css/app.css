@@ -1001,7 +1001,35 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 }
 
 /* - Success ------------------------------------------- */
+@-webkit-keyframes slime {
+  0% {
+    -webkit-background-size: 0%;
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-background-size: 100%;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes slime {
+  0% {
+    -webkit-background-size: 0%;
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-background-size: 100%;
+    opacity: 1;
+  }
+}
+
 .success {
+  -webkit-animation-timing-function: ease;
+  -webkit-animation: slime 0.1s 1;
+  -moz-animation-timing-function: ease;
+  -moz-animation: slime 0.1s 1;
   background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
   -moz-background-size: 100%;
   -webkit-background-size: 100%;
@@ -1057,6 +1085,9 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   }
 }
 @media screen and (min-width: 50em) {
+  .success {
+    padding-top: 28%;
+  }
   .success h3 {
     font-size: 3em;
     margin-bottom: 0.8em;
