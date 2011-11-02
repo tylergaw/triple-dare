@@ -50,7 +50,8 @@ select {
 	width: 100%;
 	
 	&:focus {
-		// Do this later
+		@include box-shadow(#fff, 0, 0, 5px);
+		outline: none;
 	}
 }
 
@@ -110,6 +111,7 @@ input[type="submit"] {
 	
 	&:hover, &:focus {
 		@include background-size(72%);
+		outline: none;
 		@include rotate(-1deg);
 	}
 }
