@@ -1,0 +1,28 @@
+/* - Success ------------------------------------------- */
+
+.success {
+	background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
+	@include background-size(100%);
+	color: #fff;
+	line-height: 1.4em;
+	margin: 0 auto;
+	padding: 24% 0 35% 0;
+	text-align: center;
+	@include rotate(-5deg);
+	width: 90%;
+	z-index: 99;
+	
+	h3, p {
+		@include text-shadow(rgba(0, 0, 0, 0.15), 3px, 4px, 0);
+	}
+	
+	h3 {
+		font-size: 2em;
+		margin-bottom: 0.4em;
+	}
+	
+	p {
+		margin: 0 auto;
+		width: 60%;
+	}
+}
