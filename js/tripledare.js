@@ -369,7 +369,7 @@
 					setTimeout(function () {						
 						fieldset.removeChild(container);
 						fieldset.className = '';
-					}, 8000);
+					}, 12000);
 					
 					return false;
 				};
