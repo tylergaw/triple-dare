@@ -772,6 +772,10 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 1.8em;
   }
 }
+.submitted label, .submitted input, .submitted select {
+  display: none;
+}
+
 /* - That crazy ole' timer ----------------------------- */
 #be-a-contestant h2 {
   background: transparent url(../images/timer.png) no-repeat center top;
@@ -981,6 +985,72 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   [role="contentinfo"] h3 + ul {
     float: left;
     text-align: right;
+  }
+}
+
+/* - Success ------------------------------------------- */
+.success {
+  background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  color: #fff;
+  line-height: 1.4em;
+  margin: 0 auto;
+  max-width: 30em;
+  padding: 24% 0 35% 0;
+  text-align: center;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  width: 90%;
+  z-index: 99;
+}
+.success h3, .success p {
+  text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
+}
+.success h3 {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+.success p {
+  margin: 0 auto;
+  width: 60%;
+}
+@media screen and (min-width: 28em) {
+  .success {
+    padding: 25% 0 35% 0;
+  }
+  .success h3 {
+    font-size: 3em;
+    margin-bottom: 0.8em;
+  }
+  .success p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 42em) {
+  .success {
+    width: 100%;
+  }
+  .success h3 {
+    font-size: 2em;
+    margin-bottom: 0.4em;
+  }
+  .success p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 50em) {
+  .success h3 {
+    font-size: 3em;
+    margin-bottom: 0.8em;
+  }
+  .success p {
+    font-size: 1.2em;
   }
 }
 
