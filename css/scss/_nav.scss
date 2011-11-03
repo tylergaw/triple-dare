@@ -58,10 +58,6 @@ body > nav {
 		background: transparent url(../images/nav-no-rgba.png) repeat left top;
 		left: 0;
 		
-		li {
-			display: inline;
-		}
-		
 		a {
 			&:hover {
 				background-color: #eef13f;
@@ -69,4 +65,8 @@ body > nav {
 			}
 		}
 	}
+}
+
+.ie7 body > nav li {
+	display: inline;
 }

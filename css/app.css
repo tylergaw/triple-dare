@@ -140,12 +140,13 @@ body > nav a:hover {
   background: transparent url(../images/nav-no-rgba.png) repeat left top;
   left: 0;
 }
-.ie7 body > nav li, .ie8 body > nav li {
-  display: inline;
-}
 .ie7 body > nav a:hover, .ie8 body > nav a:hover {
   background-color: #eef13f;
   color: #1f1f1f;
+}
+
+.ie7 body > nav li {
+  display: inline;
 }
 
 /* - Page banner containing branding and tagline ------- */
