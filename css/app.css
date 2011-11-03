@@ -64,7 +64,6 @@ body {
 
 .ie7 body, .ie8 body {
   background-image: url(../images/texture-blue.png);
-  min-width: 825px;
 }
 
 ::selection {
@@ -139,13 +138,7 @@ body > nav a:hover {
 
 .ie7 body > nav, .ie8 body > nav {
   background: transparent url(../images/nav-no-rgba.png) repeat left top;
-  display: table-caption;
   left: 0;
-  margin: 0;
-  min-width: 825px;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 .ie7 body > nav li, .ie8 body > nav li {
   display: inline;
@@ -917,6 +910,9 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 .ie7 #team-color, .ie7 #gender {
   margin-left: 0.6em;
   width: 100%;
+}
+.ie7 input[type="submit"] {
+  margin-left: 0.4em;
 }
 
 /* - That crazy ole' timer ----------------------------- */
