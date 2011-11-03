@@ -55,10 +55,22 @@ section {
 	}
 }
 
-.ie7 {
+.ie6, .ie7 {
 	section h1 {
 		background-image: none;
 		left: 0;
 		text-indent: 0;
+	}
+}
+
+.ie6 {
+	section {
+		h1 {
+			text-align: center;
+		}
+		
+		div {
+			width: 700px;
+		}
 	}
 }

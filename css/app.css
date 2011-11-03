@@ -304,10 +304,17 @@ section h1 {
   margin-top: 1.4em;
 }
 
-.ie7 section h1 {
+.ie6 section h1, .ie7 section h1 {
   background-image: none;
   left: 0;
   text-indent: 0;
+}
+
+.ie6 section h1 {
+  text-align: center;
+}
+.ie6 section div {
+  width: 700px;
 }
 
 /* - Obstacles section specifics ----------------------- */
@@ -618,6 +625,13 @@ section h1 {
   text-align: center;
 }
 
+.ie6 #obstacles li {
+  float: left;
+  height: 375px;
+  margin: 1em auto;
+  width: 50%;
+}
+
 /* - Prizes section specifics -------------------------- */
 #prizes {
   background: #7eb036 url(../images/texture-green.png) repeat 90%;
@@ -700,6 +714,20 @@ section h1 {
 }
 .ie7 #prizes li.last-child {
   margin-top: 2em;
+}
+
+.ie6 #prizes li {
+  float: left;
+  height: 300px;
+  margin: 1em auto;
+  width: 45%;
+}
+.ie6 #prizes li.nth-child-2n {
+  clear: right;
+  float: right;
+}
+.ie6 #prizes li.last-child {
+  margin-top: -6em;
 }
 
 /* - Be a contestant section specifics ----------------- */

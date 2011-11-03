@@ -315,3 +315,12 @@
 		text-align: center;
 	}
 }
+
+.ie6 #obstacles {
+	li {
+		float: left;
+		height: 375px;
+		margin: 1em auto;
+		width: 50%;
+	}
+}
