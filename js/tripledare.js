@@ -6,9 +6,11 @@
 		
 		// A modified version of Quirksmode's BrowserDetect
 		// http://www.quirksmode.org/js/detect.html
+		// TODO: Remember to remove browsers/OSs you don't need
 		browserDetect = {
 			init: function () {
 				this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+				this.version = this.searchVersion(navigator.userAgent);
 				this.OS = this.searchString(this.dataOS) || "an unknown OS";
 			},
 			searchString: function (data) {
@@ -21,6 +23,8 @@
 				for (i; i < len; i += 1) {
 					dataString = data[i].string;
 					dataProp   = data[i].prop;
+					
+					this.versionSearchString = data[i].versionSearch || data[i].identity;
 			
 					if (dataString) {
 						if (dataString.indexOf(data[i].subString) !== -1) {
@@ -34,6 +38,16 @@
 				}
 			
 				return identity;
+			},
+			searchVersion: function (dataString) {
+				var version = null,
+					index   = dataString.indexOf(this.versionSearchString);
+				
+				if (index !== -1) {
+					version = parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+				}
+				
+				return version;
 			},
 			dataBrowser: [
 				{
@@ -170,7 +184,10 @@
 						this.value = this.getAttribute('placeholder');
 					}
 				};
-
+			
+			// Adding a check for Opera here because we don't want
+			// to use Opera's placeholder implementation. It works,
+			// but there is no way to style the placeholder text.
 			if (support && browserDetect.browser !== 'Opera') {
 				htmlElem.className += ' input-placeholders';
 			} else {
@@ -205,11 +222,30 @@
 			var container      = document.getElementById('be-a-contestant'),
 				el             = container.getElementsByTagName('h2')[0],
 				stylesheet     = document.styleSheets[0],
-				numOfRules     = stylesheet.cssRules.length,
+				
+				// IE < 9 handles stylesheets with different property and
+				// method names. Detect, then build the correct object.
+				styles         = (function () {
+					var styles = {};
+					
+					if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
+						styles.bad = true;
+						styles.num = stylesheet.rules.length;
+						styles.insert = 'addRule';
+					} else {
+						styles.bad = false;
+						styles.num = stylesheet.cssRules.length;
+						styles.insert = 'insertRule';
+					}
+					
+					return styles;
+				}()),
+				
 				ruleCounter    = 0,
 				startTime      = 60,
 				time           = startTime,
-				rule           = '#be-a-contestant h2:before { content: "$"; }',
+				selector       = '#be-a-contestant h2:before',
+				rule           = 'content: "$"',
 				warningClass   = 'ten-second-warning',
 				outOfTimeClass = 'out-of-time',
 				interval       = 0,
@@ -223,8 +259,13 @@
 					if (el.className === outOfTimeClass) {
 						el.className = '';
 					}
-
-					stylesheet.insertRule(rule.replace('$', time), numOfRules + ruleCounter);
+					
+					if (styles.bad) {
+						stylesheet.addRule(selector, rule.replace('$', time), (styles.num + ruleCounter));
+					} else {
+						stylesheet.insertRule((selector + ' { ' + rule.replace('$', time) + ' ;} '), (styles.num + ruleCounter));
+					}
+					
 
 					ruleCounter += 1;
 
