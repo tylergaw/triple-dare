@@ -96,3 +96,37 @@
 		}
 	}
 }
+
+.ie6 header {
+	background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
+	margin-bottom: 3.6em;
+	margin-top: 3.8em;
+	padding-top: 6.3em;
+	text-align: center;
+	
+	h1 {
+		background: transparent url(../images/branding.png) no-repeat center top;
+		color: #fff;
+		@include komikaPaint(4.2em, 1.2em);
+		height: 221px;
+		margin: 0 auto;
+		text-indent: -300em;
+		width: 100%;
+	}
+	
+	h2 {
+		color: #fe6537;
+		@include komikaPaint(2.6em, 1.3em);
+		letter-spacing: 0.05em;
+		margin-top: 3.1em;
+		text-transform: uppercase;
+	}
+	
+	p {
+		color: #fff;
+		font-size: 1.4em;
+		line-height: 1.4em;
+		margin: 0.6em auto 0 auto;
+		width: 95%;
+	}
+}
