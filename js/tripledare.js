@@ -144,6 +144,23 @@
 					}
 
 					return b;
+				},
+				
+				// Add a classname to polyfill the :nth-child() selector
+				// @param ARRAY elems - Each element will have the classname applied
+				// @param INT index - The nth (ex: 2n)
+				nthChildPolyfill = function (elems, index) {
+					var i    = 0,
+						len  = elems.length;
+						
+					for (i; i < len; i += 1) {
+						
+						// I know this works for 2n, not really sure if
+						// it does for anything else. I need to look into it.
+						if (i % parseInt(index, 10)) {
+							elems[i].className += ('nth-child-' + index);
+						}
+					}
 				};
 
 			// Start up that browserDetect object
@@ -161,9 +178,18 @@
 				htmlElem.className += ' custom-selects';
 			}
 			
-			// I'm also gonna throw a classname on the html elem
-			// for older versions of ie
+			// Also gonna throw on some extras for IEs not quite as mature as 9
 			if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
+				var prizeContainer = document.getElementById('prizes'),
+					prizes         = prizeContainer.getElementsByTagName('li');
+				
+				nthChildPolyfill(prizes, '2n');
+				
+				// Make that last-child work
+				prizes[prizes.length - 1].className += ' last-child';
+				
+				// Add ie-VERSION classname to the html element	for some
+				// super major selection
 				htmlElem.className += (' ie' + browserDetect.version);
 			}
 		},

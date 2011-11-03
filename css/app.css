@@ -140,7 +140,8 @@ body > nav a:hover {
   background: transparent url(../images/nav-no-rgba.png) repeat left top;
 }
 .ie8 body > nav a:hover {
-  background-color: #85a3b4;
+  background-color: #eef13f;
+  color: #1f1f1f;
 }
 
 /* - Page banner containing branding and tagline ------- */
@@ -585,7 +586,14 @@ section h1 {
   #prizes li:last-child {
     margin-top: -3em;
   }
+  #prizes li.last-child {
+    margin-top: -3em;
+  }
   #prizes li:nth-child(2n) {
+    clear: right;
+    float: right;
+  }
+  #prizes li.nth-child-2n {
     clear: right;
     float: right;
   }
@@ -599,6 +607,9 @@ section h1 {
 }
 @media screen and (min-width: 736px) {
   #prizes li:last-child {
+    margin-top: -6em;
+  }
+  #prizes li.last-child {
     margin-top: -6em;
   }
 }
