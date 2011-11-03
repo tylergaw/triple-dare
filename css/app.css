@@ -1144,6 +1144,12 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   border-top: 6px solid #63afc4;
 }
 
+.ie7 [role="contentinfo"] h2 {
+  background: transparent url(../images/knucklelodeon-logo.png) no-repeat center top;
+  margin-top: 0;
+  padding-top: 5em;
+}
+
 /* - Success ------------------------------------------- */
 @-webkit-keyframes slime {
   0% {
