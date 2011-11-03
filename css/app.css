@@ -451,7 +451,10 @@ section h1 {
     position: absolute;
     width: 100%;
   }
-  #obstacles li:target, #obstacles li.manualDisplay {
+  #obstacles li:target {
+    display: block;
+  }
+  #obstacles li.manualDisplay {
     display: block;
   }
   #obstacles h3 {
@@ -532,6 +535,9 @@ section h1 {
     width: 47.826087%;
   }
   #obstacles nav li:nth-child(2n) {
+    float: right;
+  }
+  #obstacles nav li.nth-child-2n {
     float: right;
   }
 }

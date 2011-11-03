@@ -192,8 +192,9 @@
 				// Make that last-child work for prizes
 				prizes[prizes.length - 1].className += ' last-child';
 				
-				// Obstacle <li> need an nth-child(3n)
+				// Obstacle <li>s need an nth-child(3n) and nth-child(2n)
 				nthChildPolyfill(obstacles, '3n');
+				nthChildPolyfill(obstacles, '2n');
 				
 				// Add ie-VERSION classname to the html element	for some
 				// super major selection
@@ -363,12 +364,18 @@
 						len = prevItems.length;
 
 						for (i; i < len; i += 1) {
-							prevItems[i].className = '';
+							prevItems[i].className = prevItems[i].className.replace('active', ' ');
 						}
 					}
 
 					previousHash = itemHash;
-					selectedItem.parentNode.className = 'active';
+					selectedItem.parentNode.className += ' active';
+					
+					// Not the best with the browser sniffing...but zero hour is approaching.
+					if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
+						forcedItem = document.querySelector(itemHash);
+						forcedItem.className = 'manualDisplay';
+					}
 				},
 
 				hashChanged = function () {

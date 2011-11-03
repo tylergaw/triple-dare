@@ -153,7 +153,11 @@
 			position: absolute;
 			width: 100%;
 
-			&:target, &.manualDisplay {
+			&:target {
+				display: block;
+			}
+			
+			&.manualDisplay {
 				display: block;
 			}
 		}
@@ -250,6 +254,10 @@
 		}
 		
 		nav li:nth-child(2n) {
+			float: right;
+		}
+		
+		nav li.nth-child-2n {
 			float: right;
 		}
 	}
