@@ -263,7 +263,7 @@
 			} else {
 				htmlElem.className += ' polyfilled-input-placeholders';
 
-				inputs = document.querySelectorAll('input');
+				inputs = document.getElementsByTagName('input');
 				len = inputs.length;
 
 				for (i; i < len; i += 1) {
@@ -385,12 +385,42 @@
 
 				// @param STRING itemHash - The hashtag in the href for the selected item.
 				selectItem = function (itemHash) {
-					var prevItems    = document.querySelectorAll('li.active') || null,
-						len          = 0,
-						selectedItem = document.querySelector('a[href="' + itemHash + '"]'),
-						i            = 0;
+					var container = document.getElementById('obstacles'),
+						prevItems = (function () {
+							var prevItems = [],
+								items     = container.getElementsByTagName('li'),
+								len       = items.length,
+								i         = 0;
+							
+							for (i; i < len; i += 1) {
+								if (items[i].className.indexOf('active') !== -1) {
+									prevItems.push(items[i]);
+								}
+							}
+							
+							return prevItems;
+						}()),
+						
+						selectedItem = (function () {
+							var selectedItem = null,
+								items        = container.getElementsByTagName('a'),
+								len          = items.length,
+								i            = 0,
+								hash         = itemHash.replace('#', '');
+								
+							for (i; i < len; i += 1) {
+								if (items[i].href.split('#')[1] === hash) {
+									selectedItem = items[i];
+								}
+							}
+							
+							return selectedItem;
+						}()),
+						
+						len = 0,
+						i   = 0;
 
-					if (prevItems !== null) {
+					if (prevItems.length > 0) {
 						len = prevItems.length;
 
 						for (i; i < len; i += 1) {
@@ -403,7 +433,7 @@
 					
 					// Not the best with the browser sniffing...but zero hour is approaching.
 					if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
-						forcedItem = document.querySelector(itemHash);
+						forcedItem = document.getElementById(itemHash.replace('#', ''));
 						forcedItem.className = 'manualDisplay';
 					}
 				},
@@ -425,7 +455,7 @@
 						// Since we'll be losing the :target, we need to
 						// explicity set the currently displayed obstacle
 						// to keep displaying
-						forcedItem = document.querySelector(previousHash);
+						forcedItem = document.getElementById(previousHash.replace('#', ''));
 						forcedItem.className = 'manualDisplay';
 					}
 				},
@@ -437,17 +467,18 @@
 				onPageLoad = function () {
 					var hash        = window.location.hash || null,
 						firstItem   = null,
-						firstTarget = null;
+						firstTarget = null,
+						container   = document.getElementById('obstacles'),
+						firstItem   = container.getElementsByTagName('a')[0];
 
 					if (hash !== null && validHashes[hash]) {
 						selectItem(hash);
 					} else {
-						firstItem   = document.querySelector('#obstacles nav li:first-child a');
-						firstTarget	= firstItem.getAttribute('href');
-						forcedItem  = document.querySelector(firstTarget);
+						firstTarget	= firstItem.getAttribute('href').split('#')[1];
+						forcedItem  = document.getElementById(firstTarget);
 
 						forcedItem.className = 'manualDisplay';
-						selectItem(firstTarget);
+						selectItem('#' + firstTarget);
 					}
 				};
 
