@@ -122,6 +122,16 @@ input[type="submit"] {
 	}
 }
 
+.submitting {
+	opacity: 0.5;
+}
+
+.submitted {
+	label, input, select {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 448px) {
 	fieldset {
 		width: 100%;
@@ -161,12 +171,16 @@ input[type="submit"] {
 	}
 }
 
-.submitting {
-	opacity: 0.5;
-}
+.ie8 {
+	input[type="submit"] {
+		margin: 0.4em 0 1.2em 0;
+		padding: 0.5em 0.4em;
+		width: auto;
 
-.submitted {
-	label, input, select {
-		display: none;
+		&:hover, &:focus {
+			background: #edf23f url(../images/texture-yellow.png) repeat 90%;
+			color: #1f1f1f;
+			outline: none;
+		}
 	}
 }

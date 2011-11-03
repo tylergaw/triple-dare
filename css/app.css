@@ -780,6 +780,14 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   transform: rotate(-1deg);
 }
 
+.submitting {
+  opacity: 0.5;
+}
+
+.submitted label, .submitted input, .submitted select {
+  display: none;
+}
+
 @media screen and (min-width: 448px) {
   fieldset {
     width: 100%;
@@ -816,12 +824,15 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 1.8em;
   }
 }
-.submitting {
-  opacity: 0.5;
+.ie8 input[type="submit"] {
+  margin: 0.4em 0 1.2em 0;
+  padding: 0.5em 0.4em;
+  width: auto;
 }
-
-.submitted label, .submitted input, .submitted select {
-  display: none;
+.ie8 input[type="submit"]:hover, .ie8 input[type="submit"]:focus {
+  background: #edf23f url(../images/texture-yellow.png) repeat 90%;
+  color: #1f1f1f;
+  outline: none;
 }
 
 /* - That crazy ole' timer ----------------------------- */
