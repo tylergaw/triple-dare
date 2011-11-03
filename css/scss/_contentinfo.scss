@@ -1,5 +1,5 @@
 /* - Page-supporting content footer -------------------- */
-[role="contentinfo"] {
+footer {
 	
 	border-top: 6px solid rgba(0, 0, 0, 0.1);
 	color: #fff;
@@ -80,15 +80,26 @@
 }
 
 .ie7, .ie8 {
-	[role="contentinfo"], section + p {
+	footer, section + p {
 		border-top: 6px solid #63afc4;
 	}
 }
 
-.ie7 [role="contentinfo"] {
+.ie7 footer {
 	h2 {
 		background: transparent url(../images/knucklelodeon-logo.png) no-repeat center top;
 		margin-top: 0;
 		padding-top: 5em;
+	}
+}
+
+.ie6 {
+	footer {
+		border-top: 6px solid #63afc4;
+	}
+	
+	
+	h2 {
+		margin-top: 0;
 	}
 }

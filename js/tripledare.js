@@ -211,13 +211,16 @@
 					prizes       = prizeCon.getElementsByTagName('li'),
 					obstaclesCon = document.getElementById('obstacles'),
 					obstaclesCon = obstaclesCon.getElementsByTagName('nav')[0],
-					obstacles    = obstaclesCon.getElementsByTagName('li');
+					obstacles    = obstaclesCon.getElementsByTagName('li'),
+					fieldset     = document.getElementsByTagName('fieldset')[0],
+					inputs       = fieldset.getElementsByTagName('input');
 				
 				// Prize <li> need an nth-child(2n)
 				nthChildPolyfill(prizes, '2n');
 				
-				// Make that last-child work for prizes
+				// Make that last-child work
 				prizes[prizes.length - 1].className += ' last-child';
+				inputs[inputs.length - 1].className = 'last-child';
 				
 				// Obstacle <li>s need an nth-child(3n) and nth-child(2n)
 				nthChildPolyfill(obstacles, '3n');

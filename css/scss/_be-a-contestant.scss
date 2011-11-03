@@ -196,3 +196,32 @@ input[type="submit"] {
 		margin-left: 0.4em;
 	}
 }
+
+.ie6 {
+	#be-a-contestant {
+		padding-bottom: 2em;
+	}
+	
+	fieldset {
+		width: 75%;
+	}
+	
+	input, select {
+		background: #fe6638 url(../images/texture-orange.png) repeat 90%;
+		border: 0;
+		color: #fff;
+		@include komikaPaint(1em);
+		letter-spacing: 0.07em;
+		padding: 0.8em 0 0.4em 0;
+		text-indent: 0.7em;
+		width: 100%;
+	}
+	
+	input.last-child {
+		background: #edf23f url(../images/texture-green.png) repeat 90%;
+		border-bottom: 2px solid #5a9e26;
+		margin: 0.4em 0 1.2em 0.6em;
+		padding: 0.5em 0;
+		width: 100%;
+	}
+}
