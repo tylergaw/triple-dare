@@ -14,6 +14,10 @@ body {
 	}
 }
 
+.ie8 body {
+	background-image: url(../images/texture-blue.png);
+}
+
 ::selection {
 	background-color: #fe6638;
 	color: #fff;
