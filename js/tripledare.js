@@ -6,7 +6,6 @@
 		
 		// A modified version of Quirksmode's BrowserDetect
 		// http://www.quirksmode.org/js/detect.html
-		// TODO: Remember to remove browsers/OSs you don't need
 		browserDetect = {
 			init: function () {
 				this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
@@ -67,27 +66,12 @@
 				},
 				{
 					string: navigator.userAgent,
-					subString: "Firefox",
-					identity: "Firefox"
-				},
-				{
-					string: navigator.userAgent,
 					subString: "MSIE",
 					identity: "Explorer",
 					versionSearch: "MSIE"
 				}
 			],
 			dataOS : [
-				{
-					string: navigator.platform,
-					subString: "Win",
-					identity: "Windows"
-				},
-				{
-					string: navigator.platform,
-					subString: "Mac",
-					identity: "Mac"
-				},
 				{
 					string: navigator.userAgent,
 					subString: "iPhone",
@@ -206,6 +190,7 @@
 			}
 			
 			// Also gonna throw on some extras for IEs not quite as mature as 9
+			// Mostly adding classNames to elements to select things like :nth-child
 			if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
 				var prizeCon     = document.getElementById('prizes'),
 					prizes       = prizeCon.getElementsByTagName('li'),
@@ -285,7 +270,9 @@
 		// I opted for the :before pseudo element for the digit.
 		// However, I couldn't find a way to make that change using
 		// CSS animations and JS is unable to directly access
-		// pseudo elements.
+		// pseudo elements. So, do quick class name change to remove
+		// the :before content, then throw in a new element to house
+		// the changing time.
 		timer = function () {
 			var container      = document.getElementsByTagName('h2')[1],
 				selector       = '#be-a-contestant h2:before',
