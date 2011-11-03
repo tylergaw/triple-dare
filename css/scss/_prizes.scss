@@ -87,3 +87,10 @@
 	border-top: 6px solid #64a81a;
 	border-bottom: 6px solid #64a81a;
 }
+
+.ie7 #prizes {
+	h1 {
+		left: 0;
+		text-indent: 0;
+	}
+}

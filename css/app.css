@@ -140,6 +140,7 @@ body > nav a:hover {
 .ie7 body > nav, .ie8 body > nav {
   background: transparent url(../images/nav-no-rgba.png) repeat left top;
   display: table-caption;
+  left: 0;
   margin: 0;
   min-width: 825px;
   position: fixed;
@@ -260,7 +261,7 @@ section {
   border-right: 0;
   font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
 }
-section > div {
+section div:first-child {
   margin: 0 auto;
   max-width: 67em;
   overflow: hidden;
@@ -307,6 +308,12 @@ section h1 {
   font-size: 2.5em;
   line-height: 1em;
   margin-top: 1.4em;
+}
+
+.ie7 section h1 {
+  background-image: none;
+  left: 0;
+  text-indent: 0;
 }
 
 /* - Obstacles section specifics ----------------------- */
@@ -595,6 +602,11 @@ section h1 {
   width: 95%;
 }
 
+.ie7 #obstacles h1 {
+  left: 0;
+  text-indent: 0;
+}
+
 /* - Prizes section specifics -------------------------- */
 #prizes {
   background: #7eb036 url(../images/texture-green.png) repeat 90%;
@@ -669,6 +681,11 @@ section h1 {
 .ie7 #prizes, .ie8 #prizes {
   border-top: 6px solid #64a81a;
   border-bottom: 6px solid #64a81a;
+}
+
+.ie7 #prizes h1 {
+  left: 0;
+  text-indent: 0;
 }
 
 /* - Be a contestant section specifics ----------------- */
