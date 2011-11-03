@@ -14,9 +14,11 @@ body {
 	}
 }
 
-.ie8 body {
-	background-image: url(../images/texture-blue.png);
-	min-width: 825px;
+.ie7, .ie8 {
+	body {
+		background-image: url(../images/texture-blue.png);
+		min-width: 825px;
+	}
 }
 
 ::selection {

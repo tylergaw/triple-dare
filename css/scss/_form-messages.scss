@@ -95,10 +95,12 @@
 	}
 }
 
-.ie8 .success  {
-	background-image: none;
-	
-	p {
-		width: 80%;
+.ie7, .ie8 {
+	.success {
+		background-image: none;
+
+		p {
+			width: 80%;
+		}
 	}
 }

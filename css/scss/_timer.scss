@@ -84,13 +84,15 @@
 	}
 }
 
-.ie8 #be-a-contestant h2 {
-	font-size: 2.6em;
-	padding-top: 8em;
-	
-	&:before {
-		font-size: 140px;
-		font-size: 8.5rem;
+.ie7, .ie8 {
+	#be-a-contestant h2 {
+		font-size: 2.6em;
+		padding-top: 8em;
+
+		&:before {
+			font-size: 140px;
+			font-size: 8.5rem;
+		}
 	}
 }
 

@@ -3,7 +3,7 @@
 	border-bottom: 0;
 }
 
-.ie8 #be-a-contestant {
+.ie7 #be-a-contestant, .ie8 #be-a-contestant {
 	border-top: 6px solid #63afcf;
 }
 
@@ -171,12 +171,12 @@ input[type="submit"] {
 	}
 }
 
-.ie8 {
+.ie7, .ie8 {
 	input[type="submit"] {
 		border-bottom: 2px solid #5a9e26;
 		margin: 0.4em 0 1.2em 0;
 		padding: 0.5em 0.4em;
-		width: auto;
+		width: 9.8em;
 
 		&:hover, &:focus {
 			background: #edf23f url(../images/texture-yellow.png) repeat 90%;

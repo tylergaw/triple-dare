@@ -62,7 +62,7 @@ body {
   }
 }
 
-.ie8 body {
+.ie7 body, .ie8 body {
   background-image: url(../images/texture-blue.png);
   min-width: 825px;
 }
@@ -137,7 +137,7 @@ body > nav a:hover {
   }
 }
 
-.ie8 body > nav {
+.ie7 body > nav, .ie8 body > nav {
   background: transparent url(../images/nav-no-rgba.png) repeat left top;
   display: table-caption;
   margin: 0;
@@ -146,10 +146,10 @@ body > nav a:hover {
   top: 0;
   width: 100%;
 }
-.ie8 body > nav li {
-  display: inline-block;
+.ie7 body > nav li, .ie8 body > nav li {
+  display: inline;
 }
-.ie8 body > nav a:hover {
+.ie7 body > nav a:hover, .ie8 body > nav a:hover {
   background-color: #eef13f;
   color: #1f1f1f;
 }
@@ -303,7 +303,7 @@ section h1 {
   }
 }
 
-.ie8 section h1 {
+.ie7 section h1, .ie8 section h1 {
   font-size: 2.5em;
   line-height: 1em;
   margin-top: 1.4em;
@@ -581,15 +581,15 @@ section h1 {
   }
 }
 
-.ie8 #obstacles {
+.ie7 #obstacles, .ie8 #obstacles {
   border-top: 6px solid #ff5500;
   border-bottom: 6px solid #ff5500;
 }
-.ie8 #obstacles a {
+.ie7 #obstacles a, .ie8 #obstacles a {
   background-image: none;
   padding-top: 0;
 }
-.ie8 #obstacles nav img {
+.ie7 #obstacles nav img, .ie8 #obstacles nav img {
   margin-top: 0;
   height: 95%;
   width: 95%;
@@ -666,7 +666,7 @@ section h1 {
   }
 }
 
-.ie8 #prizes {
+.ie7 #prizes, .ie8 #prizes {
   border-top: 6px solid #64a81a;
   border-bottom: 6px solid #64a81a;
 }
@@ -676,7 +676,7 @@ section h1 {
   border-bottom: 0;
 }
 
-.ie8 #be-a-contestant {
+.ie7 #be-a-contestant, .ie8 #be-a-contestant {
   border-top: 6px solid #63afcf;
 }
 
@@ -876,13 +876,13 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 1.8em;
   }
 }
-.ie8 input[type="submit"] {
+.ie7 input[type="submit"], .ie8 input[type="submit"] {
   border-bottom: 2px solid #5a9e26;
   margin: 0.4em 0 1.2em 0;
   padding: 0.5em 0.4em;
-  width: auto;
+  width: 9.8em;
 }
-.ie8 input[type="submit"]:hover, .ie8 input[type="submit"]:focus {
+.ie7 input[type="submit"]:hover, .ie7 input[type="submit"]:focus, .ie8 input[type="submit"]:hover, .ie8 input[type="submit"]:focus {
   background: #edf23f url(../images/texture-yellow.png) repeat 90%;
   color: #1f1f1f;
   outline: none;
@@ -977,11 +977,11 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   }
 }
 
-.ie8 #be-a-contestant h2 {
+.ie7 #be-a-contestant h2, .ie8 #be-a-contestant h2 {
   font-size: 2.6em;
   padding-top: 8em;
 }
-.ie8 #be-a-contestant h2:before {
+.ie7 #be-a-contestant h2:before, .ie8 #be-a-contestant h2:before {
   font-size: 140px;
   font-size: 8.5rem;
 }
@@ -1109,7 +1109,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   }
 }
 
-.ie8 [role="contentinfo"], .ie8 section + p {
+.ie7 [role="contentinfo"], .ie7 section + p, .ie8 [role="contentinfo"], .ie8 section + p {
   border-top: 6px solid #63afc4;
 }
 
@@ -1210,10 +1210,10 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   }
 }
 
-.ie8 .success {
+.ie7 .success, .ie8 .success {
   background-image: none;
 }
-.ie8 .success p {
+.ie7 .success p, .ie8 .success p {
   width: 80%;
 }
 
