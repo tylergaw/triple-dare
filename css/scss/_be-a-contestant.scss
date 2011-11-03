@@ -3,8 +3,10 @@
 	border-bottom: 0;
 }
 
-.ie7 #be-a-contestant, .ie8 #be-a-contestant {
-	border-top: 6px solid #63afcf;
+.ie6, .ie7, .ie8  {
+	#be-a-contestant {
+		border-top: 6px solid #63afcf;
+	}
 }
 
 /* - Be a contestant form ------------------------------ */

@@ -269,11 +269,16 @@
 	}
 }
 
-.ie7, .ie8 {
+.ie6, .ie7, .ie8 {
 	#obstacles {
 		border-top: 6px solid #ff5500;
 		border-bottom: 6px solid #ff5500;
+	}
+}
 
+.ie7, .ie8 {
+	#obstacles {
+		
 		a {
 			background-image: none;
 			padding-top: 0;

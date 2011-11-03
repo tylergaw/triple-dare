@@ -83,9 +83,11 @@
 	}
 }
 
-.ie7 #prizes, .ie8 #prizes {
-	border-top: 6px solid #64a81a;
-	border-bottom: 6px solid #64a81a;
+.ie6, .ie7, .ie8 {
+	#prizes {
+		border-top: 6px solid #64a81a;
+		border-bottom: 6px solid #64a81a;;
+	}
 }
 
 .ie7 #prizes {

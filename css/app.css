@@ -633,10 +633,11 @@ section h1 {
   }
 }
 
-.ie7 #obstacles, .ie8 #obstacles {
+.ie6 #obstacles, .ie7 #obstacles, .ie8 #obstacles {
   border-top: 6px solid #ff5500;
   border-bottom: 6px solid #ff5500;
 }
+
 .ie7 #obstacles a, .ie8 #obstacles a {
   background-image: none;
   padding-top: 0;
@@ -753,7 +754,7 @@ section h1 {
   }
 }
 
-.ie7 #prizes, .ie8 #prizes {
+.ie6 #prizes, .ie7 #prizes, .ie8 #prizes {
   border-top: 6px solid #64a81a;
   border-bottom: 6px solid #64a81a;
 }
@@ -789,7 +790,7 @@ section h1 {
   border-bottom: 0;
 }
 
-.ie7 #be-a-contestant, .ie8 #be-a-contestant {
+.ie6 #be-a-contestant, .ie7 #be-a-contestant, .ie8 #be-a-contestant {
   border-top: 6px solid #63afcf;
 }
 
