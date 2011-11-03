@@ -56,6 +56,16 @@ body > nav {
 .ie8 {
 	body > nav {
 		background: transparent url(../images/nav-no-rgba.png) repeat left top;
+		display: table-caption;
+		margin: 0;
+		min-width: 825px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		
+		li {
+			display: inline-block;
+		}
 		
 		a {
 			&:hover {

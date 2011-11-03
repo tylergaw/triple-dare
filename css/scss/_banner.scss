@@ -72,3 +72,25 @@
 		}
 	}
 }
+
+.ie8 [role="banner"] {
+	margin-bottom: 3.6em;
+	margin-top: 3.8em;
+	padding-top: 6.3em;
+	
+
+	h1 {
+		background-position: 53% top;
+		height: 221px;
+		padding-top: 0;
+	}
+	
+	h2 {
+		font-size: 2.9em;
+		margin-top: 3.1em;
+	}
+	
+	p {
+		font-size: 1.4em;
+	}
+}
