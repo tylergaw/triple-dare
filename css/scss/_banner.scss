@@ -41,7 +41,7 @@
 		width: 95%;
 	}
 	
-	@media screen and (min-width: 33em) {
+	@media screen and (min-width: 528px) {
 		@include background-size('auto');
 		margin-bottom: 3.6em;
 		padding-top: 6.3em;
@@ -59,7 +59,7 @@
 		}
 	}
 	
-	@media screen and (min-width: 60em) {
+	@media screen and (min-width: 960px) {
 		margin-bottom: 4.7em;
 		margin-top: 3.8em;
 		

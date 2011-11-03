@@ -117,7 +117,7 @@
 		background-image: url(../images/obstacle-the-wringer.png);
 	}
 	
-	@media screen and (min-width: 20em) {
+	@media screen and (min-width: 320px) {
 		li {
 			@include background-size(auto);
 			margin: 4em auto;
@@ -134,14 +134,14 @@
 		}
 	}
 	
-	@media screen and (min-width: 28em) {
+	@media screen and (min-width: 448px) {
 		h1 {
 			left: 6.8em;
 			text-indent: -6.7em;
 		}
 	}
 	
-	@media screen and (min-width: 32em) {
+	@media screen and (min-width: 512px) {
 		
 		li {
 			background-position: 3% 5em;
@@ -202,7 +202,7 @@
 		}
 	}
 		
-	@media screen and (min-width: 43em) {
+	@media screen and (min-width: 688px) {
 		li {
 			background-position: center top;
 			@include background-size(auto);
@@ -250,7 +250,7 @@
 		}
 	}
 	
-	@media screen and (min-width: 54em) {
+	@media screen and (min-width: 864px) {
 		h3 {
 			font-size: 2.6em;
 		}

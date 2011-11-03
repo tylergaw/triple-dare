@@ -54,7 +54,7 @@ body {
   -webkit-font-smoothing: antialiased;
   width: 100%;
 }
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 528px) {
   body {
     background-image: url(../images/body-bg-splat.png), url(../images/texture-blue.png);
     background-repeat: no-repeat, repeat;
@@ -108,7 +108,7 @@ body > nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   text-shadow: rgba(0, 0, 0, 0.2) 0 1px 0;
 }
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 528px) {
   body > nav {
     background-color: rgba(15, 40, 48, 0.2);
     display: table-caption;
@@ -125,7 +125,7 @@ body > nav a:hover {
     padding: 0.5em 0.8em;
   }
 }
-@media screen and (min-width: 43em) {
+@media screen and (min-width: 688px) {
   body > nav a {
     font-size: 1.1em;
     padding: 0.5em 1.5em;
@@ -177,7 +177,7 @@ body > nav a:hover {
   margin: 0.6em auto 0 auto;
   width: 95%;
 }
-@media screen and (min-width: 33em) {
+@media screen and (min-width: 528px) {
   [role="banner"] {
     -moz-background-size: auto;
     -webkit-background-size: auto;
@@ -200,7 +200,7 @@ body > nav a:hover {
     margin-top: 3.1em;
   }
 }
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 960px) {
   [role="banner"] {
     margin-bottom: 4.7em;
     margin-top: 3.8em;
@@ -236,7 +236,7 @@ section h1 {
   text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
 }
-@media screen and (min-width: 28em) {
+@media screen and (min-width: 448px) {
   section h1 {
     background: transparent url(../images/headers-checks-bg.png) repeat-x left top;
     -moz-background-size: 28px 28px;
@@ -250,7 +250,7 @@ section h1 {
     text-indent: -10.7em;
   }
 }
-@media screen and (min-width: 43em) {
+@media screen and (min-width: 688px) {
   section h1 {
     -moz-background-size: 40px 40px;
     -webkit-background-size: 40px 40px;
@@ -402,7 +402,7 @@ section h1 {
 #obstacles a[href*="wringer"] {
   background-image: url(../images/obstacle-the-wringer.png);
 }
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 320px) {
   #obstacles li {
     -moz-background-size: auto;
     -webkit-background-size: auto;
@@ -419,13 +419,13 @@ section h1 {
     margin: 0.3em 0 1.5em 0;
   }
 }
-@media screen and (min-width: 28em) {
+@media screen and (min-width: 448px) {
   #obstacles h1 {
     left: 6.8em;
     text-indent: -6.7em;
   }
 }
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 512px) {
   #obstacles li {
     background-position: 3% 5em;
     -moz-background-size: 40%;
@@ -478,7 +478,7 @@ section h1 {
     margin-right: 0;
   }
 }
-@media screen and (min-width: 43em) {
+@media screen and (min-width: 688px) {
   #obstacles li {
     background-position: center top;
     -moz-background-size: auto;
@@ -520,7 +520,7 @@ section h1 {
     float: right;
   }
 }
-@media screen and (min-width: 54em) {
+@media screen and (min-width: 864px) {
   #obstacles h3 {
     font-size: 2.6em;
   }
@@ -546,13 +546,13 @@ section h1 {
   margin: 0 auto 0.4em auto;
   width: 85%;
 }
-@media screen and (min-width: 28em) {
+@media screen and (min-width: 448px) {
   #prizes h1 {
     left: 4.5em;
     text-indent: -4.4em;
   }
 }
-@media screen and (min-width: 32em) {
+@media screen and (min-width: 512px) {
   #prizes ul {
     margin-top: -4em;
     padding-bottom: 4em;
@@ -581,7 +581,7 @@ section h1 {
     width: 85%;
   }
 }
-@media screen and (min-width: 46em) {
+@media screen and (min-width: 736px) {
   #prizes li:last-child {
     margin-top: -6em;
   }
@@ -744,18 +744,18 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   transform: rotate(-1deg);
 }
 
-@media screen and (min-width: 28em) {
+@media screen and (min-width: 448px) {
   fieldset {
     width: 100%;
   }
 }
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 672px) {
   fieldset {
     float: left;
     width: 40.4255319%;
   }
 }
-@media screen and (min-width: 61em) {
+@media screen and (min-width: 976px) {
   label[for="team-color"],
   label[for="gender"] {
     display: none;
@@ -844,7 +844,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 #be-a-contestant h2.out-of-time:before {
   color: #ff1800;
 }
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 672px) {
   #be-a-contestant h2 {
     display: block;
   }
@@ -853,20 +853,20 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 6rem;
   }
 }
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   #be-a-contestant h2:before {
     font-size: 110px;
     font-size: 7rem;
     top: 21%;
   }
 }
-@media screen and (min-width: 53em) {
+@media screen and (min-width: 848px) {
   #be-a-contestant h2:before {
     font-size: 130px;
     font-size: 8rem;
   }
 }
-@media screen and (min-width: 61em) {
+@media screen and (min-width: 976px) {
   #be-a-contestant h2 {
     font-size: 2.6em;
     padding-top: 8em;
@@ -986,7 +986,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   text-align: center;
   width: auto;
 }
-@media screen and (min-width: 25em) {
+@media screen and (min-width: 400px) {
   [role="contentinfo"] p, [role="contentinfo"] ul {
     float: right;
     margin-bottom: 0;
@@ -1060,7 +1060,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   margin: 0 auto;
   width: 60%;
 }
-@media screen and (min-width: 28em) {
+@media screen and (min-width: 448px) {
   .success {
     padding: 25% 0 35% 0;
   }
@@ -1072,7 +1072,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 1.2em;
   }
 }
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 672px) {
   .success {
     width: 100%;
   }
@@ -1084,7 +1084,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 1em;
   }
 }
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 800px) {
   .success {
     padding-top: 28%;
   }

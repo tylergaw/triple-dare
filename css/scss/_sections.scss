@@ -24,7 +24,7 @@ section {
 		@include text-shadow(rgba(0, 0, 0, 0.15) 3px 4px 0);
 	}
 	
-	@media screen and (min-width: 28em) {
+	@media screen and (min-width: 448px) {
 		h1 {
 			background: transparent url(../images/headers-checks-bg.png) repeat-x left top;
 			@include background-size(28px 28px);
@@ -36,7 +36,7 @@ section {
 		}
 	}
 	
-	@media screen and (min-width: 43em) {
+	@media screen and (min-width: 688px) {
 		h1 {
 			@include background-size(40px 40px);
 			background-position: 0 0;
