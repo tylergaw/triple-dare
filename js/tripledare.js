@@ -150,15 +150,15 @@
 				// @param ARRAY elems - Each element will have the classname applied
 				// @param INT index - The nth (ex: 2n)
 				nthChildPolyfill = function (elems, index) {
-					var i    = 0,
-						len  = elems.length;
+					var i       = 0,
+						len     = elems.length,
+						matched = null;
 						
 					for (i; i < len; i += 1) {
-						
-						// I know this works for 2n, not really sure if
-						// it does for anything else. I need to look into it.
-						if (i % parseInt(index, 10)) {
-							elems[i].className += ('nth-child-' + index);
+						matched = i * parseInt(index, 10);
+
+						if (matched && matched < len + 1) {
+							elems[matched - 1].className += (' nth-child-' + index);
 						}
 					}
 				};
@@ -180,13 +180,20 @@
 			
 			// Also gonna throw on some extras for IEs not quite as mature as 9
 			if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
-				var prizeContainer = document.getElementById('prizes'),
-					prizes         = prizeContainer.getElementsByTagName('li');
+				var prizeCon     = document.getElementById('prizes'),
+					prizes       = prizeCon.getElementsByTagName('li'),
+					obstaclesCon = document.getElementById('obstacles'),
+					obstaclesCon = obstaclesCon.getElementsByTagName('nav')[0],
+					obstacles    = obstaclesCon.getElementsByTagName('li');
 				
+				// Prize <li> need an nth-child(2n)
 				nthChildPolyfill(prizes, '2n');
 				
-				// Make that last-child work
+				// Make that last-child work for prizes
 				prizes[prizes.length - 1].className += ' last-child';
+				
+				// Obstacle <li> need an nth-child(3n)
+				nthChildPolyfill(obstacles, '3n');
 				
 				// Add ie-VERSION classname to the html element	for some
 				// super major selection
