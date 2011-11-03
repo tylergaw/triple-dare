@@ -319,8 +319,17 @@
 .ie6 #obstacles {
 	li {
 		float: left;
-		height: 375px;
+		height: 390px;
 		margin: 1em auto;
 		width: 50%;
+	}
+	
+	
+	h3 {
+		font-size: 1.6em;
+	}
+	
+	p {
+		font-size: 1.1em;
 	}
 }

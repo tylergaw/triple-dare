@@ -149,6 +149,29 @@ body > nav a:hover {
   display: inline;
 }
 
+.ie6 nav {
+  background-color: #58a2b9;
+  left: 0;
+  padding: 0.2em 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+.ie6 nav li {
+  display: inline;
+}
+.ie6 nav a {
+  color: #fff;
+  padding: 0.2em 0.9em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.ie6 nav a:hover {
+  background-color: #eef13f;
+  color: #1f1f1f;
+}
+
 /* - Page banner containing branding and tagline ------- */
 [role="banner"] {
   background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
@@ -342,10 +365,11 @@ section h1 {
 }
 
 .ie6 section h1 {
+  font-size: 2.5em;
   text-align: center;
 }
 .ie6 section div {
-  width: 700px;
+  width: 760px;
 }
 
 /* - Obstacles section specifics ----------------------- */
@@ -658,9 +682,15 @@ section h1 {
 
 .ie6 #obstacles li {
   float: left;
-  height: 375px;
+  height: 390px;
   margin: 1em auto;
   width: 50%;
+}
+.ie6 #obstacles h3 {
+  font-size: 1.6em;
+}
+.ie6 #obstacles p {
+  font-size: 1.1em;
 }
 
 /* - Prizes section specifics -------------------------- */
@@ -747,9 +777,12 @@ section h1 {
   margin-top: 2em;
 }
 
+.ie6 #prizes ul {
+  margin-top: 3em;
+}
 .ie6 #prizes li {
   float: left;
-  height: 300px;
+  height: 340px;
   margin: 1em auto;
   width: 45%;
 }
@@ -758,7 +791,7 @@ section h1 {
   float: right;
 }
 .ie6 #prizes li.last-child {
-  margin-top: -6em;
+  margin-top: -7.5em;
 }
 
 /* - Be a contestant section specifics ----------------- */

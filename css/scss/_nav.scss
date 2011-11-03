@@ -70,3 +70,29 @@ body > nav {
 .ie7 body > nav li {
 	display: inline;
 }
+
+.ie6 nav {
+	background-color: #58a2b9;
+	left: 0;
+	padding: 0.2em 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	
+	li {
+		display: inline;
+	}
+	
+	a {
+		color: #fff;
+		padding: 0.2em 0.9em;
+		text-decoration: none;
+		text-transform: uppercase;
+		
+		&:hover {
+			background-color: #eef13f;
+			color: #1f1f1f;
+		}
+	}
+}
