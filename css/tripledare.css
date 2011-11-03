@@ -1,0 +1,1463 @@
+/* - Meyer Reset, pruned to fit this lil' page --------- */
+html, body, div,
+h1, h2, h3, p,
+a, img, ul, li,
+fieldset, form, label,
+footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+footer, header, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* - Custom fonts -------------------------------------- */
+@font-face {
+  font-family: "OpenSansSemibold";
+  src: url("../fonts/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/OpenSans-Semibold-webfont.eot?iefix") format("embedded-opentype"), url("../fonts/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Semibold-webfont.svg#webfontOpenSansSemibold") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "KomikaTitle-PaintRegular";
+  src: url("../fonts/KomikaTitle-Paint-webfont.eot");
+  src: url("../fonts/KomikaTitle-Paint-webfont.eot?iefix") format("embedded-opentype"), url("../fonts/KomikaTitle-Paint-webfont.woff") format("woff"), url("../fonts/KomikaTitle-Paint-webfont.ttf") format("truetype"), url("../fonts/KomikaTitle-Paint-webfont.svg#webfontKomikaTitle-PaintRegular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "DigitalDream-FatRegular";
+  src: url("../fonts/DigitalDream-Fat-webfont.eot");
+  src: url("../fonts/DigitalDream-Fat-webfont.eot?iefix") format("embedded-opentype"), url("../fonts/DigitalDream-Fat-webfont.woff") format("woff"), url("../fonts/DigitalDream-Fat-webfont.ttf") format("truetype"), url("../fonts/DigitalDream-Fat-webfont.svg#webfontDigitaldreamFatRegular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* - General styles ------------------------------------ */
+body {
+  background: #80c1d6 url(../images/texture-blue.png) repeat 90%;
+  caption-side: top;
+  display: table;
+  font: 100%/1em "OpenSansSemibold", helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+@media screen and (min-width: 528px) {
+  body {
+    background-image: url(../images/body-bg-splat.png), url(../images/texture-blue.png);
+    background-repeat: no-repeat, repeat;
+    background-position: 60% top, 90%;
+  }
+}
+
+.ie7 body, .ie8 body {
+  background-image: url(../images/texture-blue.png);
+}
+
+::selection {
+  background-color: #fe6638;
+  color: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: #fe6638;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* - Main navigation ----------------------------------- */
+body > nav {
+  background-color: rgba(15, 40, 48, 0.1);
+  margin: 0 auto 3.6em auto;
+  text-align: center;
+  width: 95%;
+}
+body > nav li {
+  display: block;
+}
+body > nav a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: block;
+  padding: 0.5em 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  -moz-transition-property: padding font-size;
+  -webkit-transition-property: padding font-size;
+  -o-transition-property: padding font-size;
+  transition-property: padding font-size;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+body > nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-shadow: rgba(0, 0, 0, 0.2) 0 1px 0;
+}
+@media screen and (min-width: 528px) {
+  body > nav {
+    background-color: rgba(15, 40, 48, 0.2);
+    display: table-caption;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  body > nav li {
+    display: inline-block;
+  }
+  body > nav a {
+    border-bottom: 0;
+    padding: 0.5em 0.8em;
+  }
+}
+@media screen and (min-width: 688px) {
+  body > nav a {
+    font-size: 1.1em;
+    padding: 0.5em 1.5em;
+  }
+}
+
+.ie7 body > nav, .ie8 body > nav {
+  background: transparent url(../images/nav-no-rgba.png) repeat left top;
+  left: 0;
+}
+.ie7 body > nav a:hover, .ie8 body > nav a:hover {
+  background-color: #eef13f;
+  color: #1f1f1f;
+}
+
+.ie7 body > nav li {
+  display: inline;
+}
+
+.ie6 nav {
+  background-color: #58a2b9;
+  left: 0;
+  padding: 0.2em 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+.ie6 nav li {
+  display: inline;
+}
+.ie6 nav a {
+  color: #fff;
+  padding: 0.2em 0.9em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.ie6 nav a:hover {
+  background-color: #eef13f;
+  color: #1f1f1f;
+}
+
+/* - Page banner containing branding and tagline ------- */
+header {
+  background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
+  -moz-background-size: 90%;
+  -webkit-background-size: 90%;
+  -o-background-size: 90%;
+  background-size: 90%;
+  margin: 5% auto 2.2em auto;
+  padding-top: 18%;
+  text-align: center;
+}
+header h1 {
+  background: transparent url(../images/branding.png) no-repeat 56% top;
+  -moz-background-size: 55%;
+  -webkit-background-size: 55%;
+  -o-background-size: 55%;
+  background-size: 55%;
+  color: #fff;
+  font: 4.2em/1.2em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: 35%;
+  text-shadow: #fe6537 4px 4px 0;
+  text-indent: -300em;
+  width: 100%;
+}
+header h2 {
+  color: #fe6537;
+  font: 1.6em/1.3em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  letter-spacing: 0.05em;
+  margin: 10% auto 0 auto;
+  text-transform: uppercase;
+  text-shadow: #f2f2f2 2px 2px 0;
+  -moz-transition: font-size 0.2s ease;
+  -webkit-transition: font-size 0.2s ease;
+  -o-transition: font-size 0.2s ease;
+  transition: font-size 0.2s ease;
+}
+header p {
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 0.6em auto 0 auto;
+  width: 95%;
+}
+@media screen and (min-width: 528px) {
+  header {
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    margin-bottom: 3.6em;
+    padding-top: 6.3em;
+  }
+  header h1 {
+    background-position: 53% top;
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    height: 221px;
+    padding-top: 0;
+  }
+  header h2 {
+    font-size: 2.6em;
+    margin-top: 3.1em;
+  }
+}
+@media screen and (min-width: 960px) {
+  header {
+    margin-bottom: 4.7em;
+    margin-top: 3.8em;
+  }
+  header h2 {
+    font-size: 3.2em;
+  }
+  header p {
+    font-size: 1.4em;
+  }
+}
+
+.ie7 [role="banner"], .ie8 [role="banner"] {
+  margin-bottom: 3.6em;
+  margin-top: 3.8em;
+  padding-top: 6.3em;
+}
+.ie7 [role="banner"] h1, .ie8 [role="banner"] h1 {
+  background-position: 53% top;
+  height: 221px;
+  padding-top: 0;
+}
+.ie7 [role="banner"] h2, .ie8 [role="banner"] h2 {
+  font-size: 2.9em;
+  margin-top: 3.1em;
+}
+.ie7 [role="banner"] p, .ie8 [role="banner"] p {
+  font-size: 1.4em;
+}
+
+.ie6 header {
+  margin-bottom: 3.6em;
+  margin-top: 3.8em;
+  padding-top: 6.3em;
+  text-align: center;
+}
+.ie6 header h1 {
+  background-position: center top;
+  height: 221px;
+  padding-top: 0;
+}
+.ie6 header h2 {
+  font: 2.6em/1.3em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  margin-top: 3.1em;
+}
+.ie6 header p {
+  font-size: 1.4em;
+}
+
+/* - General page sections ----------------------------- */
+section {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-left: 0;
+  border-right: 0;
+  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+}
+section div:first-child {
+  margin: 0 auto;
+  max-width: 67em;
+  overflow: hidden;
+  width: 95%;
+}
+section h1 {
+  color: #fff;
+  font-size: 1.6em;
+  letter-spacing: 0.05em;
+  line-height: 1.1em;
+  margin: 1.2em 0 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
+}
+@media screen and (min-width: 448px) {
+  section h1 {
+    background: transparent url(../images/headers-checks-bg.png) repeat-x left top;
+    -moz-background-size: 28px 28px;
+    -webkit-background-size: 28px 28px;
+    -o-background-size: 28px 28px;
+    background-size: 28px 28px;
+    left: 10.8em;
+    line-height: 1.1em;
+    position: relative;
+    text-align: left;
+    text-indent: -10.7em;
+  }
+}
+@media screen and (min-width: 688px) {
+  section h1 {
+    -moz-background-size: 40px 40px;
+    -webkit-background-size: 40px 40px;
+    -o-background-size: 40px 40px;
+    background-size: 40px 40px;
+    background-position: 0 0;
+    font-size: 2.5em;
+    line-height: 1em;
+    margin-top: 1.4em;
+  }
+}
+
+.ie7 section h1, .ie8 section h1 {
+  font-size: 2.5em;
+  line-height: 1em;
+  margin-top: 1.4em;
+}
+
+.ie6 section h1, .ie7 section h1 {
+  background-image: none;
+  left: 0;
+  text-indent: 0;
+}
+
+.ie6 section h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+.ie6 section div {
+  margin: 0 auto;
+  width: 760px;
+}
+
+/* - Obstacles section specifics ----------------------- */
+#obstacles {
+  background: #fe6638 url(../images/texture-orange.png) repeat 90%;
+  color: #fff;
+  text-align: center;
+}
+#obstacles ul {
+  position: relative;
+}
+#obstacles li {
+  background: transparent url(../images/green-on-orange-splat.png) no-repeat center top;
+  -moz-background-size: 70%;
+  -webkit-background-size: 70%;
+  -o-background-size: 70%;
+  background-size: 70%;
+  margin: 2em auto;
+  padding-top: 2.2em;
+  width: 100%;
+}
+#obstacles h3 {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+#obstacles p {
+  font-size: 0.9em;
+  line-height: 1.2em;
+  margin: 0.3em 0 1em 0;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+#obstacles h3, #obstacles p {
+  text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
+}
+#obstacles img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+}
+#obstacles #human-hamster-wheel img {
+  margin-top: -1em;
+}
+#obstacles nav {
+  display: none;
+  margin: 1.8em 0 1.2em 0;
+  overflow: hidden;
+}
+#obstacles nav li {
+  background: #7eb036 url(../images/texture-green.png) repeat 90%;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  display: block;
+  margin: 0.6em 0;
+  padding-top: 0;
+}
+#obstacles nav li:hover, #obstacles nav li.active {
+  background: #edf23f url(../images/texture-yellow.png) repeat 90%;
+}
+#obstacles nav li.active a {
+  background-position: center 0.4em;
+  -moz-background-size: 83%;
+  -webkit-background-size: 83%;
+  -o-background-size: 83%;
+  background-size: 83%;
+  color: #f46034;
+  cursor: default;
+}
+#obstacles a {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center 0.8em;
+  -moz-background-size: 75%;
+  -webkit-background-size: 75%;
+  -o-background-size: 75%;
+  background-size: 75%;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+  padding: 90% 0.6em 0.9em 0.6em;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -moz-transition-property: background-size background-position;
+  -webkit-transition-property: background-size background-position;
+  -o-transition-property: background-size background-position;
+  transition-property: background-size background-position;
+  -moz-transition-duration: 0.06s;
+  -webkit-transition-duration: 0.06s;
+  -o-transition-duration: 0.06s;
+  transition-duration: 0.06s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  white-space: nowrap;
+}
+#obstacles a:hover {
+  background-position: center 0.4em;
+  -moz-background-size: 83%;
+  -webkit-background-size: 83%;
+  -o-background-size: 83%;
+  background-size: 83%;
+  color: #f46034;
+}
+#obstacles a[href*="tank"] {
+  background-image: url(../images/obstacle-the-tank.png);
+}
+#obstacles a[href*="sundae"] {
+  background-image: url(../images/obstacle-sundae-slide.png);
+}
+#obstacles a[href*="hamster"] {
+  background-image: url(../images/obstacle-human-hamster-wheel.png);
+}
+#obstacles a[href*="hatch"] {
+  background-image: url(../images/obstacle-down-the-hatch.png);
+}
+#obstacles a[href*="pick"] {
+  background-image: url(../images/obstacle-pick-it.png);
+}
+#obstacles a[href*="wringer"] {
+  background-image: url(../images/obstacle-the-wringer.png);
+}
+@media screen and (min-width: 320px) {
+  #obstacles li {
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    margin: 4em auto;
+    padding-top: 3.2em;
+  }
+  #obstacles h3 {
+    font-size: 1.8em;
+  }
+  #obstacles p {
+    font-size: 1.2em;
+    margin: 0.3em 0 1.5em 0;
+  }
+}
+@media screen and (min-width: 448px) {
+  #obstacles h1 {
+    left: 6.8em;
+    text-indent: -6.7em;
+  }
+}
+@media screen and (min-width: 512px) {
+  #obstacles li {
+    background-position: 3% 5em;
+    -moz-background-size: 40%;
+    -webkit-background-size: 40%;
+    -o-background-size: 40%;
+    background-size: 40%;
+    display: none;
+    margin: -2.5em 0 0 0;
+    overflow: hidden;
+    padding-top: 3.4em;
+    position: absolute;
+    width: 100%;
+  }
+  #obstacles li:target {
+    display: block;
+  }
+  #obstacles li.manualDisplay {
+    display: block;
+  }
+  #obstacles h3 {
+    float: left;
+    font-size: 1.8em;
+    margin: 12% 0 0 2%;
+    width: 45%;
+  }
+  #obstacles p {
+    clear: left;
+    float: left;
+    margin-left: 2%;
+    width: 45%;
+  }
+  #obstacles img {
+    width: 52%;
+  }
+  #obstacles #human-hamster-wheel img {
+    margin-top: 0;
+  }
+  #obstacles nav {
+    display: block;
+    margin-top: 65%;
+  }
+  #obstacles nav ul {
+    float: none;
+    width: 100%;
+  }
+  #obstacles nav li {
+    float: left;
+    margin: 0 2.1276596% 0.6em 0;
+    position: relative;
+    width: 31.9148936%;
+  }
+  #obstacles nav li:nth-child(3n) {
+    margin-right: 0;
+  }
+  #obstacles nav li.nth-child-3n {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 688px) {
+  #obstacles li {
+    background-position: center top;
+    -moz-background-size: auto;
+    -webkit-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    margin: 0 0 0 0;
+    padding-top: 3.4em;
+  }
+  #obstacles h3 {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+  #obstacles p {
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  #obstacles img {
+    float: none;
+    margin-top: 4em;
+    width: 95%;
+  }
+  #obstacles nav {
+    margin-top: 1.8em;
+  }
+  #obstacles ul, #obstacles nav {
+    width: 48.9361702%;
+  }
+  #obstacles ul {
+    float: right;
+  }
+  #obstacles nav li {
+    margin: 0.4em 0;
+    width: 47.826087%;
+  }
+  #obstacles nav li:nth-child(2n) {
+    float: right;
+  }
+  #obstacles nav li.nth-child-2n {
+    float: right;
+  }
+}
+@media screen and (min-width: 864px) {
+  #obstacles h3 {
+    font-size: 2.6em;
+  }
+}
+
+.ie6 #obstacles, .ie7 #obstacles, .ie8 #obstacles {
+  border-top: 6px solid #ff5500;
+  border-bottom: 6px solid #ff5500;
+}
+
+.ie7 #obstacles a, .ie8 #obstacles a {
+  background-image: none;
+  padding-top: 0;
+}
+.ie7 #obstacles nav img, .ie8 #obstacles nav img {
+  margin-top: 0;
+  height: 95%;
+  width: 95%;
+}
+
+.ie7 #obstacles h1 {
+  left: 0;
+  text-indent: 0;
+}
+.ie7 #obstacles div {
+  text-align: left;
+}
+.ie7 #obstacles li {
+  display: block;
+  left: -400em;
+}
+.ie7 #obstacles li.manualDisplay {
+  left: auto;
+}
+.ie7 #obstacles nav li {
+  left: auto;
+  top: auto;
+}
+.ie7 #obstacles h3, .ie7 #obstacles p {
+  text-align: center;
+}
+
+.ie6 #obstacles li {
+  float: left;
+  height: 390px;
+  margin: 1em auto;
+  width: 50%;
+}
+.ie6 #obstacles h3 {
+  font-size: 1.6em;
+}
+.ie6 #obstacles p {
+  font-size: 1.1em;
+}
+
+/* - Prizes section specifics -------------------------- */
+#prizes {
+  background: #7eb036 url(../images/texture-green.png) repeat 90%;
+  color: #fff;
+  text-align: center;
+}
+#prizes ul {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 90%;
+}
+#prizes li {
+  line-height: 1.6em;
+  margin: 1.5em 0 3.8em 0;
+}
+#prizes img {
+  display: block;
+  margin: 0 auto 0.4em auto;
+  width: 85%;
+}
+@media screen and (min-width: 448px) {
+  #prizes h1 {
+    left: 4.5em;
+    text-indent: -4.4em;
+  }
+}
+@media screen and (min-width: 512px) {
+  #prizes ul {
+    margin-top: -4em;
+    padding-bottom: 4em;
+    width: 100%;
+  }
+  #prizes li {
+    clear: left;
+    display: inline-block;
+    float: left;
+    margin: 5em 0 0 0;
+    position: relative;
+    width: 45%;
+  }
+  #prizes li:last-child {
+    margin-top: -3em;
+  }
+  #prizes li.last-child {
+    margin-top: -3em;
+  }
+  #prizes li:nth-child(2n) {
+    clear: right;
+    float: right;
+  }
+  #prizes li.nth-child-2n {
+    clear: right;
+    float: right;
+  }
+  #prizes img {
+    margin-bottom: 0.8em;
+    width: 95%;
+  }
+  #prizes img[src*="vcr"], #prizes img[src*="camp"] {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 736px) {
+  #prizes li:last-child {
+    margin-top: -6em;
+  }
+  #prizes li.last-child {
+    margin-top: -6em;
+  }
+}
+
+.ie6 #prizes, .ie7 #prizes, .ie8 #prizes {
+  border-top: 6px solid #64a81a;
+  border-bottom: 6px solid #64a81a;
+}
+
+.ie7 #prizes h1 {
+  left: 0;
+  text-indent: 0;
+}
+.ie7 #prizes li.last-child {
+  margin-top: 2em;
+}
+
+.ie6 #prizes ul {
+  margin-top: 3em;
+  margin-bottom: -4em;
+}
+.ie6 #prizes li {
+  float: left;
+  height: 340px;
+  margin: 1em auto;
+  width: 45%;
+}
+.ie6 #prizes li.nth-child-2n {
+  clear: right;
+  float: right;
+}
+.ie6 #prizes li.last-child {
+  margin-top: -7.5em;
+}
+
+/* - Be a contestant section specifics ----------------- */
+#be-a-contestant {
+  border-bottom: 0;
+}
+
+.ie6 #be-a-contestant, .ie7 #be-a-contestant, .ie8 #be-a-contestant {
+  border-top: 6px solid #63afcf;
+}
+
+/* - Be a contestant form ------------------------------ */
+fieldset {
+  margin: 0 auto;
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  width: 95%;
+}
+
+label {
+  color: #fff;
+  display: block;
+  margin-top: 0.6em;
+  padding: 0.2em 0 0.4em 0.4em;
+}
+
+.input-placeholders label,
+.polyfilled-input-placeholders label {
+  height: 0.6em;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+label[for="team-color"],
+label[for="gender"] {
+  height: 0.6em;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+select {
+  background: #fe6638 url(../images/texture-orange.png) repeat 90%;
+  border: 0;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  color: #fff;
+  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  letter-spacing: 0.07em;
+  padding: 0.8em 0;
+  text-indent: 0.7em;
+  width: 100%;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+select:focus {
+  -moz-box-shadow: 0 0 5px white;
+  -webkit-box-shadow: 0 0 5px white;
+  -o-box-shadow: 0 0 5px white;
+  box-shadow: 0 0 5px white;
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+  font-family: 'Comic Sans MS', sans-serif;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 0.9em;
+  padding: 0.8em 0.3em;
+  text-indent: 0;
+}
+
+.custom-selects select {
+  -webkit-appearance: none;
+  background-image: url(../images/select-arrow.png), url(../images/texture-orange.png);
+  background-repeat: no-repeat, repeat;
+  background-position: right top, 90%;
+  padding: 1em 0;
+  text-indent: 0.7em;
+}
+
+.font-face-selects select {
+  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  line-height: 1.15em;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  padding-top: 0.3em;
+}
+
+:-moz-placeholder {
+  color: #fff;
+}
+
+input[type="submit"] {
+  background: transparent url(../images/green-on-blue-splat.png) no-repeat center;
+  -moz-background-size: 60%;
+  -webkit-background-size: 60%;
+  -o-background-size: 60%;
+  background-size: 60%;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font: 1.5em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  letter-spacing: 0.07em;
+  margin: 0.2em auto 1.2em auto;
+  padding: 2.6em 0;
+  position: relative;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
+  -moz-transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
+  -webkit-transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
+  -o-transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
+  transition-property: background-size -webkit-transform -moz-transform -o-transform transform;
+  -moz-transition-duration: 0.07s;
+  -webkit-transition-duration: 0.07s;
+  -o-transition-duration: 0.07s;
+  transition-duration: 0.07s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  width: 9.2em;
+}
+input[type="submit"]:hover, input[type="submit"]:focus {
+  -moz-background-size: 72%;
+  -webkit-background-size: 72%;
+  -o-background-size: 72%;
+  background-size: 72%;
+  outline: none;
+  -moz-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+
+.submitting {
+  opacity: 0.5;
+}
+
+.submitted label, .submitted input, .submitted select {
+  display: none;
+}
+
+@media screen and (min-width: 448px) {
+  fieldset {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 672px) {
+  fieldset {
+    float: left;
+    width: 40.4255319%;
+  }
+}
+@media screen and (min-width: 976px) {
+  label[for="team-color"],
+  label[for="gender"] {
+    display: none;
+  }
+
+  select {
+    display: inline-block;
+  }
+
+  #team-color {
+    margin-top: 0.5em;
+    width: 57.8947368%;
+  }
+
+  #gender {
+    float: right;
+    margin-top: 0.5em;
+    width: 36.8421053%;
+  }
+
+  input[type="submit"] {
+    font-size: 1.8em;
+  }
+}
+.ie7 input[type="submit"], .ie8 input[type="submit"] {
+  border-bottom: 2px solid #5a9e26;
+  margin: 0.4em 0 1.2em 0;
+  padding: 0.5em 0.4em;
+  width: 9.8em;
+}
+.ie7 input[type="submit"]:hover, .ie7 input[type="submit"]:focus, .ie8 input[type="submit"]:hover, .ie8 input[type="submit"]:focus {
+  background: #edf23f url(../images/texture-yellow.png) repeat 90%;
+  color: #1f1f1f;
+  outline: none;
+}
+
+.ie7 #team-color, .ie7 #gender {
+  margin-left: 0.6em;
+  width: 97%;
+}
+.ie7 input[type="submit"] {
+  margin-left: 0.4em;
+}
+
+.ie6 #be-a-contestant {
+  padding-bottom: 2em;
+}
+.ie6 fieldset {
+  width: 75%;
+}
+.ie6 input, .ie6 select {
+  background: #fe6638 url(../images/texture-orange.png) repeat 90%;
+  border: 0;
+  color: #fff;
+  font: 1em/1em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  letter-spacing: 0.07em;
+  padding: 0.8em 0 0.4em 0;
+  text-indent: 0.7em;
+  width: 100%;
+}
+.ie6 input.last-child {
+  background: #edf23f url(../images/texture-green.png) repeat 90%;
+  border-bottom: 2px solid #5a9e26;
+  margin: 0.4em 0 1.2em 0.6em;
+  padding: 0.5em 0;
+  width: 100%;
+}
+
+/* - That crazy ole' timer ----------------------------- */
+#be-a-contestant h2 {
+  background: transparent url(../images/timer.png) no-repeat center top;
+  -moz-background-size: 83.913%;
+  -webkit-background-size: 83.913%;
+  -o-background-size: 83.913%;
+  background-size: 83.913%;
+  color: #fff;
+  display: none;
+  float: right;
+  font-size: 2.2em;
+  line-height: 1.3em;
+  margin-right: 1.2553191%;
+  margin-top: 1%;
+  max-width: 460px;
+  padding-top: 37%;
+  position: relative;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.2) 4px 5px 0;
+  -moz-transition-property: font-size;
+  -webkit-transition-property: font-size;
+  -o-transition-property: font-size;
+  transition-property: font-size;
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  width: 48.9361702%;
+}
+#be-a-contestant h2:before, #be-a-contestant h2 b {
+  color: #f5eb00;
+  display: block;
+  font: 1em/1em "DigitalDream-FatRegular", "arial", sans-serif;
+  left: 26%;
+  position: absolute;
+  text-shadow: black 5px 8px 0;
+  top: 19%;
+  width: 49%;
+}
+#be-a-contestant h2:before {
+  content: "60";
+}
+#be-a-contestant h2.ten-second-warning b {
+  color: #ff8a00;
+}
+#be-a-contestant h2.out-of-time {
+  -webkit-animation: timer-shake 0.1s infinite;
+  -moz-animation: timer-shake 0.1s infinite;
+  animation: timer-shake 0.1s infinite;
+  background-image: url(../images/timer-out-of-time.png);
+}
+#be-a-contestant h2.out-of-time b {
+  color: #ff1800;
+}
+@media screen and (min-width: 672px) {
+  #be-a-contestant h2 {
+    display: block;
+  }
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
+    font-size: 90px;
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
+    font-size: 110px;
+    font-size: 7rem;
+    top: 21%;
+  }
+}
+@media screen and (min-width: 848px) {
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
+    font-size: 130px;
+    font-size: 8rem;
+  }
+}
+@media screen and (min-width: 976px) {
+  #be-a-contestant h2 {
+    font-size: 2.6em;
+    padding-top: 8em;
+  }
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
+    font-size: 140px;
+    font-size: 8.5rem;
+  }
+}
+
+#be-a-contestant.timer-running h2:before {
+  content: "";
+}
+
+.ie7 #be-a-contestant h2, .ie8 #be-a-contestant h2 {
+  font-size: 2.6em;
+  padding-top: 8em;
+}
+.ie7 #be-a-contestant h2:before, .ie7 #be-a-contestant h2 b, .ie8 #be-a-contestant h2:before, .ie8 #be-a-contestant h2 b {
+  font-size: 140px;
+  font-size: 8.5rem;
+}
+
+@-webkit-keyframes timer-shake {
+  0%, 25% {
+    margin-right: -1%;
+  }
+
+  25.0001%, 50% {
+    margin-right: 1%;
+  }
+
+  50.0001%, 75% {
+    margin-right: -0.5%;
+  }
+
+  75.0001%, 100% {
+    margin-right: 0.5%;
+  }
+}
+
+@-moz-keyframes timer-shake {
+  0%, 25% {
+    margin-right: -1%;
+  }
+
+  25.0001%, 50% {
+    margin-right: 1%;
+  }
+
+  50.0001%, 75% {
+    margin-right: -0.5%;
+  }
+
+  75.0001%, 100% {
+    margin-right: 0.5%;
+  }
+}
+
+@keyframes timer-shake {
+  0%, 25% {
+    margin-right: -1%;
+  }
+
+  25.0001%, 50% {
+    margin-right: 1%;
+  }
+
+  50.0001%, 75% {
+    margin-right: -0.5%;
+  }
+
+  75.0001%, 100% {
+    margin-right: 0.5%;
+  }
+}
+
+/* - Page-supporting content footer -------------------- */
+footer {
+  border-top: 6px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 0.9em;
+  margin: 5em auto 0 auto;
+  padding: 1.2em 0;
+  text-align: center;
+  width: 95%;
+}
+footer section {
+  border: 0;
+  font: 1em/1em "OpenSansSemibold", helvetica, arial, sans-serif;
+  margin: 0 auto;
+  max-width: 620px;
+}
+footer section:after {
+  clear: both;
+  content: " ";
+  display: block;
+}
+footer h2 {
+  margin-top: -3em;
+}
+footer h2:before {
+  background: transparent url(../images/knucklelodeon-logo.png) no-repeat center;
+  content: " ";
+  display: block;
+  height: 85px;
+  margin: 0 auto 1em auto;
+  width: 134px;
+}
+footer h2, footer h3 {
+  clear: both;
+  font-size: 1.4em;
+  line-height: 1em;
+  margin-bottom: 0.4em;
+}
+footer h3 {
+  padding-top: 1.8em;
+}
+footer p, footer ul {
+  line-height: 1.4em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+footer section + p {
+  background: transparent url(../images/creative-commons-logo.png) no-repeat center bottom;
+  border-top: 6px solid rgba(0, 0, 0, 0.1);
+  float: none;
+  margin-top: 1.9em;
+  padding: 1.4em 0 3.4em 0;
+  text-align: center;
+  width: auto;
+}
+@media screen and (min-width: 400px) {
+  footer p, footer ul {
+    float: right;
+    margin-bottom: 0;
+    text-align: left;
+    width: 48%;
+  }
+  footer h2 + p,
+  footer h3 + ul {
+    float: left;
+    text-align: right;
+  }
+}
+
+.ie7 footer, .ie7 section + p, .ie8 footer, .ie8 section + p {
+  border-top: 6px solid #63afc4;
+}
+
+.ie7 footer h2 {
+  background: transparent url(../images/knucklelodeon-logo.png) no-repeat center top;
+  margin-top: 0;
+  padding-top: 5em;
+}
+
+.ie6 footer {
+  border-top: 6px solid #63afc4;
+}
+.ie6 h2 {
+  margin-top: 0;
+}
+
+/* - Success ------------------------------------------- */
+@-webkit-keyframes slime {
+  0% {
+    -webkit-background-size: 0%;
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-background-size: 100%;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes slime {
+  0% {
+    -webkit-background-size: 0%;
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-background-size: 100%;
+    opacity: 1;
+  }
+}
+
+.success {
+  -webkit-animation-timing-function: ease;
+  -webkit-animation: slime 0.1s 1;
+  -moz-animation-timing-function: ease;
+  -moz-animation: slime 0.1s 1;
+  background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  color: #fff;
+  line-height: 1.4em;
+  margin: 0 auto;
+  padding: 24% 0 35% 0;
+  text-align: center;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  width: 90%;
+  z-index: 99;
+}
+.success h3, .success p {
+  text-shadow: rgba(0, 0, 0, 0.15) 3px 4px 0;
+}
+.success h3 {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+.success p {
+  margin: 0 auto;
+  width: 60%;
+}
+@media screen and (min-width: 448px) {
+  .success {
+    padding: 25% 0 40% 0;
+  }
+  .success h3 {
+    font-size: 3em;
+    margin-bottom: 0.8em;
+  }
+  .success p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 672px) {
+  .success {
+    width: 100%;
+  }
+  .success h3 {
+    font-size: 2em;
+    margin-bottom: 0.4em;
+  }
+  .success p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 800px) {
+  .success {
+    padding-top: 28%;
+  }
+  .success h3 {
+    font-size: 3em;
+    margin-bottom: 0.8em;
+  }
+  .success p {
+    font-size: 1.2em;
+  }
+}
+
+.ie7 .success, .ie8 .success {
+  background-image: none;
+}
+.ie7 .success p, .ie8 .success p {
+  width: 80%;
+}
+
+.ie6 .success h3 {
+  font-size: 3em;
+  margin-bottom: 0.8em;
+}
+.ie6 .success p {
+  font-size: 1.2em;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0.5;
+    margin-left: 85px;
+  }
+
+  25% {
+    margin-left: -35px;
+  }
+
+  50% {
+    margin-left: 50px;
+  }
+
+  75% {
+    margin-left: -22px;
+  }
+
+  100% {
+    margin-left: -10px;
+    opacity: 0.9;
+  }
+}
+
+::-webkit-validation-bubble {
+  -webkit-animation-timing-function: ease;
+  -webkit-animation: bounce 0.35s 1;
+  margin-left: -4px;
+  opacity: 1;
+}
+
+::-webkit-validation-bubble-message {
+  background: #edf23f url(../images/texture-yellow.png) repeat 90%;
+  border: 1px solid #e4d700;
+  -webkit-border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 7px;
+  color: #1f1f1f;
+  font: 1em/1.2em "KomikaTitle-PaintRegular", "Comic Sans MS", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1em;
+  min-width: 50px;
+  max-width: 310px;
+  padding: 0.4em 0.4em;
+  text-indent: 0;
+  text-transform: uppercase;
+  top: -9px;
+}
+
+::-webkit-validation-bubble-arrow {
+  background-color: #edf23f;
+  border: 1px solid #e4d700;
+  border-right: none;
+  border-bottom: none;
+  -webkit-box-shadow: none;
+  display: inline-block;
+  height: 12px;
+  left: 20px;
+  position: relative;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: rotate(45deg);
+  width: 12px;
+}
+
+::-webkit-validation-bubble-arrow-clipper {
+  display: block;
+  height: 16px;
+  overflow: hidden;
+}
+
+::-webkit-validation-bubble-icon {
+  display: none;
+}
