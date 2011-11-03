@@ -318,7 +318,12 @@
 					}
 					
 					// change the next here
-					el.innerText = time;
+					if ('textContent' in document) {
+						el.textContent = time;
+					} else {
+						el.innerText = time;
+					}
+					
 
 					if (time === 10) {
 						container.className = warningClass;
@@ -333,7 +338,7 @@
 					time -= 1;
 				},
 				alarm = function () {
-					var alarmDuration = 3500;
+					var alarmDuration = 4500;
 					container.className = outOfTimeClass;
 
 					setTimeout(function () {

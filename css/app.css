@@ -1316,7 +1316,6 @@ footer section + p {
   color: #fff;
   line-height: 1.4em;
   margin: 0 auto;
-  max-width: 30em;
   padding: 24% 0 35% 0;
   text-align: center;
   -moz-transform: rotate(-5deg);
@@ -1340,7 +1339,7 @@ footer section + p {
 }
 @media screen and (min-width: 448px) {
   .success {
-    padding: 25% 0 35% 0;
+    padding: 25% 0 40% 0;
   }
   .success h3 {
     font-size: 3em;
