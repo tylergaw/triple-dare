@@ -52,3 +52,15 @@ body > nav {
 		}
 	}
 }
+
+.ie8 {
+	body > nav {
+		background: transparent url(../images/nav-no-rgba.png) repeat left top;
+		
+		a {
+			&:hover {
+				background-color: #85a3b4;
+			}
+		}
+	}
+}

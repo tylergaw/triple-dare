@@ -36,9 +36,9 @@
 						break;
 					}
 				}
-			
 				return identity;
 			},
+			
 			searchVersion: function (dataString) {
 				var version = null,
 					index   = dataString.indexOf(this.versionSearchString);
@@ -159,6 +159,12 @@
 			// styles on select elements.
 			if (customSelects()) {
 				htmlElem.className += ' custom-selects';
+			}
+			
+			// I'm also gonna throw a classname on the html elem
+			// for older versions of ie
+			if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
+				htmlElem.className += (' ie' + browserDetect.version);
 			}
 		},
 

@@ -132,6 +132,13 @@ body > nav a:hover {
   }
 }
 
+.ie8 body > nav {
+  background: transparent url(../images/nav-no-rgba.png) repeat left top;
+}
+.ie8 body > nav a:hover {
+  background-color: #85a3b4;
+}
+
 /* - Page banner containing branding and tagline ------- */
 [role="banner"] {
   background: transparent url(../images/green-on-blue-splat.png) no-repeat center top;
