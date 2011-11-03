@@ -285,64 +285,43 @@
 		// I opted for the :before pseudo element for the digit.
 		// However, I couldn't find a way to make that change using
 		// CSS animations and JS is unable to directly access
-		// pseudo elements. So this little nifty trick found on
-		// Stackoverflow: 
-		// http://stackoverflow.com/questions/311052/setting-css-pseudo-class-rules-from-javascript/311437#311437
-		// describes a method for directly accessing the loaded
-		// stylesheets and manipulating them. Neato.
+		// pseudo elements.
 		timer = function () {
-			var container      = document.getElementById('be-a-contestant'),
-				el             = container.getElementsByTagName('h2')[0],
+			var container      = document.getElementsByTagName('h2')[1],
+				selector       = '#be-a-contestant h2:before',
+				rule           = 'content: " "',
 				stylesheet     = document.styleSheets[0],
-				
-				// IE < 9 handles stylesheets with different property and
-				// method names. Detect, then build the correct object.
-				styles         = (function () {
-					var styles = {};
-					
-					if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
-						styles.bad = true;
-						styles.num = stylesheet.rules.length;
-						styles.insert = 'addRule';
-					} else {
-						styles.bad = false;
-						styles.num = stylesheet.cssRules.length;
-						styles.insert = 'insertRule';
-					}
-					
-					return styles;
-				}()),
-				
-				ruleCounter    = 0,
+				el             = null,
 				startTime      = 60,
 				time           = startTime,
-				selector       = '#be-a-contestant h2:before',
-				rule           = 'content: "$"',
 				warningClass   = 'ten-second-warning',
 				outOfTimeClass = 'out-of-time',
 				interval       = 0,
 				tickSpeed      = 1000,
-
+								
+				// Create the new element to house the time
+				createTimeElement = function () {
+					var elem      = document.createElement('b');
+					
+					elem.appendChild(document.createTextNode(startTime));
+					container.insertBefore(elem, container.firstChild);
+					
+					return elem;				
+				},
+				
 				// Each time a second passes on the timer we'll
-				// update the contents of the h2:before pseudo element
-				// and increment the other counter vars
+				// update the contents of newly created element
 				tick = function () {
 
-					if (el.className === outOfTimeClass) {
-						el.className = '';
+					if (container.className === outOfTimeClass) {
+						container.className = '';
 					}
 					
-					if (styles.bad) {
-						stylesheet.addRule(selector, rule.replace('$', time), (styles.num + ruleCounter));
-					} else {
-						stylesheet.insertRule((selector + ' { ' + rule.replace('$', time) + ' ;} '), (styles.num + ruleCounter));
-					}
-					
-
-					ruleCounter += 1;
+					// change the next here
+					el.innerText = time;
 
 					if (time === 10) {
-						el.className = warningClass;
+						container.className = warningClass;
 					}
 
 					if (time === 0) {
@@ -355,13 +334,15 @@
 				},
 				alarm = function () {
 					var alarmDuration = 3500;
-					el.className = outOfTimeClass;
+					container.className = outOfTimeClass;
 
 					setTimeout(function () {
 						interval = setInterval(tick, tickSpeed);
 					}, alarmDuration);
 				};
-
+				
+			document.getElementById('be-a-contestant').className = 'timer-running';
+			el = createTimeElement();
 			interval = setInterval(tick, tickSpeed);
 		},
 

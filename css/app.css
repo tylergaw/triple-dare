@@ -1067,9 +1067,8 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   transition-timing-function: ease;
   width: 48.9361702%;
 }
-#be-a-contestant h2:before {
+#be-a-contestant h2:before, #be-a-contestant h2 b {
   color: #f5eb00;
-  content: "60";
   display: block;
   font: 1em/1em "DigitalDream-FatRegular", "arial", sans-serif;
   left: 26%;
@@ -1078,7 +1077,10 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   top: 19%;
   width: 49%;
 }
-#be-a-contestant h2.ten-second-warning:before {
+#be-a-contestant h2:before {
+  content: "60";
+}
+#be-a-contestant h2.ten-second-warning b {
   color: #ff8a00;
 }
 #be-a-contestant h2.out-of-time {
@@ -1087,27 +1089,27 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   animation: timer-shake 0.1s infinite;
   background-image: url(../images/timer-out-of-time.png);
 }
-#be-a-contestant h2.out-of-time:before {
+#be-a-contestant h2.out-of-time b {
   color: #ff1800;
 }
 @media screen and (min-width: 672px) {
   #be-a-contestant h2 {
     display: block;
   }
-  #be-a-contestant h2:before {
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
     font-size: 90px;
     font-size: 6rem;
   }
 }
 @media screen and (min-width: 768px) {
-  #be-a-contestant h2:before {
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
     font-size: 110px;
     font-size: 7rem;
     top: 21%;
   }
 }
 @media screen and (min-width: 848px) {
-  #be-a-contestant h2:before {
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
     font-size: 130px;
     font-size: 8rem;
   }
@@ -1117,17 +1119,21 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     font-size: 2.6em;
     padding-top: 8em;
   }
-  #be-a-contestant h2:before {
+  #be-a-contestant h2:before, #be-a-contestant h2 b {
     font-size: 140px;
     font-size: 8.5rem;
   }
+}
+
+#be-a-contestant.timer-running h2:before {
+  content: "";
 }
 
 .ie7 #be-a-contestant h2, .ie8 #be-a-contestant h2 {
   font-size: 2.6em;
   padding-top: 8em;
 }
-.ie7 #be-a-contestant h2:before, .ie8 #be-a-contestant h2:before {
+.ie7 #be-a-contestant h2:before, .ie7 #be-a-contestant h2 b, .ie8 #be-a-contestant h2:before, .ie8 #be-a-contestant h2 b {
   font-size: 140px;
   font-size: 8.5rem;
 }

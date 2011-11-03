@@ -20,9 +20,8 @@
 	@include transition-timing-function(ease);
 	width: 48.9361702%;
 		
-	&:before {
+	&:before, b {
 		color: #f5eb00;
-		content: "60";
 		display: block;
 		@include digitalDream(1em);
 		left: 26%;
@@ -32,8 +31,12 @@
 		width: 49%;
 	}
 	
+	&:before {
+		content: "60";
+	}
+	
 	&.ten-second-warning {
-		&:before {
+		b {
 			color: #ff8a00;
 		}
 	}
@@ -44,7 +47,7 @@
 		animation: timer-shake 0.1s infinite;
 		background-image: url(../images/timer-out-of-time.png);
 		
-		&:before {
+	 	b {
 			color: #ff1800;
 		}
 	}
@@ -52,14 +55,14 @@
 	@media screen and (min-width: 672px) {
 		display: block;
 		
-		&:before {
+		&:before, b {
 			font-size: 90px;
 			font-size: 6rem;
 		}
 	}
 	
 	@media screen and (min-width: 768px) {
-		&:before {
+		&:before, b {
 			font-size: 110px;
 			font-size: 7rem;
 			top: 21%;
@@ -67,7 +70,7 @@
 	}
 	
 	@media screen and (min-width: 848px) {
-		&:before {
+		&:before, b {
 			font-size: 130px;
 			font-size: 8rem;
 		}
@@ -77,10 +80,16 @@
 		font-size: 2.6em;
 		padding-top: 8em;
 		
-		&:before {
+		&:before, b {
 			font-size: 140px;
 			font-size: 8.5rem;
 		}
+	}
+}
+
+#be-a-contestant.timer-running h2 {
+	&:before {
+		content: "";
 	}
 }
 
@@ -89,7 +98,7 @@
 		font-size: 2.6em;
 		padding-top: 8em;
 
-		&:before {
+		&:before, b {
 			font-size: 140px;
 			font-size: 8.5rem;
 		}
