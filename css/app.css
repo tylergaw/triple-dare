@@ -585,6 +585,15 @@ section h1 {
   border-top: 6px solid #ff5500;
   border-bottom: 6px solid #ff5500;
 }
+.ie8 #obstacles a {
+  background-image: none;
+  padding-top: 0;
+}
+.ie8 #obstacles nav img {
+  margin-top: 0;
+  height: 95%;
+  width: 95%;
+}
 
 /* - Prizes section specifics -------------------------- */
 #prizes {

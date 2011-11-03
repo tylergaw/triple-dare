@@ -161,6 +161,34 @@
 							elems[matched - 1].className += (' nth-child-' + index);
 						}
 					}
+				},
+				
+				// The one hold out for using background size are the thumbs
+				// for the obstacle images. To get around it we're gonna
+				// grab the background image url, create and append an img
+				// with that as the source and then remove the background image.
+				fakeBackgroundSizedObstacleItems = function () {
+					var obstaclesCon = document.getElementById('obstacles'),
+						obstaclesCon = obstaclesCon.getElementsByTagName('nav')[0],
+						obstacles    = obstaclesCon.getElementsByTagName('a'),
+						i            = 0,
+						len          = obstacles.length,
+						item         = null,
+						imgEl        = null,
+						bgImg        = null;
+						
+					for (i; i < len; i += 1) {
+						item = obstacles[i];
+						
+						// Getting a little krufty here
+						bgImg = item.href.split('#')[1];
+						bgImg = 'images/obstacle-' + bgImg + '.png';
+						
+						imgEl = document.createElement('img');
+						imgEl.setAttribute('src', bgImg);
+						
+						item.insertBefore(imgEl, item.firstChild);
+					}
 				};
 
 			// Start up that browserDetect object
@@ -195,6 +223,8 @@
 				// Obstacle <li>s need an nth-child(3n) and nth-child(2n)
 				nthChildPolyfill(obstacles, '3n');
 				nthChildPolyfill(obstacles, '2n');
+				
+				fakeBackgroundSizedObstacleItems();
 				
 				// Add ie-VERSION classname to the html element	for some
 				// super major selection
