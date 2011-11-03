@@ -38,7 +38,6 @@
 				}
 				return identity;
 			},
-			
 			searchVersion: function (dataString) {
 				var version = null,
 					index   = dataString.indexOf(this.versionSearchString);
@@ -370,6 +369,8 @@
 
 			var previousHash = null,
 				forcedItem   = null,
+				container    = document.getElementById('obstacles'),
+				anchors      = container.getElementsByTagName('a'),
 
 				// Since we know what hashes we're looking for and we don't
 				// want to trigger the changes if a main nav item is selected
@@ -385,8 +386,7 @@
 
 				// @param STRING itemHash - The hashtag in the href for the selected item.
 				selectItem = function (itemHash) {
-					var container = document.getElementById('obstacles'),
-						prevItems = (function () {
+					var prevItems = (function () {
 							var prevItems = [],
 								items     = container.getElementsByTagName('li'),
 								len       = items.length,
@@ -403,7 +403,7 @@
 						
 						selectedItem = (function () {
 							var selectedItem = null,
-								items        = container.getElementsByTagName('a'),
+								items        = anchors,
 								len          = items.length,
 								i            = 0,
 								hash         = itemHash.replace('#', '');
@@ -440,7 +440,7 @@
 
 				hashChanged = function () {
 					var hash = window.location.hash;
-
+					
 					if (validHashes[hash]) {
 
 						if (forcedItem !== null) {
@@ -469,7 +469,7 @@
 						firstItem   = null,
 						firstTarget = null,
 						container   = document.getElementById('obstacles'),
-						firstItem   = container.getElementsByTagName('a')[0];
+						firstItem   = anchors[0];
 
 					if (hash !== null && validHashes[hash]) {
 						selectItem(hash);
@@ -480,12 +480,35 @@
 						forcedItem.className = 'manualDisplay';
 						selectItem('#' + firstTarget);
 					}
+				},
+				
+				// Since IE7 and below will not actually trigger the hashchange event
+				// we'll just watch for our nav items to be clicked and manually call
+				// the function assigned to window.onhashchange
+				initTheNonSupported = function () {
+					var i = 0,
+						len = anchors.length,
+						click = function () {
+							window.location.hash = this.href.split('#')[1];
+							hashChanged();
+							return false;
+						}
+					
+					for (i; i < len; i += 1) {
+						anchors[i].onclick = click;
+					}
 				};
 
-			if ('onhashchange' in window) {
-				window.onhashchange = hashChanged;
+			if (browserDetect.browser === 'Explorer' && browserDetect.version < 9) {
+				initTheNonSupported();
+			} else {
+				
+				// IE7 has the hashchange event, but it doesn't actually fire.
+				if ('onhashchange' in window) {
+					window.onhashchange = hashChanged;
+				}
 			}
-
+			
 			onPageLoad();
 		},
 		

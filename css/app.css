@@ -602,6 +602,17 @@ section h1 {
 .ie7 #obstacles div {
   text-align: left;
 }
+.ie7 #obstacles li {
+  display: block;
+  left: -400em;
+}
+.ie7 #obstacles li.manualDisplay {
+  left: auto;
+}
+.ie7 #obstacles nav li {
+  left: auto;
+  top: auto;
+}
 .ie7 #obstacles h3, .ie7 #obstacles p {
   text-align: center;
 }

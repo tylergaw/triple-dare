@@ -297,6 +297,20 @@
 		text-align: left;
 	}
 	
+	li {
+		display: block;
+		left: -400em;
+	}
+	
+	li.manualDisplay {
+		left: auto;
+	}
+	
+	nav li {
+		left: auto;
+		top: auto;
+	}
+	
 	h3, p {
 		text-align: center;
 	}
