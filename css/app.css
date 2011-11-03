@@ -606,6 +606,12 @@ section h1 {
   left: 0;
   text-indent: 0;
 }
+.ie7 #obstacles div {
+  text-align: left;
+}
+.ie7 #obstacles h3, .ie7 #obstacles p {
+  text-align: center;
+}
 
 /* - Prizes section specifics -------------------------- */
 #prizes {
@@ -686,6 +692,9 @@ section h1 {
 .ie7 #prizes h1 {
   left: 0;
   text-indent: 0;
+}
+.ie7 #prizes li.last-child {
+  margin-top: 2em;
 }
 
 /* - Be a contestant section specifics ----------------- */
@@ -903,6 +912,11 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   background: #edf23f url(../images/texture-yellow.png) repeat 90%;
   color: #1f1f1f;
   outline: none;
+}
+
+.ie7 #team-color, .ie7 #gender {
+  margin-left: 0.6em;
+  width: 100%;
 }
 
 /* - That crazy ole' timer ----------------------------- */
